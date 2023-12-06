@@ -2,13 +2,13 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
-
-    max-width: 366px; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
    }
    
    .word {
     color: darkgoldenrod; /* Text color */
+    height:20%;
     text-align: center; /* Center align text */
     padding: 10px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
