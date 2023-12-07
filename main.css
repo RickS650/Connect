@@ -1,8 +1,8 @@
 /* CSS for a 4x4 grid with cyan background */
-@media only screen and (min-device-width : 320px) and (max-device-width : 360px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 720px) {
     body {
       background: green;
-      width: 50%;
+      width: 20%;
     }
   }
 .grid {
