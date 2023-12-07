@@ -6,28 +6,28 @@ body {
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 480px) {
-background-color: red;
+        background-color: red;
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-background-color: yellow;
+        background-color: yellow;
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-background-color: green;
+        background-color: green;
     }
 
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
-background-color: chocolate;
+        background-color: chocolate;
     }
   }
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    width: 50pc; /* Adjust as needed */
+    width: 30pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
    }
    
