@@ -1,7 +1,7 @@
 /* CSS for a 4x4 grid with cyan background */
 body {
     @media only screen and (min-width : 320px) {
-       background-color: blue; 
+       background-color: pink; 
     }
 
     /* Extra Small Devices, Phones */ 
@@ -28,7 +28,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     height: 15%;
-    width: 15pc; /* Adjust as needed */
+    width: 25pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
 height: 18pc;
    }
