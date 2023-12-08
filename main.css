@@ -2,7 +2,7 @@
 body {
     margin:0;
     @media only screen and (min-width : 320px) {
-       background-color: yellow; 
+       background-color: darkorange; 
     }
 
     /* Extra Small Devices, Phones */ 
