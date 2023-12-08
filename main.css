@@ -28,27 +28,26 @@ body {
   }
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 23%); /* 4 columns */
-    max-width: 80pc; /* Adjust as needed */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    max-width: 90pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
     height: 18pc;
-    justify-content: center;
-    column-gap: .25%;
+    width: fit-content;
    }
    
    .word {
-    color: darkgoldenrod; /* Text color */
-    height: 10%;
-    width: 10pc;
-    text-align: center; /* Center align text */
-    padding: 5px; /* Padding for each word */
-    cursor: pointer; /* Cursor style */
-    border: 1px solid black; /* Border for each word */
-    background-color: cyan;
-    margin-bottom: 7px;
-    margin-right: 7px;
-    display: flex;
-    align-items: center;
-    font-size: 1.1pc;
-    justify-content: center;
+        color: darkgoldenrod; /* Text color */
+        height: 10%;
+        width: 10pc;
+        text-align: center; /* Center align text */
+        padding: 5px; /* Padding for each word */
+        cursor: pointer; /* Cursor style */
+        border: 1px solid black; /* Border for each word */
+        background-color: cyan;
+        margin-bottom: 7px;
+        margin-right: 7px;
+        display: flex;
+        align-items: center;
+        font-size: 1.1em;
+        justify-content: center;
    }
