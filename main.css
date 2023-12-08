@@ -34,7 +34,7 @@ body {
    
    .word {
     color: darkgoldenrod; /* Text color */
-    height: 15%;
+    height: 7%;
     text-align: center; /* Center align text */
     padding: 5px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
