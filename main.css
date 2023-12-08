@@ -38,7 +38,7 @@ body {
    
    .word {
         color: darkgoldenrod; /* Text color */
-        height: 10%;
+        height: 50%;
         width: auto;
         text-align: center; /* Center align text */
         padding: 5px; /* Padding for each word */
