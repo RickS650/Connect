@@ -2,7 +2,7 @@
 body {
     margin:0;
     @media only screen and (min-width : 320px) {
-       background-color: papayawhip; 
+       background-color: yellow; 
     }
 
     /* Extra Small Devices, Phones */ 
@@ -12,6 +12,7 @@ body {
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
+        
         background-color: purple;
     }
 
@@ -31,14 +32,14 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     max-width: 90pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
-    height: 18pc;
+    height: 18%;
     width: fit-content;
    }
    
    .word {
         color: darkgoldenrod; /* Text color */
         height: 10%;
-        width: 10pc;
+        width: 10%;
         text-align: center; /* Center align text */
         padding: 5px; /* Padding for each word */
         cursor: pointer; /* Cursor style */
