@@ -33,6 +33,7 @@ body {
         margin: 0 auto; /* Center the grid horizontally */
         height: 18%;
         width: auto;
+        place-self: center; 
    }
    
    .word {
