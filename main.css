@@ -28,7 +28,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     height: 15%;
-    width: 25pc; /* Adjust as needed */
+    width: 20pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
 height: 18pc;
    }
@@ -45,6 +45,6 @@ height: 18pc;
     margin-right: 7px;
     display: flex;
     align-items: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     justify-content: center;
    }
