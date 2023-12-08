@@ -29,12 +29,12 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     width: 25pc; /* Adjust as needed */
     margin: 0 auto; /* Center the grid horizontally */
-height: 15pc;
+height: 18pc;
    }
    
    .word {
     color: darkgoldenrod; /* Text color */
-    height: 15%;
+    height: 10%;
     text-align: center; /* Center align text */
     padding: 5px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
