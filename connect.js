@@ -24,7 +24,7 @@
        wordElement.textContent = word;
        wordElement.dataset.category = category;
        wordElement.addEventListener('click', toggleSelection);
-       row.appendChild(wordElement);
+       //row.appendChild(wordElement);//
     });
     });
     }
@@ -37,30 +37,45 @@
    
     // Call the function to populate the grid when the page loads
     populateGrid();
-    const cells = document.querySelectorAll('.word'); // Select all cells
+
+
 
 let selectedCount = 0;
 
 function toggleSelection(event) {
- const selectedCell = event.target;
+    const selectedCell = event.target;
+   
+    if (selectedCell.style.backgroundColor !== 'blue') {
+       // console.log('Cell clicked');//
+        selectedCell.style.backgroundColor = 'blue';
+        selectedCount++;
 
- // Check if the selected cell is not already grey
- if (selectedCell.style.backgroundColor !== 'grey') {
-      selectedCell.style.backgroundColor = 'grey'; // Change the background color to grey
-      selectedCount++;
-
- // Check if the required number of cells (4) is selected
- if (selectedCount === 4) {
- // Disable further selections or show a message
-      cells.forEach(cell => {
-      cell.removeEventListener('click', toggleSelection); // Remove event listener
-});
- document.getElementById('submit').disabled = false; // Enable the Submit button
- }
- }
-}
-
-cells.forEach(cell => {
- cell.addEventListener('click', toggleSelection); // Add click event listener to each cell
-});
-    
+    } else {
+    if (selectedCell.style.backgroundColor == 'blue') {
+             selectedCell.style.backgroundColor = 'cyan';
+             selectedCount--;    
+    }
+    if (selectedCount === 4) {
+        console.log('Four cells selected');
+        cells.forEach(cell => {
+        cell.removeEventListener('click', toggleSelection);
+    });
+    submitButton.disabled = false;
+    }
+    }
+   }
+   
+   document.addEventListener('DOMContentLoaded', function() {
+    const cells = document.querySelectorAll('.word');
+    const submitButton = document.getElementById('submit');
+   
+    let selectedCount = 0;
+   
+    cells.forEach(cell => {
+    cell.addEventListener('click', toggleSelection);
+    });
+   
+    submitButton.addEventListener('click', () => {
+    // Handle submission logic
+    });
+   });
