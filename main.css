@@ -56,7 +56,18 @@ body {
 /* button */
 #submit {
     position: absolute;
-    left: 50%;
+    left: 75%;
+    top: 60%;
+    height: 55px;
+    width: 15%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
+
+  #deselect {
+    position: absolute;
+    left: 25%;
     top: 60%;
     height: 55px;
     width: 15%;
