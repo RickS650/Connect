@@ -52,3 +52,15 @@ body {
     font-size: 0.9em;
     justify-content: center;
 }
+
+/* button */
+#submit {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    height: 55px;
+    width: 15%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
