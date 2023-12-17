@@ -29,7 +29,6 @@ for (let i = 0; i < words.length; i++) {
   const wordElement = document.createElement('div');
   wordElement.className = 'word';
   wordElement.textContent = words[i];
-
   // Add the word element to the grid container
   gridContainer.appendChild(wordElement);
 }
@@ -76,7 +75,7 @@ function toggleSelection(event) {
   // Check if the maximum number of cells has been selected
   if (selectedCount === 4) {
     // Enable the submit button
-    //submitButton.disabled = false;
+    submitButton.disabled = false;
 
     // Remove click event listeners from other cells
     wordElements.forEach(cell => {
@@ -92,9 +91,12 @@ wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
+const instButton = document.querySelector("#instruction");
+
+
 // Submit button functionality
-//const submitButton = document.querySelector("#submit");
-//submitButton.addEventListener('click', () => {
+const submitButton = document.querySelector("#submit");
+submitButton.addEventListener('click', () => {
 
 // Now selectedCells has all the words selected
 // Check if selected cells match criteria
@@ -129,7 +131,7 @@ for (let i = 0; i < selectedCells.length; i++) {
     cell.classList.remove('selected');
   });
   selectedCells.length = 0;
-  //submitButton.disabled;//
+  submitButton.disabled;
 
   // Re-add click event listeners to word cells
   wordElements.forEach(cell => {
@@ -137,4 +139,4 @@ for (let i = 0; i < selectedCells.length; i++) {
       cell.addEventListener('click', toggleSelection);
     }
   });
-//});
+});
