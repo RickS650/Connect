@@ -1,10 +1,12 @@
 // Array of words
-const words = [
-  "Apple", "Banana", "Orange", "Grapefruit",
-  "Dog", "Elephant", "Cat", "Lion",
-  "Car", "Guitar", "Hat", "Pencil",
-  "Flower", "Moon", "Kite", "Nest"
+const catsWords = [
+  "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
+  "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",
+  "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",
+  "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"
 ];
+const longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
+const words = catsWords.map(item => item.split('-')[1]);
 
 // Function to shuffle an array using the Fisher-Yates algorithm
 function shuffleArray(array) {
@@ -19,7 +21,7 @@ shuffleArray(words);
 
 // Create a container element for the grid
 const gridContainer = document.createElement('div');
-gridContainer.className = 'grid-container';
+gridContainer.className = 'grid';
 
 // Loop through the words array
 for (let i = 0; i < words.length; i++) {
@@ -35,16 +37,12 @@ for (let i = 0; i < words.length; i++) {
 // Display the grid container on the web page
 document.body.appendChild(gridContainer);
 
-// Set the CSS styles for the grid layout
-gridContainer.style.display = 'grid';
-gridContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
-gridContainer.style.gap = '5px';
-
 // Set the CSS styles for the word elements
 const wordElements = document.querySelectorAll('.word');
 for (let i = 0; i < wordElements.length; i++) {
-  wordElements[i].style.padding = '5px';
+  wordElements[i].style.padding = '2px';
   wordElements[i].style.textAlign = 'center';
+  wordElements[i].style.rowheight = "80px";
 }
 
 // Variable to keep track of the number of selected cells
@@ -53,17 +51,18 @@ let selectedCount = 0;
 // Array to store the selected cells
 const selectedCells = [];
 
+
 // Function to toggle cell selection
 function toggleSelection(event) {
-  const selectedCell = event.target;
-  console.log(selectedCount);
+  const selectedCell = event.target
+  const selectedWord = selectedCell.innerText.trim();
+
   // Check if the cell is already selected
   if (!selectedCell.classList.contains('selected')) {
     // Check if the maximum number of cells has been selected
     if (selectedCount < 4) {
-      selectedCell.classList.add('selected');
+      selectedCells.push(selectedWord);
       selectedCount++;
-      selectedCells.push(selectedCell);
       selectedCell.style.backgroundColor = 'blue';
     }
   } else {
@@ -77,7 +76,7 @@ function toggleSelection(event) {
   // Check if the maximum number of cells has been selected
   if (selectedCount === 4) {
     // Enable the submit button
-    submitButton.disabled = false;
+    //submitButton.disabled = false;
 
     // Remove click event listeners from other cells
     wordElements.forEach(cell => {
@@ -94,10 +93,35 @@ wordElements.forEach(cell => {
 });
 
 // Submit button functionality
-const submitButton = document.querySelector("#submit");
-submitButton.addEventListener('click', () => {
-  // Do something with the selected cells
-  console.log(selectedCells.map(cell => cell.textContent));
+//const submitButton = document.querySelector("#submit");
+//submitButton.addEventListener('click', () => {
+
+// Now selectedCells has all the words selected
+// Check if selected cells match criteria
+
+const whatCat=[];
+const whatWord=[];
+
+for (let i = 0; i < selectedCells.length; i++) {
+    letCat = "", letWord="", letWhole="";
+    var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
+    letWhole = catsWords[index];    // Store the whole cat/word
+
+    letCat = letWhole.split('-')[0];   // Extract cat
+    letWord = letWhole.split('-')[1];  // and word
+    whatCat.push(letCat);           // push into array
+    whatWord.push(letWord);
+
+  }
+
+  // Find the highest value
+  whatCat.sort(function(a, b){
+    return b.value - a.value;
+  });
+  Math.max.apply(null, whatCat)
+  for (let i = 0; i < whatCat.length; i++) {
+      console.log(whatCat[i]);
+    }
 
   // Reset selection
   selectedCount = 0;
@@ -105,7 +129,7 @@ submitButton.addEventListener('click', () => {
     cell.classList.remove('selected');
   });
   selectedCells.length = 0;
-  submitButton.disabled = true;
+  //submitButton.disabled;//
 
   // Re-add click event listeners to word cells
   wordElements.forEach(cell => {
@@ -113,4 +137,4 @@ submitButton.addEventListener('click', () => {
       cell.addEventListener('click', toggleSelection);
     }
   });
-});
+//});

@@ -26,16 +26,26 @@ body {
     }
 
   }
+
 .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
-        max-width: 70pc; /* Adjust as needed */
-        margin: 0 auto; /* Center the grid horizontally */
-        height: 18%;
-        width: auto;
-        place-self: center; 
-   }
-   
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4,100px);
+    max-width: 70vw; /* Adjust as needed */
+    margin: 0 auto; /* Center the grid horizontally */
+    gap: 2px;
+    /*height: 10%;*/
+}
+
+/* .cell {
+
+    width: 20px; /* Adjust cell width 
+    border: 1px solid black; /* Just for visualization 
+    height: 50px;
+} */ 
+
+
 .word {
     color: darkgoldenrod; /* Text color */
     height: 50%;
@@ -43,7 +53,7 @@ body {
     text-align: center; /* Center align text */
     padding: 5px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
-    border: 1px solid black; /* Border for each word */
+    /*border: 1px solid black; /* Border for each word */
     background-color: cyan;
     margin-bottom: 7px;
     margin-right: 7px;
@@ -54,11 +64,13 @@ body {
 }
 
 /* button */
-#submit {
+/* #submit {
+    border-radius: 12px;
+    border: none;
     position: absolute;
     left: 75%;
     top: 60%;
-    height: 55px;
+    height: 35px;
     width: 15%;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
@@ -66,11 +78,13 @@ body {
   }
 
   #deselect {
+    border-radius: 12px;
+    border: none;
     position: absolute;
     left: 25%;
     top: 60%;
-    height: 55px;
-    width: 15%;
+    height: 35px;
+    width: 160px;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;
