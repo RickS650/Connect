@@ -29,16 +29,15 @@ body {
 
 .grid {
     display: grid;
-    padding: 0;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    grid-template-rows: repeat(4,100px);
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4,50px);
     max-width: 70vw; 
     margin: 0 auto; /* Center the grid horizontally */
-    gap: 2px;
-    /*height: 10%;*/
+    gap: 1px;
+    height: auto;
 }
-
-p{
+/* Draw a line */
+p{ 
     text-align: center;
     hr {
         width: 70%;
@@ -46,27 +45,18 @@ p{
         margin-right: auto;
     }
   }
-/* .cell {
-
-    width: 20px; /* Adjust cell width 
-    border: 1px solid black; /* Just for visualization 
-    height: 50px;
-} */ 
-
 
 .word {
     color: darkgoldenrod; /* Text color */
-    height: 60%; 
+    height: auto; 
     width: auto;
-    text-align: center; /* Center align text */
-    padding: 5px; /* Padding for each word */
+    text-align: center; /* Center horiz align text */
+    padding: 2px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
-    /*border: 1px solid black; /* Border for each word */
     background-color: cyan;
     margin-bottom: 2px;
     margin-right: 2px;
     display: flex; 
-    align-items: center;
     font-size: 0.9em;
     justify-content: center;
 }
