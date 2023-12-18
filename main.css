@@ -58,10 +58,16 @@ p{
     margin-right: 2px;
     display: flex; 
     font-size: 0.9em;
+    line-height:50px;
     justify-content: center;
+    font-weight: bold;
 }
 
-
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color:white;
+}
 
 /* button */
  #submit {
@@ -69,7 +75,7 @@ p{
     border: none;
     position: absolute;
     left: 65%;
-    top: 80%;
+    top: 60%;
     height: 30px;
     width: 15%;
     transform: translateX(-50%);
@@ -82,7 +88,7 @@ p{
     border: none;
     position: absolute;
     left: 35%;
-    top: 80%;
+    top: 60%;
     height: 30px;
     width: 160px;
     transform: translateX(-50%);

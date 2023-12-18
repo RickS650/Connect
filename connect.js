@@ -8,6 +8,18 @@ const catsWords = [
 const longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
 const words = catsWords.map(item => item.split('-')[1]);
 
+// Submit button functionality
+const submitButton = document.querySelector("#submit");
+submitButton.disabled = true;
+submitButton.addEventListener('click', () => {
+})
+
+// Deselect button functionality
+const deselectButton = document.querySelector("#deselect");
+deselectButton.disabled = true;
+deselectButton.addEventListener('click', () => {
+})
+
 // Function to shuffle an array using the Fisher-Yates algorithm
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -58,6 +70,10 @@ function toggleSelection(event) {
 
   // Check if the cell is already selected
   if (!selectedCell.classList.contains('selected')) {
+    console.log(deselectButton.disabled = false);
+    deselectButton.disabled=false;
+    console.log(deselectButton.disabled = false);
+    
     // Check if the maximum number of cells has been selected
     if (selectedCount < 4) {
       selectedCells.push(selectedWord);
@@ -91,15 +107,8 @@ wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
-const instButton = document.querySelector("#instruction");
-
-
-// Submit button functionality
-const submitButton = document.querySelector("#submit");
-submitButton.addEventListener('click', () => {
-
-// Now selectedCells has all the words selected
-// Check if selected cells match criteria
+// Now selectedCells has all the words selected,
+// check if selected cells match criteria
 
 const whatCat=[];
 const whatWord=[];
@@ -139,4 +148,3 @@ for (let i = 0; i < selectedCells.length; i++) {
       cell.addEventListener('click', toggleSelection);
     }
   });
-});
