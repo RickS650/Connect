@@ -70,9 +70,12 @@ function toggleSelection(event) {
 
   // Check if the cell is already selected
   if (!selectedCell.classList.contains('selected')) {
-    console.log(deselectButton.disabled = false);
-    deselectButton.disabled=false;
-    console.log(deselectButton.disabled = false);
+
+    if (selectedCount>0) {
+      deselectButton.disabled=false;
+    } else {
+      deselectButton.disabled=true;
+    }
     
     // Check if the maximum number of cells has been selected
     if (selectedCount < 4) {
