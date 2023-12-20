@@ -54,7 +54,7 @@ p{
     text-align: center; /* Center horiz align text */
     padding: 2px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
-    background-color: cyan;
+    /* background-color: cyan; */
     margin-bottom: 2px;
     margin-right: 2px;
     display: flex; 

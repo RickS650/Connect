@@ -54,7 +54,7 @@ for (let i = 0; i < wordElements.length; i++) {
   wordElements[i].style.padding = '2px';
   wordElements[i].style.textAlign = 'center';
   wordElements[i].style.rowheight = '80px';
-  //wordElements[i].style.backgroundColor = 'cyan';
+  wordElements[i].style.backgroundColor = 'cyan';
 }
 
 // Array to store the selected cells
@@ -72,9 +72,11 @@ function toggleSelection(event) {
     deselectButton.disabled=true;
   }
 
+  let bgColor = selectedCell.style.backgroundColor;
+
   // Check if the cell is already selected
-  //if (!selectedCell.classList.contains('selected')) {
-  if (selectedCell.style.backgroundColor === 'cyan') {
+  //  if (!selectedCell.classList.contains('selected')) {
+   if (selectedCell.style.backgroundColor === 'cyan' ) {
     // Check if the maximum number of cells has been selected
     if (selectedCount < 4 ); {
       selectedCells.push(selectedWord);
@@ -82,11 +84,11 @@ function toggleSelection(event) {
       selectedCell.style.backgroundColor = 'blue';
     }
   } else {
-        // Deselect the cell
-        selectedCell.classList.remove('selected');
-        selectedCount--;
-        selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
-        selectedCell.style.backgroundColor = 'cyan';     
+      // Deselect the cell
+      selectedCell.classList.remove('selected');
+      selectedCount--;
+      selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
+      selectedCell.style.backgroundColor = 'cyan';     
   }
 
   // Check if the maximum number of cells has been selected
