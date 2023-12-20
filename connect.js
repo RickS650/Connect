@@ -53,11 +53,9 @@ const wordElements = document.querySelectorAll('.word');
 for (let i = 0; i < wordElements.length; i++) {
   wordElements[i].style.padding = '2px';
   wordElements[i].style.textAlign = 'center';
-  wordElements[i].style.rowheight = "80px";
+  wordElements[i].style.rowheight = '80px';
+  //wordElements[i].style.backgroundColor = 'cyan';
 }
-
-// Variable to keep track of the number of selected cells
-let selectedCount = 0;
 
 // Array to store the selected cells
 const selectedCells = [];
@@ -68,27 +66,27 @@ function toggleSelection(event) {
   const selectedCell = event.target
   const selectedWord = selectedCell.innerText.trim();
 
-  // Check if the cell is already selected
-  if (!selectedCell.classList.contains('selected')) {
+  if (selectedCount >= 0 ) {
+    deselectButton.disabled=false;
+  } else {
+    deselectButton.disabled=true;
+  }
 
-    if (selectedCount>0) {
-      deselectButton.disabled=false;
-    } else {
-      deselectButton.disabled=true;
-    }
-    
+  // Check if the cell is already selected
+  //if (!selectedCell.classList.contains('selected')) {
+  if (selectedCell.style.backgroundColor === 'cyan') {
     // Check if the maximum number of cells has been selected
-    if (selectedCount < 4) {
+    if (selectedCount < 4 ); {
       selectedCells.push(selectedWord);
       selectedCount++;
       selectedCell.style.backgroundColor = 'blue';
     }
   } else {
-      // Deselect the cell
-      selectedCell.classList.remove('selected');
-      selectedCount--;
-      selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
-      selectedCell.style.backgroundColor = 'cyan';
+        // Deselect the cell
+        selectedCell.classList.remove('selected');
+        selectedCount--;
+        selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
+        selectedCell.style.backgroundColor = 'cyan';     
   }
 
   // Check if the maximum number of cells has been selected
@@ -104,7 +102,6 @@ function toggleSelection(event) {
     });
   }
 }
-
 // Add click event listeners to the word cells
 wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
