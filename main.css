@@ -50,14 +50,14 @@ p{
 .word {
     color: darkgoldenrod; /* Text color */
     height: auto; 
-    width: 76%;
+    width: auto;
     text-align: center; /* Center horiz align text */
     padding: 2px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
     /* background-color: cyan; */
     margin-bottom: 2px;
     margin-right: 2px;
-    display: flex; 
+    /*display: grid; */
     font-size: 0.9em;
     line-height:50px;
     justify-content: center;
@@ -78,7 +78,7 @@ p {
     left: 65%;
     top: 60%;
     height: 25px;
-    width: 15%;
+    width: 160px;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;
