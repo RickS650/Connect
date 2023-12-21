@@ -50,7 +50,7 @@ p{
 .word {
     color: darkgoldenrod; /* Text color */
     height: auto; 
-    width: auto;
+    width: 76%;
     text-align: center; /* Center horiz align text */
     padding: 2px; /* Padding for each word */
     cursor: pointer; /* Cursor style */
