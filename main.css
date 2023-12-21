@@ -78,7 +78,7 @@ p {
     left: 65%;
     top: 60%;
     height: 25px;
-    width: 160px;
+    width: autopx;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -91,7 +91,7 @@ p {
     left: 35%;
     top: 60%;
     height: 25px;
-    width: 160px;
+    width: auto;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;
