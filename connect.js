@@ -1,11 +1,12 @@
 // Array of words
 const catsWords = [
-  "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
-  "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",
-  "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",
-  "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"
+  "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",  
+  "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",       
+  "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",       
+  "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"            
 ];
-const longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
+const shortCat = ["fruit","animals","objects","nature"];    // a,b,c,d for later
+const longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"];
 const words = catsWords.map(item => item.split('-')[1]);
 
 // Submit button functionality
@@ -59,7 +60,7 @@ for (let i = 0; i < wordElements.length; i++) {
 
 // Array to store the selected cells
 const selectedCells = [];
-
+let selectedCount = 0;
 
 // Function to toggle cell selection
 function toggleSelection(event) {
@@ -72,8 +73,8 @@ function toggleSelection(event) {
     deselectButton.disabled=true;
   }
 
-  let bgColor = selectedCell.style.backgroundColor;
-
+  //let bgColor = selectedCell.style.backgroundColor;
+  
   // Check if the cell is already selected
   //  if (!selectedCell.classList.contains('selected')) {
    if (selectedCell.style.backgroundColor === 'cyan' ) {
@@ -95,53 +96,59 @@ function toggleSelection(event) {
   if (selectedCount === 4) {
     // Enable the submit button
     submitButton.disabled = false;
-
     // Remove click event listeners from other cells
     wordElements.forEach(cell => {
       if (!selectedCells.includes(cell)) {
         cell.removeEventListener('click', toggleSelection);
       }
     });
+    //indCats(selectedCells);
   }
 }
+
 // Add click event listeners to the word cells
 wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
-// Now selectedCells has all the words selected,
-// check if selected cells match criteria
+// Now selectedCells has all the words selected, check if selected cells match criteria
+function findCats(array){
+  const whatCat=[];
+  const whatWord=[];
+  let a = 0, b = 0, c = 0, d = 0;
 
-const whatCat=[];
-const whatWord=[];
-
-for (let i = 0; i < selectedCells.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     letCat = "", letWord="", letWhole="";
     var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
     letWhole = catsWords[index];    // Store the whole cat/word
 
-    letCat = letWhole.split('-')[0];   // Extract cat
-    letWord = letWhole.split('-')[1];  // and word
+    letCat = letWhole.split('-')[0];   // Extract cat ....
+    switch (letCat) {
+      case (letCat = shortCat[0]):
+        a++;
+        break;
+      case (letcat = shortCat[1]):
+        b++
+        break;
+      case (letCat = shortCat[2]):
+        c++;
+        break;
+      case (letCat = shortCat[3]):
+        d++;
+        break;
+    }
+    letWord = letWhole.split('-')[1];  // ... and word
     whatCat.push(letCat);           // push into array
     whatWord.push(letWord);
-
+    console.log(a,b,c,d);
   }
 
-  // Find the highest value
-  whatCat.sort(function(a, b){
-    return b.value - a.value;
-  });
-  Math.max.apply(null, whatCat)
-  for (let i = 0; i < whatCat.length; i++) {
-      console.log(whatCat[i]);
-    }
-
   // Reset selection
-  selectedCount = 0;
-  selectedCells.forEach(cell => {
+  /* selectedCount = 0;
+  array.forEach(cell => {
     cell.classList.remove('selected');
   });
-  selectedCells.length = 0;
+  array.length = 0;
   submitButton.disabled;
 
   // Re-add click event listeners to word cells
@@ -149,4 +156,5 @@ for (let i = 0; i < selectedCells.length; i++) {
     if (!selectedCells.includes(cell)) {
       cell.addEventListener('click', toggleSelection);
     }
-  });
+  }) */
+};

@@ -32,7 +32,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(4,50px);
-    max-width: 70vw; 
+    max-width: 70%; 
     margin: 0 auto; /* Center the grid horizontally */
     gap: 1px;
     height: auto;
