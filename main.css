@@ -6,7 +6,7 @@ body {
 /* 16px = 1em*/
 
     /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 300px) {
+    @media only screen and (min-width : 360px) {
         background-color: red; 
         .grid {
             margin: auto .5em; 
@@ -14,7 +14,7 @@ body {
     }
 
     /* Small Devices, Tablets  */
-    @media only screen and (min-width : 768px) {    
+    @media only screen and (min-width : 720px) {    
         background-color: purple; 
     }
 
