@@ -2,6 +2,9 @@ var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
 
+/* var vv = document.documentElement.clientWidth;
+console.log(vv); */
+
 const catsWords = [
   "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
   "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",
