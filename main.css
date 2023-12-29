@@ -6,7 +6,7 @@ body {
 /* 16px = 1em*/
 
     /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 480px) {
+    @media only screen and (min-width : 300px) {
         background-color: red; 
         .grid {
             margin: auto .5em; 
@@ -104,7 +104,71 @@ p {
     font-family: Arial, sans-serif;
     font-size: 18px;
   }
-
+  #blob1 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    left: 46%;
+    position: absolute;
+    top: 65%;
+  }
+  #blob2 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    left: 48%;
+    position: absolute;
+    top: 65%;
+  }
+  #blob3 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    left: 50%;
+    position: absolute;
+    top: 65%;
+  }
+  #blob4 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    left: 52%;
+    position: absolute;
+    top: 65%;
+  }
+  #blob5 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    left: 54%;
+    position: absolute;
+    top: 65%;
+  }
   #deselect {
     border-radius: 8px;
     border: 1px solid black;
