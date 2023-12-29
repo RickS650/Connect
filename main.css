@@ -9,8 +9,7 @@ body {
     @media only screen and (min-width:320px) and (max-width : 480px) {
         background-color: red; 
         .grid {
-            /* Modify grid dimensions for phones */
-            margin: auto 5%; /* Adjust margin or any other properties */
+            margin: auto 1em /* Adjust margin or any other properties */
         }
     }
 
@@ -27,6 +26,9 @@ body {
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
         background-color: grey; 
+        .grid {
+            margin: auto 16em /* Adjust margin or any other properties */
+        }
     }
   } 
 
@@ -37,7 +39,6 @@ body {
     max-width: 50%; 
     height: auto;
     text-align: center;
-    margin: auto 16em;
 }
 
 .col-span{
@@ -61,7 +62,7 @@ body {
 p{ 
     text-align: center;
     hr {
-        width: 70%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
