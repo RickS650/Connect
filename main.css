@@ -3,25 +3,26 @@ body {
     /*margin:0;
     padding: 0;
     background-color: grey;*/
-    
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-        background-color: grey; 
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width:320px) and (max-width : 480px) {
+        background-color: red; 
+
     }
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
-        background-color: green; 
-    }
+
     /* Small Devices, Tablets  */
     @media only screen and (min-width : 768px) {    
         background-color: purple; 
     }
-    /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 480px) {
-        background-color: red; 
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        background-color: green; 
     }
-    @media only screen and (min-width : 320px) {
-       background-color: yellow; 
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        background-color: grey; 
     }
   } 
 
