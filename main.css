@@ -30,13 +30,31 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: repeat(4,50px);
-    max-width: 70%; 
-    margin: 0 auto; /* Center the grid horizontally */
-    gap: 1px;
+    grid-template-columns: repeat(4, 2fr); 
+    max-width: 50%; 
     height: auto;
+    text-align: center;
+    margin: auto 265px;
 }
+
+.col-span{
+    grid-column: span 4;
+    text-align: center;
+} 
+ .row {
+    color: darkgoldenrod;
+    height: auto; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    cursor: pointer; 
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height:50px;
+    justify-content: center;
+ }
+
 /* Draw a line */
 p{ 
     text-align: center;
@@ -47,17 +65,17 @@ p{
     }
   }
 
-.word {
-    color: darkgoldenrod; /* Text color */
+.cell {
+    color: darkgoldenrod; 
+    background: cyan;
     height: auto; 
-    width: auto;
-    text-align: center; /* Center horiz align text */
-    padding: 2px; /* Padding for each word */
-    cursor: pointer; /* Cursor style */
-    /* background-color: cyan; */
+    width: 175px;
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    cursor: pointer; 
     margin-bottom: 2px;
     margin-right: 2px;
-    /*display: grid; */
     font-size: 0.9em;
     line-height:50px;
     justify-content: center;
@@ -78,7 +96,7 @@ p {
     left: 65%;
     top: 60%;
     height: 25px;
-    width: 8%;
+    width: 10%;
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;

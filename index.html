@@ -10,8 +10,10 @@
             <td style = "width: 50%"; ><span style = "font-size: 3vw">
                 Connect With Rick
             </td>
-            <td style="font-size:2vw";><span style="float: right;" >
-                version 1e
+            <td style="font-size:2.6vw";><span style="float: right;">
+                <span style = "color: green;" >
+                <span style = "font-weight: lighter;">
+                version 1g
             </td>
         </tr>
       </table>
@@ -20,18 +22,56 @@
     h1 {font-family: "Avenir Next", Calibri, Verdana, sans-serif}
 /*     p {text-align: center; }
     div {text-align: center;} */
-</style>
+    </style>
 
- <link rel="stylesheet" href="main.css"> <!-- Link your CSS file here -->
- <script src="connect.js" defer></script> <!-- Include your JS file here -->
+    <link rel="stylesheet" href="main.css">
+    <script src="buttonControl.js"></script>
+    <script src="merging.js"></script>
+    <script src="connect.js" defer> </script>
+
  <noscript>You need to enable JavaScript to view the full site.</noscript>
 </head>
 <hr>
 <body>
 
+
+<!-- <div class = "col-span"></div> -->
+
 <p class="addText">Create groups of four!</p>
+
+<div id="gridID" class="grid">
+    <div class="row" id="row0">
+        <div class="cell" id="cell0"></div>
+        <div class="cell" id="cell1"></div>
+        <div class="cell" id="cell2"></div>
+        <div class="cell" id="cell3"></div>
+    </div>
+    <div class="row" id="row1">
+        <div class="cell" id="cell4"></div>
+        <div class="cell" id="cell5"></div>
+        <div class="cell" id="cell6"></div>
+        <div class="cell" id="cell7"></div>
+    </div>
+    <div class="row" id="row2">
+        <div class="cell" id="cell8"></div>
+        <div class="cell" id="cell9"></div>
+        <div class="cell" id="cell10"></div>
+        <div class="cell" id="cell11"></div>
+    </div>
+    <div class="row" id="row3">      
+        <div class="cell" id="cell12"></div>
+        <div class="cell" id="cell13"></div>
+        <div class="cell" id="cell14"></div>
+        <div class="cell" id="cell15"></div>
+    </div>
+</div>
 
 <button id="submit">Submit</button>
 <button id="deselect">Deselect All</button>
+
+<!-- <ItemTemplate> 
+    <asp:LinkButton  ID="gdlbtnRemove" runat="server"     
+     OnClientClick="return RemoveRow(this)">Remove</asp:LinkButton> 
+</ItemTemplate> -->
 
 </html>
