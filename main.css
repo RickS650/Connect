@@ -9,7 +9,10 @@ body {
     @media only screen and (min-width : 360px) {
         background-color: red; 
         .grid {
-            margin: auto .5em; 
+            margin: auto .4em; 
+        }
+        submit {
+            left: 40%;
         }
     }
 
