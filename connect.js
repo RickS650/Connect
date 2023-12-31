@@ -1,9 +1,11 @@
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
+const whatCat=[];
+const whatWord=[];
 
 /* var vv = document.documentElement.clientWidth;
-console.log(vv); */
+console.log(grid.width); */
 
 const catsWords = [
   "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
@@ -115,9 +117,6 @@ var submitButtonClicked = false;
 
 // Now selectedCells has all the words selected, check if selected cells match criteria
 function findCats(array){
-  const whatCat=[];
-  const whatWord=[];
-
   let a = 0, b = 0, c = 0, d = 0;
 
   for (let i = 0; i < array.length; i++) {
@@ -159,7 +158,9 @@ function findCats(array){
       fullCat = longCat[3];
     }
   }
-  RowToSpan(mergeRow);
+
+  fullCat = fullCat + " - " + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
+  MergeCellsInRow(mergeRow);
 
 }  
 

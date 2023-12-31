@@ -12,7 +12,7 @@ body {
             margin: auto .4em; 
         }
         submit {
-            left: 40%;
+            left: 70%;
         }
     }
 
@@ -36,7 +36,8 @@ body {
   } 
 
 .grid {
-    display: grid;
+    display: flex;
+    flex-direction: column; /* Display rows vertically */
     grid-template-rows: repeat(4,3em);
     grid-template-columns: repeat(4, 2fr); 
     max-width: 50%; 
@@ -45,10 +46,12 @@ body {
 }
 
 .col-span{
-    grid-column: span 4;
+    grid-column: span 3;
+    background-color: lightyellow;
     text-align: center;
 } 
  .row {
+    display: flex;
     color: darkgoldenrod;
     height: auto; 
     text-align: center;
@@ -106,6 +109,11 @@ p {
     transform: translateX(-50%);
     font-family: Arial, sans-serif;
     font-size: 18px;
+  }
+  .leftText{
+    p { white-space: pre-line; }
+    font-family: Arial, sans-serif;
+    font-size: 13px;
   }
   #blob1 {
     border-radius: 50%;
