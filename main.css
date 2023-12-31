@@ -19,6 +19,12 @@ body {
     /* Small Devices, Tablets  */
     @media only screen and (min-width : 720px) {    
         background-color: purple; 
+        .grid {
+            margin: auto .4em; 
+        }
+        submit {
+            left: 70%;
+        }
     }
 
     /* Medium Devices, Desktops */
