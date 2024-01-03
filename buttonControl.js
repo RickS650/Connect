@@ -17,7 +17,7 @@ function submitButtonClickHandler() {
       var letCat = "";
       var letWord = "";
       var letWhole = "";
-  
+
       for (let i = 0; i < selectedCells.length; i++) {
         letCat = "", letWord="", letWhole="";
         var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
@@ -33,8 +33,10 @@ function submitButtonClickHandler() {
       whatCat.sort(function(a, b){
         return b.valueOf - a.valueOf;
       });
+
       Math.max.apply(null, whatCat)
       findCats(selectedCells);
+
   }}
   
 function deselectButtonClickHandler() {

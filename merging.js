@@ -2,43 +2,85 @@
 function MergeCellsInRow(rowToMerge) {
     const rows = document.querySelectorAll('.row');
     const cellsToMerge = rows[rowToMerge].querySelectorAll('.cell');
+    let cellX = 1;
+    var spanCell = document.getElementById("cell0");
 
-    var mergedCell = document.getElementById("cell1");
-    mergedCell.remove();
-    mergedCell = document.getElementById("cell2");
-    mergedCell.remove();
-    mergedCell = document.getElementById("cell3");
-    mergedCell.remove();
+    switch (rowToMerge) {
+      case 0:
+        var mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++;
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        spanCell.style.backgroundColor='lightyellow';
+        xNum = 4;
+        spanCell.removeEventListener('click', toggleSelection);
+        break;
+      case 1:
+        cellX = 5;
+        spanCell = document.getElementById("cell4");
+        var mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++;
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        spanCell.style.backgroundColor="pink";
+        spanCell.removeEventListener('click', toggleSelection);
+        xNum = 8;
+        break;
+      case 2:
+        cellX = 9;
+        spanCell = document.getElementById("cell8");
+        var mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++;
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        spanCell.style.backgroundColor='purple';
+        xNum = 12;
+        spanCell.removeEventListener('click', toggleSelection);
+        break;
+      case 3:
+        cellX = 13;
+        spanCell = document.getElementById("cell8");
+        var mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++;
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        cellX++
+        mergedCell = document.getElementById("cell"+cellX);
+        mergedCell.remove();
+        spanCell.style.backgroundColor='green';
+        xNum = 16;
+        spanCell.removeEventListener('click', toggleSelection);
+        break;
+    }
 
     // Unable to get span to work
-    const spanCell = document.getElementById("cell0");
+    //const spanCell = document.getElementById("cell0");
     //spanCell.classList.add("col-span");
     spanCell.style.columnSpan='3'; 
     spanCell.style.width='700px'; // so did this instead
     spanCell.textContent = fullCat;
 
-    // Make sure each merged row has its own colour
-    switch (rowToMerge) {
-      case 0:
-        spanCell.style.backgroundColor='lightyellow';
-        xNum = 4;
-        break;
-      case 1:
-        spanCell.style.backgroundColor='lightred';
-        xNum = 8;
-        break;
-      case 2:
-        spanCell.style.backgroundColor='lightpurple';
-        xNum = 12;
-        break;
-      case 3:
-        spanCell.style.backgroundColor='lightgreen';
-        break;
-      }
     mergeRow ++;
+    wordElements.forEach(cell => {
+      cell.addEventListener('click', toggleSelection);
+    });
     if (xNum< 13) {
       reFormat(xNum);
     } 
+
 }
 
 function reFormat(startNumber) {
@@ -55,24 +97,17 @@ function reFormat(startNumber) {
   shuffleArray(words);
 
   // then reload the cells 
-  for (let i = startNumber; i < words.length; i++) {
-    var cell = document.getElementById("cell"+i);
+  for (let i = 0; i < words.length; i++) {
+    var cell = document.getElementById("cell"+startNumber);
+    startNumber++;
     cell.textContent = words[i];  
-}
-
-}
-
-const cellCount = [];
-
-function deleteRow(x) {
-var rowCollection = document.getElementsByClassName('row');
-  if ( x >= 0) {
-    var table = document.getElementById("<%= grid.ClientID %>");
-    console.log(table.rowIndex);
-/*     var rowDel = rowCollection[x]; // Access the specific row by index 'x'
-    console.log(rowDel);
-    rowDel.parentNode.removeChild(rowDel); // Remove the specific row element */
-  } else {
-    console.log('Row index out of range or negative');
+    cell.style.backgroundColor = 'cyan';     
   }
+/*   submitButton.disabled = true;
+  deselectButton.disabled = true; */
 }
+ 
+
+//const selectedCells = []; 
+//let selectedCount = 0;
+//const cellCount = [];

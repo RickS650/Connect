@@ -1,11 +1,11 @@
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
-const whatCat=[];
-const whatWord=[];
-
-/* var vv = document.documentElement.clientWidth;
-console.log(grid.width); */
+var whatCat=[];
+var whatWord=[];
+let cyanColor = "rgb(0, 255, 255)";
+let blueColor = "rgb(0, 0, 255)";
+let lightRedColor ="rgb( (255,114,118)";
 
 const catsWords = [
   "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
@@ -57,7 +57,7 @@ wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
-const selectedCells = []; 
+var selectedCells = []; 
 let selectedCount = 0;
 
 // Function to toggle cell selection
@@ -68,9 +68,6 @@ function toggleSelection(event) {
  // Get the background color of the selected cell
  const computedStyle = window.getComputedStyle(selectedCell);
  const bgColor = computedStyle.getPropertyValue('background-color');
-
- let cyanColor = "rgb(0, 255, 255)";
- let blueColor = "rgb(0, 0, 255)";
 
   if (selectedCount >= 0 ) {
     deselectButton.disabled=false;
@@ -98,14 +95,14 @@ function toggleSelection(event) {
     submitButton.disabled = false;
   }
 
-  if (submitButtonClicked) {
+/*   if (submitButtonClicked) {
     // Remove click event listeners from other cells
     wordElements.forEach(cell => {
       if (!selectedCells.includes(cell)) {
           cell.removeEventListener('click', toggleSelection);
       }
     });
-  }
+  } */
 }
 
 var submitButtonClicked = false;
@@ -118,9 +115,9 @@ var submitButtonClicked = false;
 // Now selectedCells has all the words selected, check if selected cells match criteria
 function findCats(array){
   let a = 0, b = 0, c = 0, d = 0;
-
+  whatCat=[], whatWord=[];
+  
   for (let i = 0; i < array.length; i++) {
-
     letCat = "", letWord="", letWhole="";
     var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
     letWhole = catsWords[index];    // Store the whole cat/word
@@ -131,12 +128,15 @@ function findCats(array){
         a++;
         break;
       case (letcat = shortCat[1]):
+        a=0;
         b++
         break;
       case (letCat = shortCat[2]):
+        a=0, b=0;
         c++;
         break;
       case (letCat = shortCat[3]):
+        a=0,b=0,c=0;
         d++;
         break;
     }
@@ -144,23 +144,38 @@ function findCats(array){
     letWord = letWhole.split('-')[1];  // ... and word
     whatCat.push(letCat);           // push into array
     whatWord.push(letWord);
+    whatWord[i];
   }
 
-  if ((a = 4) || (b = 4) || (c = 4) || (d = 4)); {;
-
-    if (a = 4) { ;
+  if ((a == 4) || (b == 4) || (c == 4) || (d == 4)); {
+    if (a == 4) { ;
       fullCat =  longCat[0];
-    } else if (b = 4){;
+      a=0
+    } else if (b == 4){;
       fullCat = longCat[1];
-    } else if (c = 4){ ;
+      b=0
+    } else if (c == 4){ ;
       fullCat = longCat[2];
-    } else if (d = 4){;
+      c=0
+    } else if (d == 4){;
       fullCat = longCat[3];
+      d=0
     }
   }
 
   fullCat = fullCat + " - " + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
+
+  //Empty selectconst selectedCells = []; 
+  selectedCount = 0;
+  selectedCells = []; 
   MergeCellsInRow(mergeRow);
+
+
+  //wordElements = document.querySelectorAll('.cell');
+  // Add click event listeners to the cells
+ /*  wordElements.forEach(cell => {
+    cell.addEventListener('click', toggleSelection);
+  }); */
 
 }  
 
@@ -182,14 +197,6 @@ function resetAll() {;
       cell.addEventListener('click', toggleSelection)}
   });
 }
-
-/* function RemoveRow(item) {
-  var table = document.getElementById("<%= grid.ClientID %>");
-  console.log(table.rowIndex);
-  table.deleteRow(item.parentNode.parentNode.rowIndex);
-  return false;
-}
- */
 
 /* document.addEventListener('DOMContentLoaded', function() {
   // Your code that manipulates the DOM goes here
