@@ -7,6 +7,8 @@ let cyanColor = "rgb(0, 255, 255)";
 let blueColor = "rgb(0, 0, 255)";
 let lightRedColor ="rgb( (255,114,118)";
 
+threeRight("off");
+
 const catsWords = [
   "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
   "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",
@@ -91,9 +93,11 @@ function toggleSelection(event) {
   }
 
   // Check if the maximum number of cells has been selected
+  console.log(selectedCount);
   if (selectedCount === 4) {
     submitButton.disabled = false;
-  }
+  } 
+  
 
 /*   if (submitButtonClicked) {
     // Remove click event listeners from other cells
@@ -162,7 +166,11 @@ function findCats(array){
       d=0
     }
   }
-
+  if ((a == 3) || (b == 3) || (c == 3) || (d == 3)); {
+      threeRight("on");
+      return;
+  }
+  
   fullCat = fullCat + " - " + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
 
   //Empty selectconst selectedCells = []; 
@@ -198,6 +206,15 @@ function resetAll() {;
   });
 }
 
+function threeRight(onOff) {
+  var x = document.getElementById("threeGoes");
+
+  if (onOff == "on") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 /* document.addEventListener('DOMContentLoaded', function() {
   // Your code that manipulates the DOM goes here
   mergeCellsInRow(); // Call the function that operates on DOM elements

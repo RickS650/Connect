@@ -130,7 +130,7 @@ p {
   height: 15px;
   border-radius: 50%; /* Makes the button round */
   margin: 0 5px; /* Adjust the spacing between buttons */
-border: thin;
+  border: thin;
 }
   #blob1 {
     border-radius: 50%;

@@ -1,6 +1,15 @@
+function threeRight(onOff) {
+  var x = document.getElementById("threeGoes");
+
+  if (onOff == "on") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function submitButtonClickHandler() {
     submitButtonClicked = true; 
-  
   
     if (submitButtonClicked) {
       // Remove click event listeners from other cells
@@ -8,7 +17,7 @@ function submitButtonClickHandler() {
         if (!selectedCells.includes(cell)) {
             cell.removeEventListener('click', toggleSelection);
         }})
-  
+
         // Now selectedCells has all the words selected,
         // check if selected cells match criteria
   
