@@ -36,7 +36,7 @@ body {
     @media only screen and (min-width : 1200px) {
         background-color: grey; 
         .grid {
-            margin: auto 16em 
+            margin: auto 20em ;
         }
     }
   } 
@@ -121,6 +121,17 @@ p {
     font-family: Arial, sans-serif;
     font-size: 13px;
   }
+  .button-container {
+    text-align: center; /* Center the inline-block elements */
+  }
+  /* Styling for the round buttons */
+.round-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /* Makes the button round */
+  margin: 0 5px; /* Adjust the spacing between buttons */
+border: thin;
+}
   #blob1 {
     border-radius: 50%;
     border: none;
@@ -130,7 +141,7 @@ p {
     text-decoration: none;
     /*display: inline-block;*/
     font-size: 16px;
-    left: 46%;
+    left: 47%;
     position: absolute;
     top: 65%;
   }
@@ -143,7 +154,7 @@ p {
     text-decoration: none;
     /*display: inline-block;*/
     font-size: 16px;
-    left: 48%;
+    left: 49%;
     position: absolute;
     top: 65%;
   }
@@ -156,7 +167,7 @@ p {
     text-decoration: none;
     /*display: inline-block;*/
     font-size: 16px;
-    left: 50%;
+    left: 51%;
     position: absolute;
     top: 65%;
   }
@@ -169,7 +180,7 @@ p {
     text-decoration: none;
     /*display: inline-block;*/
     font-size: 16px;
-    left: 52%;
+    left: 53%;
     position: absolute;
     top: 65%;
   }
@@ -182,7 +193,7 @@ p {
     text-decoration: none;
     /*display: inline-block;*/
     font-size: 16px;
-    left: 54%;
+    left: 55%;
     position: absolute;
     top: 65%;
   }
