@@ -1,11 +1,13 @@
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
-var whatCat=[];
-var whatWord=[];
+var whatCat = [];
+var whatWord = [];
 let cyanColor = "rgb(0, 255, 255)";
 let blueColor = "rgb(0, 0, 255)";
-let lightRedColor ="rgb( (255,114,118)";
+let lightRedColor = "rgb( (255,114,118)";
+let noOfAttempts = 4;
+let specialCase = false;
 
 threeRight("off");
 
@@ -15,14 +17,14 @@ const catsWords = [
   "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",
   "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"
 ];
-const longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
+var longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
 const words = catsWords.map(item => item.split('-')[1]);
-const shortCat=[];
+var shortCat = [];
 
-shortCat[0] =catsWords[0].split('-')[0];
-shortCat[1] =catsWords[4].split('-')[0];
-shortCat[2] =catsWords[8].split('-')[0];
-shortCat[3] =catsWords[12].split('-')[0];
+shortCat[0] = catsWords[0].split('-')[0];
+shortCat[1] = catsWords[4].split('-')[0];
+shortCat[2] = catsWords[8].split('-')[0];
+shortCat[3] = catsWords[12].split('-')[0];
 
 // Submit button functionality
 const submitButton = document.querySelector("#submit");
@@ -49,8 +51,8 @@ shuffleArray(words);
 var grid = document.getElementById("gridID");
 
 for (let i = 0; i < words.length; i++) {
-    var cell = document.getElementById("cell"+i);
-    cell.textContent = words[i];  
+  var cell = document.getElementById("cell" + i);
+  cell.textContent = words[i];
 }
 
 const wordElements = document.querySelectorAll('.cell');
@@ -59,70 +61,68 @@ wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
-var selectedCells = []; 
+var selectedCells = [];
 let selectedCount = 0;
 
 // Function to toggle cell selection
 function toggleSelection(event) {
   const selectedCell = event.target
   const selectedWord = selectedCell.innerText.trim();
-
- // Get the background color of the selected cell
- const computedStyle = window.getComputedStyle(selectedCell);
- const bgColor = computedStyle.getPropertyValue('background-color');
-
-  if (selectedCount >= 0 ) {
-    deselectButton.disabled=false;
-  } else {
-    deselectButton.disabled=true;
+  // Don't allow more than 4 selections (count starts at 0)
+  if (selectedCount > 3) {
+    return;
   }
-    // Check if the cell is already selected
+
+  // Get the background color of the selected cell
+  const computedStyle = window.getComputedStyle(selectedCell);
+  const bgColor = computedStyle.getPropertyValue('background-color');
+
+  if (selectedCount >= 0) {
+    deselectButton.disabled = false;
+  } else {
+    deselectButton.disabled = true;
+  }
+
+  // Check if the cell is already selected
+
   if (bgColor === cyanColor) {
     // Check if the maximum number of cells has been selected
-    if (selectedCount < 4 ); {
+    if (selectedCount <= 3); {
       selectedCells.push(selectedWord);
-      selectedCount++;
       selectedCell.style.backgroundColor = 'blue';
+      selectedCount++;
     }
   } else {
-      // Deselect the cell
-      selectedCell.classList.remove('selected');
-      selectedCount--;
-      selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
-      selectedCell.style.backgroundColor = 'cyan';     
+    // Deselect the cell
+    selectedCell.classList.remove('selected');
+    selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
+    selectedCell.style.backgroundColor = 'cyan';
+    selectedCount--;
+  }
+  // Check if the maximum number of cells has been selected
+  // has to be 4, not 3,  because incremented earlier
+  if (selectedCount == 4) {
+    submitButton.disabled = false;
+    // selectedCount = 0;
   }
 
-  // Check if the maximum number of cells has been selected
-  console.log(selectedCount);
-  if (selectedCount === 4) {
-    submitButton.disabled = false;
-  } 
-  
-
-/*   if (submitButtonClicked) {
-    // Remove click event listeners from other cells
-    wordElements.forEach(cell => {
-      if (!selectedCells.includes(cell)) {
-          cell.removeEventListener('click', toggleSelection);
-      }
-    });
-  } */
 }
 
 var submitButtonClicked = false;
 
- // Add click event listeners to the word cells
- wordElements.forEach(cell => {
+// Add click event listeners to the word cells
+wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
-  });
+});
 
 // Now selectedCells has all the words selected, check if selected cells match criteria
-function findCats(array){
+function findCats(array) {
   let a = 0, b = 0, c = 0, d = 0;
-  whatCat=[], whatWord=[];
-  
+  whatCat = [], whatWord = [];
+  letCat = "", letWord = "", letWhole = "";
+
   for (let i = 0; i < array.length; i++) {
-    letCat = "", letWord="", letWhole="";
+
     var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
     letWhole = catsWords[index];    // Store the whole cat/word
     letCat = letWhole.split('-')[0];   // Extract cat ....
@@ -132,15 +132,15 @@ function findCats(array){
         a++;
         break;
       case (letcat = shortCat[1]):
-        a=0;
+        //a=0;
         b++
         break;
       case (letCat = shortCat[2]):
-        a=0, b=0;
+        //a=0, b=0;
         c++;
         break;
       case (letCat = shortCat[3]):
-        a=0,b=0,c=0;
+        //a=0,b=0,c=0;
         d++;
         break;
     }
@@ -151,43 +151,69 @@ function findCats(array){
     whatWord[i];
   }
 
-  if ((a == 4) || (b == 4) || (c == 4) || (d == 4)); {
-    if (a == 4) { ;
-      fullCat =  longCat[0];
-      a=0
-    } else if (b == 4){;
+  if ((a == 4) || (b == 4) || (c == 4) || (d == 4)) {
+    if (a == 4) {
+      ;
+      fullCat = longCat[0];
+      a = 0
+    } else if (b == 4) {
+      ;
       fullCat = longCat[1];
-      b=0
-    } else if (c == 4){ ;
+      b = 0
+    } else if (c == 4) {
+      ;
       fullCat = longCat[2];
-      c=0
-    } else if (d == 4){;
+      c = 0
+    } else if (d == 4) {
+      ;
       fullCat = longCat[3];
-      d=0
+      d = 0
     }
+    selectedCells = [];
+  } else if ((a == 3) || (b == 3) || (c == 3) || (d == 3)) {
+    // Turn message on ...
+    threeRight("on");
+    // .. remove a button
+    if (noOfAttempts > 0) {
+      var x = document.getElementById("button" + noOfAttempts);
+      x.style.display = "none";
+      // Decrement attempts
+      noOfAttempts--;
+    }
+    // Add click event listeners to the cells
+    wordElements.forEach(cell => {
+      cell.addEventListener('click', toggleSelection);
+    });
+    selectedCells = [];
+    return;
+  } else {
+    wordElements.forEach(cell => {
+      cell.addEventListener('click', toggleSelection);
+    });
+    threeRight('off');
+    if (noOfAttempts > 0) {
+      var x = document.getElementById("button" + noOfAttempts);
+      x.style.display = "none";
+      noOfAttempts--;
+      selectedCells = [];
+    } else {
+      specialCase = true;
+      MergeCellsInRow(0);
+    }
+    return;
   }
-  if ((a == 3) || (b == 3) || (c == 3) || (d == 3)); {
-      threeRight("on");
-      return;
-  }
-  
+
   fullCat = fullCat + " - " + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
 
   //Empty selectconst selectedCells = []; 
   selectedCount = 0;
-  selectedCells = []; 
+  //selectedCells = []; 
   MergeCellsInRow(mergeRow);
 
+}
 
-  //wordElements = document.querySelectorAll('.cell');
-  // Add click event listeners to the cells
- /*  wordElements.forEach(cell => {
-    cell.addEventListener('click', toggleSelection);
-  }); */
-
-}  
-
-function resetAll() {;
+function resetAll() {
+  ;
   // Reset selection
   selectedCount = 0;
   for (let i = 0; i < selectedCells.length; i++) {
@@ -197,12 +223,13 @@ function resetAll() {;
     cell.classList.remove('selected');
   });
   selectedCells.length = 0;
-  submitButton.disabled = true; 
+  submitButton.disabled = true;
 
   // Re-add click event listeners to word cells
   wordElements.forEach(cell => {
-    if (!selectedCells.includes(cell)) { 
-      cell.addEventListener('click', toggleSelection)}
+    if (!selectedCells.includes(cell)) {
+      cell.addEventListener('click', toggleSelection)
+    }
   });
 }
 
@@ -211,6 +238,9 @@ function threeRight(onOff) {
 
   if (onOff == "on") {
     x.style.display = "block";
+    setTimeout(() => {
+      x.style.display = "none"
+    }, 1500);
   } else {
     x.style.display = "none";
   }
