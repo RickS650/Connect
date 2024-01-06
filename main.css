@@ -10,11 +10,12 @@ body {
     background-color: red;
 
     .grid {
-      margin: auto .4em;
+      margin: auto 10%;
     }
 
     submit {
       left: 70%;
+      top: 50%;
     }
   }
 
@@ -45,9 +46,14 @@ body {
       margin: auto 35%;
     }
 
+    #deselect {
+      top: 60%;
+      left: 25%;
+    }
+
     #submit {
       left: 65%;
-      top: 55%;
+      top: 60%;
     }
   }
 
