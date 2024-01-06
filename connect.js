@@ -20,6 +20,7 @@ const catsWords = [
 var longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
 const words = catsWords.map(item => item.split('-')[1]);
 var shortCat = [];
+const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
 
 shortCat[0] = catsWords[0].split('-')[0];
 shortCat[1] = catsWords[4].split('-')[0];

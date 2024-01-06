@@ -1,10 +1,17 @@
 // Assuming you want to merge cells
 function MergeCellsInRow(rowToMerge) {
-
   const rows = document.querySelectorAll('.row');
   var spanCell = document.getElementById("cell0");
   var mergedCell = document.getElementById("cell1");
 
+  if (specialCase = true) {
+    //console.log(noOfAttempts);
+    // TODO "Check no of attempts"
+    var x = document.getElementById("button1");
+    x.style.display = "none";
+    fail2Win();
+    return;
+  }
   switch (rowToMerge) {
     case 0:
       for (let i = 1; i <= 3; i++) {
@@ -28,7 +35,6 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell8");
       spanCell.style.backgroundColor = 'purple';
-      //xNum = 12;
       break;
     case 3:
       for (let i = 13; i <= 15; i++) {
@@ -37,7 +43,6 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell12");
       spanCell.style.backgroundColor = 'green';
-      //xNum = 16;
       break;
   }
 
@@ -47,44 +52,18 @@ function MergeCellsInRow(rowToMerge) {
   //spanCell.classList.add("col-span");
   spanCell.style.columnSpan = '3';
   spanCell.style.width = '700px'; // so did this instead
-
-  if (specialCase = false) {;
-    spanCell.textContent = fullCat;
-    mergeRow++;
-  } else {
-    // Load fulllCat
-    let longWords = "";
-    let x = 0, y = 0;
-    switch (mergeRow) {
-      case 0:
-        x = 0, y = 4;
-        break;
-      case 1:
-        x = 4, y = 8;
-        break;
-      case 2:
-        x = 8, y = 12;
-        break;
-      case 3:
-        // Deselect all
-        const wordElements = document.querySelectorAll('.cell');
-        for (let i = 0; i < wordElements.length; i++) {
-          if (wordElements[i].style.backgroundColor = 'blue') {
-            wordElements[i].style.backgroundColor = 'cyan';
-          }
-        }
-        deselectButton.disabled = true;
-        x = 12, y = 16;
-        break;
+  spanCell.textContent = fullCat;
+  mergeRow++;
+  for (let i = 0; i < wordElements.length; i++) {
+    if (wordElements[i].style.backgroundColor = 'blue') {
+      wordElements[i].style.backgroundColor = 'cyan';
     }
-    fullCat = fullCat[mergeRow] + " - " + whatWord[x] + ", " + whatWord[x + 1] + ", " + whatWord[x + 2] + ", " + whatWord[x + 3];
-    spanCell.textContent = fullCat;
-    return;
   }
+  deselectButton.disabled = true;
 
   reFormat(mergeRow * 4);
-
 }
+
 function reFormat(startNumber) {
   // First remove the words already picked from the words array. ....
   for (let i = 0; i < whatWord.length; i++) {
@@ -93,7 +72,6 @@ function reFormat(startNumber) {
       words.splice(index, 1);
     }
   }
-
   // then reshuffle whats left ....
   shuffleArray(words);
   // then reload the cells 
@@ -108,6 +86,60 @@ function reFormat(startNumber) {
   deselectButton.disabled = true;
 }
 
-//const selectedCells = [];
-//let selectedCount = 0;
-//const cellCount = [];
+// This function is used if the user has used up all lives.
+function fail2Win() {
+  const rows = document.querySelectorAll('.row');
+  var spanCell = document.getElementById("cell0");
+  var mergedCell = document.getElementById("cell1");
+
+  deselectButton.disabled = true;
+  // Remove eventListener for all cells
+  for (j = 0; j < 16; j++) {
+    spanCell = document.getElementById("cell" + j);
+    spanCell.removeEventListener('click', toggleSelection);
+    if (wordElements[j].style.backgroundColor = 'blue') {
+      wordElements[j].style.backgroundColor = 'cyan';
+    }
+  }
+  // Go round the loop for each row
+  for (j = 0; j < 4; j++) {
+    switch (j) {
+      case 0:
+        for (let i = 1; i <= 3; i++) {
+          mergedCell = document.getElementById("cell" + i);
+          mergedCell.remove();
+        }
+        spanCell = document.getElementById("cell0");
+        spanCell.style.backgroundColor = 'lightyellow';
+        break;
+      case 1:
+        for (let i = 5; i <= 7; i++) {
+          mergedCell = document.getElementById("cell" + i);
+          mergedCell.remove();
+        }
+        spanCell = document.getElementById("cell4");
+        spanCell.style.backgroundColor = "pink";
+        break;
+      case 2:
+        for (let i = 9; i <= 11; i++) {
+          mergedCell = document.getElementById("cell" + i);
+          mergedCell.remove();
+        }
+        spanCell = document.getElementById("cell8");
+        spanCell.style.backgroundColor = 'purple';
+        break;
+      case 3:
+        for (let i = 13; i <= 15; i++) {
+          mergedCell = document.getElementById("cell" + i);
+          mergedCell.remove();
+        }
+        spanCell = document.getElementById("cell12");
+        spanCell.style.backgroundColor = 'green';
+        break;
+    }
+    fullCat = longCat[j] + " - " + failWords[j] + ", " + failWords[j + 1] + ", " + failWords[j + 2] + ", " + failWords[j + 3];
+    spanCell.style.columnSpan = '3';
+    spanCell.style.width = '700px';
+    spanCell.textContent = fullCat;  
+  }
+}
