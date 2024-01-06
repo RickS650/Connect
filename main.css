@@ -1,218 +1,244 @@
 /* CSS for a 4x4 grid with cyan background */
 body {
-    /*margin:0;
+  /*margin:0;
     padding: 0;
     background-color: grey;*/
-/* 16px = 1em*/
+  /* 16px = 1em*/
 
-    /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 360px) {
-        background-color: red; 
-        .grid {
-            margin: auto .4em; 
-        }
-        submit {
-            left: 70%;
-        }
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width : 360px) {
+    background-color: red;
+
+    .grid {
+      margin: auto .4em;
     }
 
-    /* Small Devices, Tablets  */
-    @media only screen and (min-width : 720px) {    
-        background-color: purple; 
-        .grid {
-            margin: auto 20%; 
-        }
-        submit {
-          top: 50%;
-            left: 70%;
-        }
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
-        background-color: green; 
-        .grid {
-          margin: auto 30%; 
-      }
-      submit {
-          left: 70%;
-      }
-    }
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-        background-color: grey; 
-        .grid {
-            margin: auto 20em ;
-        }
-    }
-  } 
-
-.grid {
-    display: flex;
-    flex-direction: column; /* Display rows vertically */
-    grid-template-rows: repeat(4,3em);
-    grid-template-columns: repeat(4, 2fr); 
-    max-width: 50%; 
-    height: auto;
-    text-align: center;
-}
-
-.col-span{
-    grid-column: span 3;
-    background-color: lightyellow;
-    text-align: center;
-} 
- .row {
-    display: flex;
-    color: darkgoldenrod;
-    height: auto; 
-    text-align: center;
-    padding: 0; 
-    margin: 0;
-    cursor: pointer; 
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height:50px;
-    justify-content: center;
- }
-
-/* Draw a line */
-p{ 
-    text-align: center;
-    hr {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+    submit {
+      left: 70%;
     }
   }
 
+  /* Small Devices, Tablets  */
+  @media only screen and (min-width : 720px) {
+    background-color: purple;
+
+    .grid {
+      margin: auto 20%;
+    }
+
+    submit {
+      top: 20%;
+      left: 70%;
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    background-color: green;
+
+    .grid {
+      margin: auto 35%;
+    }
+
+    submit {
+      left: 70%;
+    }
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+    background-color: grey;
+
+    .grid {
+      margin: auto 20em;
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  /* Display rows vertically */
+  grid-template-rows: repeat(4, 3em);
+  grid-template-columns: repeat(4, 2fr);
+  max-width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+.col-span {
+  grid-column: span 3;
+  background-color: lightyellow;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  color: darkgoldenrod;
+  height: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  line-height: 50px;
+  justify-content: center;
+}
+
+/* Draw a line */
+p {
+  text-align: center;
+
+  hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .cell {
-    color: darkgoldenrod; 
-    background: cyan;
-    height: auto; 
-    width: 175px;
-    text-align: center;
-    padding: 0; 
-    margin: 0;
-    cursor: pointer; 
-    margin-bottom: 2px;
-    margin-right: 2px;
-    font-size: 0.9em;
-    line-height:50px;
-    justify-content: center;
-    font-weight: bold;
+  color: darkgoldenrod;
+  background: cyan;
+  height: auto;
+  width: 175px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  font-size: 0.9em;
+  line-height: 50px;
+  justify-content: center;
+  font-weight: bold;
 }
 
 p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color:white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
 }
 
 /* button */
- #submit {
-    border-radius: 8px;
-    border: 1px solid black;
-    position: absolute;
-    left: 65%;
-    top: 60%;
-    height: 2em;
-    width: 6em;
-    transform: translateX(-50%);
-    font-family: Arial, sans-serif;
-    font-size: 18px;
+#submit {
+  border-radius: 8px;
+  border: 1px solid black;
+  position: absolute;
+  left: 65%;
+  top: 60%;
+  height: 2em;
+  width: 6em;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.leftText {
+  p {
+    white-space: pre-line;
   }
-  .leftText{
-    p { white-space: pre-line; }
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-  }
-  .button-container {
-    text-align: center; /* Center the inline-block elements */
-  }
-  /* Styling for the round buttons */
+
+  font-family: Arial,
+  sans-serif;
+  font-size: 13px;
+}
+
+.button-container {
+  text-align: center;
+  /* Center the inline-block elements */
+}
+
+/* Styling for the round buttons */
 .round-button {
   width: 15px;
   height: 15px;
-  border-radius: 50%; /* Makes the button round */
-  margin: 0 5px; /* Adjust the spacing between buttons */
+  border-radius: 50%;
+  /* Makes the button round */
+  margin: 0 5px;
+  /* Adjust the spacing between buttons */
   border: thin;
 }
-  #blob1 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    font-size: 16px;
-    left: 47%;
-    position: absolute;
-    top: 65%;
-  }
-  #blob2 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    font-size: 16px;
-    left: 49%;
-    position: absolute;
-    top: 65%;
-  }
-  #blob3 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    font-size: 16px;
-    left: 51%;
-    position: absolute;
-    top: 65%;
-  }
-  #blob4 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    font-size: 16px;
-    left: 53%;
-    position: absolute;
-    top: 65%;
-  }
-  #blob5 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    /*display: inline-block;*/
-    font-size: 16px;
-    left: 55%;
-    position: absolute;
-    top: 65%;
-  }
-  #deselect {
-    border-radius: 8px;
-    border: 1px solid black;
-    position: absolute;
-    left: 35%;
-    top: 60%;
-    height: 2em;
-    width: auto;
-    transform: translateX(-50%);
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-  }
+
+#blob1 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 47%;
+  position: absolute;
+  top: 65%;
+}
+
+#blob2 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 49%;
+  position: absolute;
+  top: 65%;
+}
+
+#blob3 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 51%;
+  position: absolute;
+  top: 65%;
+}
+
+#blob4 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 53%;
+  position: absolute;
+  top: 65%;
+}
+
+#blob5 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  left: 55%;
+  position: absolute;
+  top: 65%;
+}
+
+#deselect {
+  border-radius: 8px;
+  border: 1px solid black;
+  position: absolute;
+  left: 35%;
+  top: 60%;
+  height: 2em;
+  width: auto;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
