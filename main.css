@@ -10,7 +10,7 @@ body {
     background-color: red;
 
     .grid {
-      margin: auto 10%;
+      margin: auto 20%;
     }
 
     submit {
@@ -48,7 +48,7 @@ body {
 
     #deselect {
       top: 60%;
-      left: 25%;
+      left: 30%;
     }
 
     #submit {
@@ -63,6 +63,10 @@ body {
 
     .grid {
       margin: auto 20em;
+    }
+    #submit {
+      top: 60%;
+      left: 65%;
     }
   }
 }
