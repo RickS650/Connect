@@ -8,7 +8,11 @@ body {
       margin: auto 20%;
     }
 
-    #submit {
+    .cell {
+      width: 200px;
+    }
+
+    #deselect {
       left: 25%;
       top: 60%;
     }
@@ -26,7 +30,9 @@ body {
     .grid {
       margin: auto 30%;
     }
-
+    .cell {
+      width: 175px;
+    }
     #deselect {
       top: 48%;
       left: 25%;
@@ -44,6 +50,10 @@ body {
 
     #grid {
       margin: auto 35%;
+    }
+
+    .cell {
+      width: 175px;
     }
 
     #deselect {
@@ -64,6 +74,11 @@ body {
     .grid {
       margin: auto 20em;
     }
+
+    .cell {
+      width: 175px;
+    }
+
     #submit {
       top: 60%;
       left: 65%;
@@ -117,7 +132,7 @@ p {
   color: darkgoldenrod;
   background: cyan;
   height: auto;
-  width: 175px;
+  /*width: 175px;*/
   text-align: center;
   padding: 0;
   margin: 0;
