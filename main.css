@@ -129,7 +129,7 @@ p {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
-  left: 65%;
+/*  left: 65%;m*/
 /*  top: 60%;*/
   height: 2em;
   width: 6em;
@@ -237,8 +237,8 @@ p {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
-  left: 35%;
-  top: 60%;
+  /* left: 35%; */
+  /* top: 60%; */
   height: 2em;
   width: auto;
   transform: translateX(-50%);
