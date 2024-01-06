@@ -4,7 +4,7 @@ function MergeCellsInRow(rowToMerge) {
   var spanCell = document.getElementById("cell0");
   var mergedCell = document.getElementById("cell1");
 
-  if (specialCase = true) {
+  if (specialCase == true) {
     //console.log(noOfAttempts);
     // TODO "Check no of attempts"
     var x = document.getElementById("button1");
@@ -12,12 +12,18 @@ function MergeCellsInRow(rowToMerge) {
     fail2Win();
     return;
   }
+  for (let i = 0; i < wordElements.length; i++) {
+    if (wordElements[i].style.backgroundColor = 'blue') {
+      wordElements[i].style.backgroundColor = 'cyan';
+    }
+  }
   switch (rowToMerge) {
     case 0:
       for (let i = 1; i <= 3; i++) {
         mergedCell = document.getElementById("cell" + i);
         mergedCell.remove();
       }
+      spanCell= document.getElementById("cell0");
       spanCell.style.backgroundColor = 'lightyellow';
       break;
     case 1:
@@ -46,22 +52,20 @@ function MergeCellsInRow(rowToMerge) {
       break;
   }
 
-  spanCell.removeEventListener('click', toggleSelection);
-  // Unable to get span to work
-  //const spanCell = document.getElementById("cell0");
-  //spanCell.classList.add("col-span");
-  spanCell.style.columnSpan = '3';
-  spanCell.style.width = '700px'; // so did this instead
-  spanCell.textContent = fullCat;
-  mergeRow++;
-  for (let i = 0; i < wordElements.length; i++) {
-    if (wordElements[i].style.backgroundColor = 'blue') {
-      wordElements[i].style.backgroundColor = 'cyan';
-    }
-  }
-  deselectButton.disabled = true;
+  if (specialCase == false) {
+    spanCell.removeEventListener('click', toggleSelection);
+    // Unable to get span to work
+    //const spanCell = document.getElementById("cell0");
+    //spanCell.classList.add("col-span");
+    spanCell.style.columnSpan = '3';
+    spanCell.style.width = '700px'; // so did this instead
+    spanCell.textContent = fullCat;
+    mergeRow++;
 
-  reFormat(mergeRow * 4);
+    deselectButton.disabled = true;
+
+    reFormat(mergeRow * 4);
+  }
 }
 
 function reFormat(startNumber) {
@@ -140,6 +144,6 @@ function fail2Win() {
     fullCat = longCat[j] + " - " + failWords[j] + ", " + failWords[j + 1] + ", " + failWords[j + 2] + ", " + failWords[j + 3];
     spanCell.style.columnSpan = '3';
     spanCell.style.width = '700px';
-    spanCell.textContent = fullCat;  
+    spanCell.textContent = fullCat;
   }
 }

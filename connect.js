@@ -123,7 +123,6 @@ function findCats(array) {
   letCat = "", letWord = "", letWhole = "";
 
   for (let i = 0; i < array.length; i++) {
-
     var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
     letWhole = catsWords[index];    // Store the whole cat/word
     letCat = letWhole.split('-')[0];   // Extract cat ....
@@ -151,7 +150,6 @@ function findCats(array) {
     whatWord.push(letWord);
     whatWord[i];
   }
-
   if ((a == 4) || (b == 4) || (c == 4) || (d == 4)) {
     if (a == 4) {
       ;
