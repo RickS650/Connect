@@ -26,8 +26,8 @@ body {
       margin: auto 20%;
     }
 
-    submit {
-      top: 20%;
+    #submit {
+      top: 40%;
       left: 70%;
     }
   }
