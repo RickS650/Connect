@@ -23,11 +23,11 @@ body {
     background-color: purple;
 
     .grid {
-      margin: auto 20%;
+      margin: auto 25%;
     }
 
     #submit {
-      top: 40%;
+      top: 45%;
       left: 70%;
     }
   }
