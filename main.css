@@ -126,7 +126,7 @@ p {
   border: 1px solid black;
   position: absolute;
   left: 65%;
-  top: 60%;
+/*  top: 60%;*/
   height: 2em;
   width: 6em;
   transform: translateX(-50%);
