@@ -40,7 +40,7 @@ body {
       margin: auto 35%;
     }
 
-    submit {
+    .submit {
       left: 70%;
     }
   }
@@ -121,7 +121,7 @@ p {
 }
 
 /* button */
-#submit {
+.submit {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
@@ -156,7 +156,6 @@ p {
   border-radius: 50%;
   /* Makes the button round */
   margin: 0 5px;
-  /* Adjust the spacing between buttons */
   border: thin;
 }
 
