@@ -26,12 +26,12 @@ body {
       margin: auto 30%;
     }
 
-    .deselect {
+    #deselect {
       top: 55%;
       left: 30%;
     }
 
-    .submit {
+    #submit {
       top: 55%;
       left: 70%;
     }
@@ -126,7 +126,7 @@ p {
 }
 
 /* button */
-.submit {
+#submit {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
@@ -234,7 +234,7 @@ p {
   top: 65%;
 }
 
-.deselect {
+#deselect {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
