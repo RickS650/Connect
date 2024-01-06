@@ -20,7 +20,7 @@ body {
     @media only screen and (min-width : 720px) {    
         background-color: purple; 
         .grid {
-            margin: auto .4em; 
+            margin: auto 14em; 
         }
         submit {
             left: 70%;
