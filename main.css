@@ -7,12 +7,12 @@ body {
     background-color: red;
 
     .grid {
-      margin: auto 200px;
+      /* margin: auto 200px; */
       grid-template-columns: 70px, 70px, 70px, 70px;
     }
 
     .cell {
-      width: 100px;
+      width: 70px;
     }
 
     #deselect {
