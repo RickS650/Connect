@@ -8,10 +8,10 @@ body {
 
     .grid {
       margin: auto 200px;
-      grid-template-columns: repeat( 4, minmax(70px, 75px) );
+      grid-template-columns: 70px, 70px, 70px, 70px;
     }
 
-    .grid .cell {
+    .cell {
       width: 100px;
     }
 
