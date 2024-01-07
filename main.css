@@ -3,7 +3,28 @@ body {
   /* Extra Small Devices, Phones */
   /* Samsung S23 (landscape) width 780px, height 360px. (red) */
   /* portrait width 360px, height 780 px */
+  @media only screen and (min-width : 320px) {
+    background-color: orange;
 
+    .grid {
+      /* margin: auto 200px; */
+      grid-template-columns: 20%, 20%, 20%, 20%;
+    }
+
+    .cell {
+      width: 20%;
+    }
+
+    #deselect {
+      left: 25%;
+      top: 70%;
+    }
+
+    #submit {
+      left: 60%;
+      top: 70%;
+    }
+  }
 
   /* Small Devices, Tablets  */
   @media only screen and (min-width : 720px) {
@@ -26,28 +47,6 @@ body {
     }
   }
 
-  @media only screen and (min-width : 320px) {
-    background-color: red;
-
-    .grid {
-      /* margin: auto 200px; */
-      grid-template-columns: 20%, 20%, 20%, 20%;
-    }
-
-    .cell {
-      width: 20%;
-    }
-
-    #deselect {
-      left: 25%;
-      top: 70%;
-    }
-
-    #submit {
-      left: 60%;
-      top: 70%;
-    }
-  }
   /* ipad air 3 width 834 height 1112px. (purple) */
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
