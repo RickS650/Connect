@@ -145,7 +145,8 @@ p {
   margin-right: 2px;
   font-size: 0.9em;
   line-height: 50px;
-  /* justify-content: center; */
+  box-sizing:border-box; /* Don't forget this !*/
+  justify-content: center;
   font-weight: bold;
 }
 
