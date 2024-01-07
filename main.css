@@ -1,11 +1,13 @@
 body {
 
   /* Extra Small Devices, Phones */
+  /* Samsung S23 (landscape) width 780px, height 360px. (red) */
+  /* portrait width 360px, height 780 px */
   @media only screen and (min-width : 360px) {
     background-color: red;
 
     .grid {
-      margin: auto 20%;
+      margin: auto 200px;
     }
 
     .grid .cell {
@@ -22,7 +24,7 @@ body {
       top: 60%;
     }
   }
-/* Samsung S23 width 780px, height 360px. (red) */
+
   /* Small Devices, Tablets  */
   @media only screen and (min-width : 720px) {
     background-color: purple;
