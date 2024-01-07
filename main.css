@@ -9,7 +9,7 @@ body {
     }
 
     .cell {
-      width: 200px;
+      width: 100px;
     }
 
     #deselect {
@@ -22,7 +22,7 @@ body {
       top: 60%;
     }
   }
-
+/* Samsung S23 width 780px, height 360px. (red) */
   /* Small Devices, Tablets  */
   @media only screen and (min-width : 720px) {
     background-color: purple;
@@ -44,6 +44,7 @@ body {
     }
   }
 
+  /* ipad air 3 width 834 height 1112px. (purple) */
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
     background-color: green;

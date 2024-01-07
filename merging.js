@@ -12,21 +12,23 @@ function MergeCellsInRow(rowToMerge) {
     fail2Win();
     return;
   }
-  for (let i = 0; i < wordElements.length; i++) {
-    if (wordElements[i].style.backgroundColor = 'blue') {
-      wordElements[i].style.backgroundColor = 'cyan';
-    }
-  }
+
   switch (rowToMerge) {
     case 0:
+      for (let i = 4; i < wordElements.length; i++) {
+        wordElements[i].style.backgroundColor = 'cyan';
+      }
       for (let i = 1; i <= 3; i++) {
         mergedCell = document.getElementById("cell" + i);
         mergedCell.remove();
       }
-      spanCell= document.getElementById("cell0");
+      spanCell = document.getElementById("cell0");
       spanCell.style.backgroundColor = 'lightyellow';
       break;
     case 1:
+      for (let i = 8; i < wordElements.length; i++) {
+        wordElements[i].style.backgroundColor = 'cyan';
+      }
       for (let i = 5; i <= 7; i++) {
         mergedCell = document.getElementById("cell" + i);
         mergedCell.remove();
@@ -35,6 +37,9 @@ function MergeCellsInRow(rowToMerge) {
       spanCell.style.backgroundColor = "pink";
       break;
     case 2:
+      for (let i = 10; i < wordElements.length; i++) {
+        wordElements[i].style.backgroundColor = 'cyan';
+      }
       for (let i = 9; i <= 11; i++) {
         mergedCell = document.getElementById("cell" + i);
         mergedCell.remove();
