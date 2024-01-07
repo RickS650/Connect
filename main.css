@@ -7,22 +7,23 @@ body {
     background-color: orange;
 
     .grid {
-      /* margin: auto 200px; */
-      grid-template-columns: 20%, 20%, 20%, 20%;
+      margin: auto 25%;
+      grid-template-columns: 25%, 25%, 25%, 25%;
+
     }
 
     .cell {
-      width: 20%;
+      width: 30%;
     }
 
     #deselect {
       left: 25%;
-      top: 70%;
+      top: 75%;
     }
 
     #submit {
       left: 60%;
-      top: 70%;
+      top: 75%;
     }
   }
 
