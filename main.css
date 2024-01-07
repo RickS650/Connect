@@ -142,7 +142,7 @@ p {
   margin-right: 2px;
   font-size: 0.9em;
   line-height: 50px;
-  justify-content: center;
+  /* justify-content: center; */
   font-weight: bold;
 }
 
