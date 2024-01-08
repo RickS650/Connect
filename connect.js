@@ -1,5 +1,3 @@
-
-
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
