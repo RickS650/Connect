@@ -7,9 +7,9 @@ body {
     background-color: orange;
 
     .grid {
-      margin: auto 10%;
-      grid-template-columns: 19vw, 19vw, 19vw, 19vw;
-
+      margin: auto 5%;
+      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+      font-size: 15px;
     }
 
     .cell {
