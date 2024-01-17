@@ -2,7 +2,7 @@ body {
 
   /* Extra Small Devices, Phones */
   /* Samsung phones */
-  @media only screen and (min-width : 720px) {
+  @media only screen and (min-width : 720px) { /* Landscape 1410 */
     background-color: orange;
 
     .grid {
@@ -17,12 +17,12 @@ body {
 
     #deselect {
       left: 25%;
-      top: 40%;
+      top: 410px;
     }
 
     #submit {
       left: 70%;
-      top: 40%;
+      top: 410px;
     }
   }
 
