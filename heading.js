@@ -11,16 +11,16 @@
         function handleOrientationChange() {
             // Portrait mode
             if (mediaQueryPortrait.matches) {
-                const screenWidth = window.screen.width;
-                const screenHeight = window.screen.height;
-                alert(`Portrait Screen width: ${screenWidth}px`);
-                alert(`Portrait Screen height: ${screenHeight}px`);
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                alert(`Portrait Viewport width: ${viewportWidth}px`);
+                alert(`Portrait Viewport height: ${viewportHeight}px`);
             } else if (mediaQueryLandscape.matches) {
                 // Landscape mode
-                const screenWidth = window.screen.width;
-                const screenHeight = window.screen.height;
-                alert(`Landscape Screen width: ${screenWidth}px`);
-                alert(`Landscape Screen height: ${screenHeight}px`);
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                alert(`Landscape Viewport width: ${viewportWidth}px`);
+                alert(`Landscape Viewport height: ${viewportHeight}px`);
             }
         }
     
