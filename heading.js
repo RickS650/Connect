@@ -23,11 +23,10 @@ function handleOrientationChange() {
     alert(`Screen height: ${screenHeight}px`);
   }
 }
-
+});
 // Initial check
 handleOrientationChange();
 
 // Listen for orientation changes
 mediaQueryPortrait.addEventListener("change", handleOrientationChange);
 mediaQueryLandscape.addEventListener("change", handleOrientationChange);
-});
