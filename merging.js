@@ -81,7 +81,7 @@ function reFormat(startNumber) {
       words.splice(index, 1);
     }
   }
-  // then reshuffle whats left ....
+  // then reshuffle what's left ....
   shuffleArray(words);
   // then reload the cells 
   for (let i = 0; i < words.length; i++) {
@@ -106,9 +106,7 @@ function fail2Win() {
   for (j = 0; j < 16; j++) {
     spanCell = document.getElementById("cell" + j);
     spanCell.removeEventListener('click', toggleSelection);
-    if (wordElements[j].style.backgroundColor = 'blue') {
-      wordElements[j].style.backgroundColor = 'cyan';
-    }
+    wordElements[j].style.backgroundColor = 'cyan';
   }
   // Go round the loop for each row
   for (j = 0; j < 4; j++) {

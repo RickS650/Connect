@@ -1,3 +1,29 @@
+// Start of network stuff
+/* const mysql = require('mysql2');
+
+// Create a connection pool
+const pool = mysql.createPool({
+ host: 'your_mysql_host',
+ user: 'your_mysql_user',
+ password: 'your_mysql_password',
+ database: 'your_mysql_database',
+ waitForConnections: true,
+ connectionLimit: 10,
+ queueLimit: 0
+});
+
+// Execute a query
+pool.query('SELECT * FROM your_table', (error, results, fields) => {
+ if (error) {
+ console.error(error);
+ } else {
+ console.log(results);
+ }
+});
+
+// Close the connection pool when done
+pool.end(); */
+
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;

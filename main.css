@@ -2,7 +2,7 @@ body {
 
   /* Extra Small Devices, Phones */
   /* Samsung S23 (landscape) width 780px, height 360px. (red) */
-  /* portrait width 360px, height 780 px */
+
   @media only screen and (min-width : 320px) {
     background-color: orange;
 
@@ -18,12 +18,36 @@ body {
 
     #deselect {
       left: 25%;
-      top: 75%;
+      top: 80%;
     }
 
     #submit {
       left: 60%;
-      top: 75%;
+      top: 80%;
+    }
+  }
+
+  @media only screen and (min-width : 780px) {
+    background-color: red;
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 30%;
+    }
+
+    #deselect {
+      left: 25%;
+      top: 80%;
+    }
+
+    #submit {
+      left: 60%;
+      top: 80%;
     }
   }
 
