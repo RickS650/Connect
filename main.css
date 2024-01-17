@@ -1,9 +1,8 @@
 body {
 
   /* Extra Small Devices, Phones */
-  /* Samsung S23 (landscape) width 780px, height 360px. (red) */
-
-  @media only screen and (min-width : 320px) {
+  /* Samsung phones */
+  @media only screen and (min-width : 720px) {
     background-color: orange;
 
     .grid {
