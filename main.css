@@ -79,8 +79,7 @@ body {
 
   /* Small Devices, Tablets, iPad (Portrait) */
   @media only screen and (min-width : 834px) {
-    background-color: lightblue;
-
+    background-color: green;
     .grid {
       margin: auto 30%;
     }
