@@ -83,7 +83,7 @@ body {
 
     .grid {
       margin: auto 30%;
-      grid-template-columns: 31vw, 31vw, 31vw, 31vw;
+      grid-template-columns: 70vw, 70vw, 70vw, 70vw;
       font-size: 15px;
     }
 
