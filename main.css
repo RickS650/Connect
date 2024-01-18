@@ -2,7 +2,7 @@ body {
 
   /* Extra Small Devices, Phones */
   /* Samsung portrait phones */
-  @media only screen and (min-width : 720px) { 
+  @media only screen and (min-width : 720px) {
     background-color: lightblue;
 
     .grid {
@@ -27,7 +27,7 @@ body {
   }
 
   /* Landscape Samsung */
-  @media only screen and (min-width : 1410px) { 
+  @media only screen and (min-width : 1410px) {
     background-color: lightblue;
 
     .grid {
@@ -58,12 +58,12 @@ body {
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+      grid-template-columns: 31vw, 31vw, 31vw, 31vw;
       font-size: 15px;
     }
 
     .cell {
-      width: 30%;
+      width: 40%;
     }
 
     #deselect {
@@ -79,21 +79,24 @@ body {
 
   /* Small Devices, Tablets, iPad (Portrait) */
   @media only screen and (min-width : 834px) {
-    background-color: green;
+    background-color: lightblue;
+
     .grid {
       margin: auto 30%;
     }
+
     .cell {
       width: 175px;
     }
+
     #deselect {
-      top: 71vw;
-      left: 25%;
+      left: 25vw;
+      top: 50vw;
     }
 
     #submit {
-      top: 71vw;
-      left: 58%;
+      left: 58vw;
+      top: 50vw;
     }
   }
 
@@ -138,7 +141,7 @@ body {
       left: 65%;
     }
   } */
-} 
+}
 
 .grid {
   display: flex;
@@ -196,7 +199,8 @@ p {
   margin-right: 2px;
   font-size: 0.9em;
   line-height: 50px;
-  box-sizing:border-box; /* Don't forget this !*/
+  box-sizing: border-box;
+  /* Don't forget this !*/
   justify-content: center;
   font-weight: bold;
   border-radius: 8px;
@@ -227,7 +231,8 @@ p {
     white-space: pre-line;
   }
 
-  font-family: Arial, sans-serif;
+  font-family: Arial,
+  sans-serif;
   font-size: 13px;
 }
 
