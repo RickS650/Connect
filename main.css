@@ -58,7 +58,7 @@ body {
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: 31vw, 31vw, 31vw, 31vw;
+      grid-template-columns: 80vw, 80vw, 80vw, 80vw;
       font-size: 15px;
     }
 
@@ -72,7 +72,7 @@ body {
     }
 
     #submit {
-      left: 70%;
+      left: 80%;
       top: 71vw;
     }
   }
