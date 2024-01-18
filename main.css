@@ -54,25 +54,25 @@ body {
 
   /* iPhone portrait */
   @media only screen and (min-width : 780px) {
-    background-color: lightgreen;
+    background-color: lightblue;
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: 50vw, 50vw, 50vw, 50vw;
+      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
       font-size: 15px;
     }
 
     .cell {
-      width: 40%;
+      width: 30%;
     }
 
     #deselect {
-      left: 25vw;
+      left: 25%;
       top: 71vw;
     }
 
     #submit {
-      left: 90vw;
+      left: 70%;
       top: 71vw;
     }
   }
@@ -83,6 +83,8 @@ body {
 
     .grid {
       margin: auto 30%;
+      grid-template-columns: 31vw, 31vw, 31vw, 31vw;
+      font-size: 15px;
     }
 
     .cell {
@@ -95,7 +97,7 @@ body {
     }
 
     #submit {
-      left: 58vw;
+      left: 70vw;
       top: 50vw;
     }
   }
