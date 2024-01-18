@@ -104,7 +104,7 @@ body {
 
   /* Tablets, iPad (Landscape) */
   @media only screen and (min-width : 1112px) {
-    background-color: lightgreen;
+    background-color: lightblue;
 
     .grid {
       margin: auto 5%;
@@ -127,9 +127,9 @@ body {
     }
   }
 
-  /* Large Devices, Wide Screens */
-  /* @media only screen and (min-width : 1200px) {
-    background-color: grey;
+  /* Large Devices, Wide Screens, Laptops*/
+  @media only screen and (min-width : 1200px) {
+    background-color: lightblue;
 
     .grid {
       margin: auto 20em;
@@ -143,16 +143,13 @@ body {
       top: 60%;
       left: 65%;
     }
-  } */
+  }
 }
 
 .grid {
   display: flex;
   flex-direction: column;
   /* Display rows vertically */
-  /* grid-template-rows: repeat(4, 3em); */
-  /* grid-template-columns: repeat(4, 2fr); */
-  /* grid-template-columns: repeat( 4, minmax(70px, 5fr) ); */
   max-width: 90%;
   height: auto;
   text-align: center;
@@ -193,17 +190,14 @@ p {
   color: darkgoldenrod;
   background: cyan;
   height: auto;
-  /*width: 175px;*/
   text-align: center;
   padding: 0;
   margin: 0;
   cursor: pointer;
   margin-bottom: 2px;
   margin-right: 2px;
-  /* font-size: 0.9em; */
   line-height: 50px;
   box-sizing: border-box;
-  /* Don't forget this !*/
   justify-content: center;
   font-weight: bold;
   border-radius: 8px;
@@ -220,11 +214,8 @@ p {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
-  /*  left: 65%;m*/
-  /*  top: 60%;*/
   height: 2em;
   width: 6em;
-  /*transform: translateX(-50%);*/
   font-family: Arial, sans-serif;
   font-size: 18px;
 }
@@ -241,7 +232,6 @@ p {
 
 .button-container {
   text-align: center;
-  /* Center the inline-block elements */
 }
 
 /* Styling for the round buttons */
@@ -249,7 +239,6 @@ p {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  /* Makes the button round */
   margin: 0 5px;
   border: thin;
 }
@@ -261,7 +250,6 @@ p {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
   font-size: 16px;
   left: 47%;
   position: absolute;
@@ -275,7 +263,6 @@ p {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
   font-size: 16px;
   left: 49%;
   position: absolute;
@@ -289,7 +276,6 @@ p {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
   font-size: 16px;
   left: 51%;
   position: absolute;
@@ -303,7 +289,6 @@ p {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
   font-size: 16px;
   left: 53%;
   position: absolute;
@@ -317,7 +302,6 @@ p {
   padding: 5px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
   font-size: 16px;
   left: 55%;
   position: absolute;
@@ -328,8 +312,6 @@ p {
   border-radius: 8px;
   border: 1px solid black;
   position: absolute;
-  /* left: 35%; */
-  /* top: 60%; */
   height: 2em;
   width: auto;
   transform: translateX(-50%);
