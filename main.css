@@ -108,7 +108,7 @@ body {
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
+      grid-template-columns: repeat(4, 95vw);
       font-size: 15px;
     }
 
@@ -118,12 +118,12 @@ body {
 
     #deselect {
       left: 25vw;
-      top: 40vw;
+      top: 35vw;
     }
 
     #submit {
       left: 70vw;
-      top: 40vw;
+      top: 35vw;
     }
   }
 
