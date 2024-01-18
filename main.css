@@ -79,7 +79,7 @@ body {
 
   /* Tablets, iPad (Portrait) */
   @media only screen and (min-width : 834px) {
-    background-color: lightgreen;
+    background-color: lightblue;
 
     .grid {
       margin: auto 5%;
@@ -102,29 +102,30 @@ body {
     }
   }
 
-  /* ipad air 3 width 834 height 1112px. (purple) */
-  /* Medium Devices, Desktops */
-  /* @media only screen and (min-width : 992px) {
-    background-color: green;
+  /* Tablets, iPad (Landscape) */
+  @media only screen and (min-width : 1112px) {
+    background-color: lightgreen;
 
     .grid {
-      margin: auto 35%;
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
     }
 
     .cell {
-      width: 175px;
+      width: 85vw;
     }
 
     #deselect {
-      top: 60%;
-      left: 30%;
+      left: 25vw;
+      top: 40vw;
     }
 
     #submit {
-      left: 65%;
-      top: 60%;
+      left: 70vw;
+      top: 40vw;
     }
-  } */
+  }
 
   /* Large Devices, Wide Screens */
   /* @media only screen and (min-width : 1200px) {
