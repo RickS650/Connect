@@ -83,8 +83,8 @@ body {
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: repeat(4,90vw);
-      font-size: 30px;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
     }
 
     .cell {
