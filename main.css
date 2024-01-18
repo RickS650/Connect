@@ -77,9 +77,9 @@ body {
     }
   }
 
-  /* Small Devices, Tablets  */
-/*   @media only screen and (min-width : 720px) {
-    background-color: purple;
+  /* Small Devices, Tablets, iPad */
+  @media only screen and (min-width : 834px) {
+    background-color: lightblue;
 
     .grid {
       margin: auto 30%;
@@ -96,7 +96,7 @@ body {
       top: 48%;
       left: 58%;
     }
-  } */
+  }
 
   /* ipad air 3 width 834 height 1112px. (purple) */
   /* Medium Devices, Desktops */
