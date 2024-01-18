@@ -58,7 +58,7 @@ body {
 
     .grid {
       margin: auto 5%;
-      grid-template-columns: 80vw, 80vw, 80vw, 80vw;
+      grid-template-columns: 180vw, 180vw, 180vw, 180vw;
       font-size: 15px;
     }
 
@@ -67,12 +67,12 @@ body {
     }
 
     #deselect {
-      left: 25%;
+      left: 25vw;
       top: 71vw;
     }
 
     #submit {
-      left: 80%;
+      left: 90vw;
       top: 71vw;
     }
   }
