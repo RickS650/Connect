@@ -77,13 +77,13 @@ body {
     }
   }
 
-  /* Small Devices, Tablets, iPad (Portrait) */
+  /* Tablets, iPad (Portrait) */
   @media only screen and (min-width : 834px) {
     background-color: lightgreen;
 
     .grid {
-      margin: auto 30%;
-      grid-template-columns: 70vw, 70vw, 70vw, 70vw;
+      margin: auto 5%;
+      grid-template-columns: 90vw, 90vw, 90vw, 90vw;
       font-size: 15px;
     }
 
