@@ -68,14 +68,40 @@ body {
 
     #deselect {
       left: 25%;
-      top: 56vw;
+      top: 55vw;
     }
 
     #submit {
       left: 70%;
-      top: 56vw;
+      top: 55vw;
     }
   }
+
+    /* iPhone landscape */
+    @media only screen and (min-width : 1500px) {
+      background-color: lightblue;
+  
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        font-size: 15px;
+      }
+  
+      .cell {
+        width: 30%;
+      }
+  
+      #deselect {
+        left: 25%;
+        top: 55vw;
+      }
+  
+      #submit {
+        left: 70%;
+        top: 55vw;
+      }
+    }
+
 
   /* Tablets, iPad (Portrait) */
   @media only screen and (min-width : 834px) {
