@@ -1,12 +1,13 @@
 // Start of network stuff
-/* require('dotenv').config();
+// import mysql from 'mysql2';
+import { createPool } from './MySQL';
+console.log("here");
+require('dotenv').config();
 
 const dbHost = process.env.DB_HOST;
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASSWORD;
 const dbDatabase = process.env.DB_DATABASE;
-
-import { createPool } from 'mysql';
 
 // Create a connection pool
 const pool = createPool({
@@ -30,7 +31,7 @@ pool.query('SELECT * FROM MainItems', (error, results, fields) => {
 
 // Close the connection pool when done
 pool.end();
- */
+
 
 
 
