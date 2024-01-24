@@ -1,7 +1,6 @@
 // Start of network stuff
-// import mysql from 'mysql2';
-import { createPool } from './MySQL';
-console.log("here");
+
+/* import { createPool } from './MySQL.js';
 require('dotenv').config();
 
 const dbHost = process.env.DB_HOST;
@@ -31,10 +30,7 @@ pool.query('SELECT * FROM MainItems', (error, results, fields) => {
 
 // Close the connection pool when done
 pool.end();
-
-
-
-
+ */
 var completedRows = 0;
 var fullCat = "";
 var mergeRow = 0;
@@ -45,6 +41,34 @@ let blueColor = "rgb(0, 0, 255)";
 let lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
 let specialCase = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('http://localhost:8080')
+      .then(response => response.json())
+      .then(data => {
+          const table = document.getElementById('LoadItems'); 
+          const dataArray = []; // Array to store td.textContent values
+
+          data.forEach(row => {
+              const tr = document.createElement('tr');
+
+              Object.values(row).forEach(value => {
+                  const td = document.createElement('td');
+                  td.textContent = value;
+                  tr.appendChild(td);
+
+                  // Store the td.textContent value in the array
+                  dataArray.push(value);
+              });
+
+              table.appendChild(tr);
+          });
+
+          // Now, dataArray contains all the td.textContent values
+          console.log(dataArray);
+      })
+      .catch(error => console.error(error));
+});
 
 threeRight("off");
 
