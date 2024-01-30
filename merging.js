@@ -1,12 +1,13 @@
-// Assuming you want to merge cells
+// Assuming you want to merge cell
+
 function MergeCellsInRow(rowToMerge) {
   const rows = document.querySelectorAll('.row');
   var spanCell = document.getElementById("cell0");
   var mergedCell = document.getElementById("cell1");
+  var cellWidth = "700px";
 
   if (specialCase == true) {
-    //console.log(noOfAttempts);
-    // TODO "Check no of attempts"
+
     var x = document.getElementById("button1");
     x.style.display = "none";
     fail2Win();
@@ -23,7 +24,7 @@ function MergeCellsInRow(rowToMerge) {
         mergedCell = document.getElementById("cell" + i);
         mergedCell.remove();
       }
-      spanCell= document.getElementById("cell0");
+      spanCell = document.getElementById("cell0");
       spanCell.style.backgroundColor = 'lightyellow';
       break;
     case 1:
@@ -56,10 +57,17 @@ function MergeCellsInRow(rowToMerge) {
     spanCell.removeEventListener('click', toggleSelection);
     // Unable to get span to work
     //const spanCell = document.getElementById("cell0");
-    //spanCell.classList.add("col-span");
+    //spanCell.classList.add("col-span");   
     spanCell.style.columnSpan = '3';
-    spanCell.style.width = '700px'; // so did this instead
+    spanCell.style.width = cellWidth; // so did this instead
     spanCell.textContent = fullCat;
+
+    // Set the new height of the row
+/*     const currentHeight = spanCell.clientHeight;
+    const newHeight = currentHeight * 1.2;
+    spanCell.style.height = newHeight + 'px';
+    spanCell.style.whiteSpace = "pre"; */
+
     mergeRow++;
 
     deselectButton.disabled = true;
@@ -141,9 +149,10 @@ function fail2Win() {
         spanCell.style.backgroundColor = 'green';
         break;
     }
-    fullCat = longCat[j] + " - " + failWords[j] + ", " + failWords[j + 1] + ", " + failWords[j + 2] + ", " + failWords[j + 3];
+    fullCat = longCat[j] + "\n" + failWords[j] + ", " + failWords[j + 1] + ", " + failWords[j + 2] + ", " + failWords[j + 3];
     spanCell.style.columnSpan = '3';
     spanCell.style.width = '700px';
     spanCell.textContent = fullCat;
   }
+
 }

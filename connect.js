@@ -12,12 +12,12 @@ let specialCase = false;
 threeRight("off");
 
 const catsWords = [
-  "fruits-Apple", "fruits-Banana", "fruits-Orange", "fruits-Grapefruit",
-  "animals-Dog", "animals-Elephant", "animals-Cat", "animals-Lion",
+  "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
+  "WALLS-HADRIAN", "WALLS-WAILING", "WALLS-BERLIN", "WALLS-CHINA",
   "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",
   "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"
 ];
-var longCat = ["Types of fruit", "Types of animals", "Types of objects", "Types of nature"]
+var longCat = ["BLACK .... ", "FAMOUS WALLS - ", "Types of objects - ", "Types of nature - "]
 const words = catsWords.map(item => item.split('-')[1]);
 var shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
@@ -202,7 +202,7 @@ function findCats(array) {
     return;
   }
 
-  fullCat = fullCat + " - " + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
+  fullCat = fullCat + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
 
   //Empty selectconst selectedCells = []; 
   selectedCount = 0;
@@ -244,32 +244,3 @@ function threeRight(onOff) {
     x.style.display = "none";
   }
 }
-/* document.addEventListener('DOMContentLoaded', function() {
-  // Your code that manipulates the DOM goes here
-  mergeCellsInRow(); // Call the function that operates on DOM elements
-});
-
-function mergeCellsInRow(rowToMerge) {
-  const rows = document.querySelectorAll('.row');
-  const cellsToMerge = rows[rowToMerge].querySelectorAll('.cell'); // Change index as needed
-
-  // Remove existing cells in the row
-  cellsToMerge.forEach(cell => {
-    cell.remove();
-  });
-
-  // Create a new merged cell
-  const newRow = document.createElement('div');
-  newRow.classList.add('row');
-
-  const mergedCell = document.createElement('div');
-  mergedCell.classList.add('cell', 'merged-cell');
-  mergedCell.textContent = longCat;
-
-  newRow.appendChild(mergedCell);
-
-  // Insert the new row with the merged cell
-  const grid = document.querySelector('.grid');
-  grid.insertBefore(newRow, rows[rowToMerge+1]); 
-  mergeRow ++;
-} */

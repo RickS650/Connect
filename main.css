@@ -182,6 +182,7 @@ body {
     /* Display rows vertically */
     max-width: 90%;
     height: auto;
+    align-items: center;
     text-align: center;
   }
   
