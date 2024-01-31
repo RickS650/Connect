@@ -1,10 +1,10 @@
 body {
 
  
-    /* Extra Small Devices, Phones */
+   /* Extra Small Devices, Phones */
     /* Samsung portrait phones */
-    @media only screen and  (min-width : 720px) {
-      background-color: red;
+    @media only screen and (min-width : 720px) {
+      background-color: lightblue;
   
       .grid {
         margin: auto 5%;
@@ -29,7 +29,7 @@ body {
   
     /* Landscape Samsung */
     @media only screen and (min-width : 1410px) {
-      background-color:green;
+      background-color: lightgreen;
   
       .grid {
         margin: auto 5%;
@@ -38,7 +38,7 @@ body {
       }
   
       .cell {
-        width: 75vw;
+        width: 30%;
       }
   
       #deselect {
@@ -64,7 +64,7 @@ body {
       }
   
       .cell {
-        width: 33vw;
+        width: 30%;
       }
   
       #deselect {
@@ -103,6 +103,56 @@ body {
         }
       }
   
+  
+    /* Tablets, iPad (Portrait) */
+    @media only screen and (min-width : 834px) {
+      background-color: lightblue;
+  
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: repeat(4, 90vw);
+        font-size: 15px;
+      }
+  
+      .cell {
+        width: 85vw;
+      }
+  
+      #deselect {
+        left: 25vw;
+        top: 50vw;
+      }
+  
+      #submit {
+        left: 70vw;
+        top: 50vw;
+      }
+    }
+  
+    /* Tablets, iPad (Landscape) */
+    @media only screen and (min-width : 1112px) {
+      background-color: lightblue;
+  
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: repeat(4, 95vw);
+        font-size: 18px;
+      }
+  
+      .cell {
+        width: 85vw;
+      }
+  
+      #deselect {
+        left: 25vw;
+        top: 38vw;
+      }
+  
+      #submit {
+        left: 70vw;
+        top: 38vw;
+      }
+    }
     /* Large Devices, Wide Screens, Laptops*/
     @media only screen and (min-width : 1200px) {
       background-color: lightblue;
