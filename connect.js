@@ -14,13 +14,20 @@ threeRight("off");
 /* let person = prompt("Please enter your name", "");
 
 if (person != null) {
-console.log(person);
-} */
+  document.cookie = "username=" + person;
+} 
+const userName=["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Vic"]
+const notFound = !userName.includes('person'); /* Returns true if not a user
+if (notFound) {
+  return;
+}
+// Ok we are in so carry on 
+*/
 
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent =  displayDate+" ver iPad.l" ;
+const existingContent = displayDate + " ver iPad.l";
 
 document.getElementById('datetime').innerHTML = existingContent;
 

@@ -115,17 +115,17 @@ body {
       }
   
       .cell {
-        width: 92vw;
+        width: 46vw;
       }
   
       #deselect {
         left: 25vw;
-        top: 60vw;
+        top: 50vw;
       }
   
       #submit {
         left: 70vw;
-        top: 60vw;
+        top: 50vw;
       }
     }
   
