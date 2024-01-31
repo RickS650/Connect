@@ -4,7 +4,7 @@ body {
     /* Extra Small Devices, Phones */
     /* Samsung portrait phones */
     @media only screen and (min-width : 720px) {
-      background-color: lightblue;
+      background-color: red;
   
       .grid {
         margin: auto 5%;
@@ -13,7 +13,7 @@ body {
       }
   
       .cell {
-        width: 33vw;
+        width: 55vw;
       }
   
       #deselect {
