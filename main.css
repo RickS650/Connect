@@ -13,7 +13,7 @@ body {
       }
   
       .cell {
-        width: 55vw;
+        width: 30%;
       }
   
       #deselect {
@@ -29,7 +29,7 @@ body {
   
     /* Landscape Samsung */
     @media only screen and (min-width : 1410px) {
-      background-color: lightgreen;
+      background-color:green;
   
       .grid {
         margin: auto 5%;
