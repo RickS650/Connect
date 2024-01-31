@@ -11,6 +11,17 @@ let specialCase = false;
 
 threeRight("off");
 
+/* let person = prompt("Please enter your name", "");
+
+if (person != null) {
+console.log(person);
+} */
+
+var date = new Date();
+var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+var displayDate = date.toLocaleDateString('en-GB', options);
+document.getElementById('datetime').innerHTML = displayDate;
+
 const catsWords = [
   "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
   "WALLS-HADRIAN", "WALLS-WAILING", "WALLS-BERLIN", "WALLS-CHINA",
