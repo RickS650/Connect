@@ -1,5 +1,6 @@
 body {
 
+ 
     /* Extra Small Devices, Phones */
     /* Samsung portrait phones */
     @media only screen and (min-width : 720px) {
@@ -12,7 +13,7 @@ body {
       }
   
       .cell {
-        width: 30%;
+        width: 18vw;
       }
   
       #deselect {
@@ -37,7 +38,7 @@ body {
       }
   
       .cell {
-        width: 30%;
+        width: 75vw;
       }
   
       #deselect {
