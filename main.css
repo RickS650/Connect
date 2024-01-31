@@ -1,84 +1,59 @@
 body {
 
-  /* Extra Small Devices, Phones */
-  /* Samsung portrait phones */
-  @media only screen and (min-width : 720px) {
-    background-color: lightblue;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
-      font-size: 15px;
+    /* Extra Small Devices, Phones */
+    /* Samsung portrait phones */
+    @media only screen and (min-width : 720px) {
+      background-color: lightblue;
+  
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        font-size: 15px;
+      }
+  
+      .cell {
+        width: 30%;
+      }
+  
+      #deselect {
+        left: 25%;
+        top: 71vw;
+      }
+  
+      #submit {
+        left: 70%;
+        top: 71vw;
+      }
     }
-
-    .cell {
-      width: 30%;
+  
+    /* Landscape Samsung */
+    @media only screen and (min-width : 1410px) {
+      background-color: lightgreen;
+  
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        font-size: 15px;
+      }
+  
+      .cell {
+        width: 30%;
+      }
+  
+      #deselect {
+        left: 25%;
+        top: 70vh;
+      }
+  
+      #submit {
+        left: 70%;
+        top: 70vh;
+      }
     }
-
-    #deselect {
-      left: 25%;
-      top: 71vw;
-    }
-
-    #submit {
-      left: 70%;
-      top: 71vw;
-    }
-  }
-
-  /* Landscape Samsung */
-  @media only screen and (min-width : 1410px) {
-    background-color: lightgreen;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 30%;
-    }
-
-    #deselect {
-      left: 25%;
-      top: 70vh;
-    }
-
-    #submit {
-      left: 70%;
-      top: 70vh;
-    }
-  }
-
-
-  /* iPhone portrait */
-  @media only screen and (min-width : 780px) {
-    background-color: lightblue;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: 21vw, 21vw, 21vw, 21vw;
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 30%;
-    }
-
-    #deselect {
-      left: 25%;
-      top: 55vw;
-    }
-
-    #submit {
-      left: 65%;
-      top: 55vw;
-    }
-  }
-
-    /* iPhone landscape */
-    @media only screen and (min-width : 1500px) {
+  
+  
+    /* iPhone portrait */
+    @media only screen and (min-width : 780px) {
       background-color: lightblue;
   
       .grid {
@@ -97,10 +72,35 @@ body {
       }
   
       #submit {
-        left: 70%;
+        left: 65%;
         top: 55vw;
       }
     }
+  
+      /* iPhone landscape */
+      @media only screen and (min-width : 1500px) {
+        background-color: lightblue;
+    
+        .grid {
+          margin: auto 5%;
+          grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+          font-size: 15px;
+        }
+    
+        .cell {
+          width: 30%;
+        }
+    
+        #deselect {
+          left: 25%;
+          top: 55vw;
+        }
+    
+        #submit {
+          left: 70%;
+          top: 55vw;
+        }
+      }
   
     /* Large Devices, Wide Screens, Laptops*/
     @media only screen and (min-width : 1200px) {
