@@ -140,17 +140,17 @@ body {
       }
   
       .cell {
-        width: 25w;
+        width: 11;
       }
   
       #deselect {
         left: 25vw;
-        top: 25vw;
+        top: 35vw;
       }
   
       #submit {
         left: 70vw;
-        top: 25vw;
+        top: 35vw;
       }
     }
     /* Large Devices, Wide Screens, Laptops*/
