@@ -13,17 +13,17 @@ body {
       }
   
       .cell {
-        width: 30%;
+        width: 22vw;
       }
   
       #deselect {
-        left: 25%;
-        top: 71vw;
+        left: 25vw;
+        top: 58vw;
       }
   
       #submit {
-        left: 70%;
-        top: 71vw;
+        left: 68vw;
+        top: 58vw;
       }
     }
   
@@ -38,7 +38,7 @@ body {
       }
   
       .cell {
-        width: 30%;
+        width: 39vw;
       }
   
       #deselect {
@@ -59,12 +59,12 @@ body {
   
       .grid {
         margin: auto 5%;
-        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        grid-template-columns: (4,21vw);
         font-size: 15px;
       }
   
       .cell {
-        width: 30%;
+        width: 23vw;
       }
   
       #deselect {
@@ -80,7 +80,7 @@ body {
   
       /* iPhone landscape */
       @media only screen and (min-width : 1500px) {
-        background-color: lightblue;
+        background-color: lightgreen;
     
         .grid {
           margin: auto 5%;

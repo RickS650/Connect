@@ -27,7 +27,7 @@ if (notFound) {
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver iPad.l";
+const existingContent = displayDate + " ver iPad.p";
 
 document.getElementById('datetime').innerHTML = existingContent;
 
