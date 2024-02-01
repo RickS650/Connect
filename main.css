@@ -1,9 +1,8 @@
 body {
 
- 
    /* Extra Small Devices, Phones */
     /* Samsung portrait phones */
-    @media only screen and (min-width : 710px) {
+    @media only screen and (min-width : 720px) and (max-width: 1409px){
       background-color: red;
   
       .grid {
