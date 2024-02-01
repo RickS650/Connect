@@ -3,12 +3,12 @@ body {
  
    /* Extra Small Devices, Phones */
     /* Samsung portrait phones */
-    @media only screen and (min-width : 720px) {
-      background-color: lightblue;
+    @media only screen and (min-width : 730px) {
+      background-color: red;
   
       .grid {
         margin: auto 5%;
-        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        grid-template-columns: (4,21vw);
         font-size: 15px;
       }
   
@@ -33,7 +33,7 @@ body {
   
       .grid {
         margin: auto 5%;
-        grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+        grid-template-columns: (4,21vw);
         font-size: 15px;
       }
   
@@ -84,7 +84,7 @@ body {
     
         .grid {
           margin: auto 5%;
-          grid-template-columns: 21vw, 21vw, 21vw, 21vw;
+          grid-template-columns: (4,21vw);
           font-size: 15px;
         }
     
