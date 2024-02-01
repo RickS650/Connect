@@ -27,7 +27,8 @@ body {
     }
   
     /* Landscape Samsung */
-    @media only screen and (min-width : 1410px), screen and (max-width: 1499px) {
+    @media only screen and (min-width : 1410px) {
+    /* , screen and (max-width: 1499px) { */
       background-color: lightgreen;
   
       .grid {
@@ -53,7 +54,8 @@ body {
   
   
     /* iPhone portrait */
-    @media only screen and (min-width : 780px), screen and (max-width: 834px){
+    @media only screen and (min-width : 780px){
+    /* , screen and (max-width: 834px){ */
       background-color: lightblue;
   
       .grid {
@@ -104,7 +106,8 @@ body {
   
   
     /* Tablets, iPad (Portrait) */
-    @media only screen and (min-width : 834px), screen and (max-width: 1111px){
+    @media only screen and (min-width : 834px){
+    /* , screen and (max-width: 1111px){ */
       background-color: lightblue;
   
       .grid {
@@ -129,7 +132,8 @@ body {
     }
   
     /* Tablets, iPad (Landscape) */
-    @media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
+    @media only screen and (min-width : 1112px){
+    /* , screen and (max-width: 1199px) { */
       background-color: lightblue;
   
       .grid {
