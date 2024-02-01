@@ -11,6 +11,9 @@ let specialCase = false;
 
 threeRight("off");
 
+alert(window.screen.availWidth);
+alert(window.screen.availHeight);
+
 /* let person = prompt("Please enter your name", "");
 
 if (person != null) {
@@ -27,7 +30,7 @@ if (notFound) {
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 9.s23.l";
+const existingContent = displayDate + " ver 10.all";
 
 document.getElementById('datetime').innerHTML = existingContent;
 
