@@ -27,7 +27,7 @@ if (notFound) {
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver s23.p";
+const existingContent = displayDate + " ver 1.s23.p";
 
 document.getElementById('datetime').innerHTML = existingContent;
 
