@@ -50,8 +50,28 @@ body {
   }
 
   @media only screen and (min-width: 768px) {
-    background-color: yellow
-  }
+    background-color: yellow;
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 46vw;
+    }
+
+    #deselect {
+      left: 25vw;
+      top: 48vw;
+    }
+
+    #submit {
+      left: 70vw;
+      top: 48vw;
+    }
+  } 
+  
 
   @media only screen and (min-width: 992px) {
     background-color: blue
@@ -63,7 +83,7 @@ body {
 
   /* Extra Small Devices, Phones */
   /* Samsung portrait phones */
-  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ 
+  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ ;
 
   } */
 
