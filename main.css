@@ -1,55 +1,32 @@
 body {
 
-@media only screen and (max-width: 600px){
-background-color: red;
+  @media only screen and (max-width: 600px) {
+    background-color: red;
 
-.grid {
-  margin: auto 5%;
-  grid-template-columns: (4, 21vw);
-  font-size: 15px;
-}
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
 
-.cell {
-  width: 22vw;
-}
+    .cell {
+      width: 22vw;
+    }
 
-#deselect {
-  left: 25vw;
-  top: 82vw;
-}
+    #deselect {
+      left: 25vw;
+      top: 82vw;
+    }
 
-#submit {
-  left: 68vw;
-  top: 82vw;
-}
+    #submit {
+      left: 68vw;
+      top: 82vw;
+    }
 
-}
+  }
 
-@media only screen and (min-width: 600px) {
-background-color: green
-}
-
-@media only screen and (min-width: 768px) {
-background-color: yellow
-}
-
-@media only screen and (min-width: 992px) {
-background-color: blue
-}
-
-@media only screen and (min-width: 1200px) {
-background-color: orange
-}
-  /* Extra Small Devices, Phones */
-  /* Samsung portrait phones */
- /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ 
-
-  } */
-
-
-  /* iPhone portrait */
-/*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
-    background-color: lightblue;
+  @media only screen and (min-width: 600px) {
+    background-color: green;
 
     .grid {
       margin: auto 5%;
@@ -70,12 +47,35 @@ background-color: orange
       left: 65%;
       top: 55vw;
     }
+  }
+
+  @media only screen and (min-width: 768px) {
+    background-color: yellow
+  }
+
+  @media only screen and (min-width: 992px) {
+    background-color: blue
+  }
+
+  @media only screen and (min-width: 1200px) {
+    background-color: orange
+  }
+
+  /* Extra Small Devices, Phones */
+  /* Samsung portrait phones */
+  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ 
+
   } */
 
+
+  /* iPhone portrait */
+  /*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
+    background-color: lightblue */
+
   /* Tablets, iPad (Portrait) */
-/* @media only screen and (min-width : 901px) { */
+  /* @media only screen and (min-width : 901px) { */
   /* , screen and (max-width: 1111px){   */
-   /*  background-color: blue;
+  /*  background-color: blue;
 
     .grid {
       margin: auto 5%;
@@ -123,8 +123,8 @@ background-color: orange
     }
   } 
  */
-    /* Large Devices, Wide Screens, Laptops*/
-/*     @media only screen and (min-width : 1200px), screen and (max-width: 1409px) {
+  /* Large Devices, Wide Screens, Laptops*/
+  /*     @media only screen and (min-width : 1200px), screen and (max-width: 1409px) {
       background-color: lightblue;
   
       .grid {
@@ -145,9 +145,9 @@ background-color: orange
         left: 65vw;
       }
     } */
-  
+
   /* Landscape Samsung */
-/*   @media only screen and (min-width : 1410px), screen and (max-width: 1499px) { 
+  /*   @media only screen and (min-width : 1410px), screen and (max-width: 1499px) { 
     background-color: lightgreen;
 
     .grid {
@@ -171,178 +171,178 @@ background-color: orange
     }
   } */
 }
-  /* iPhone landscape */
-  */
-  .grid {
-    display: flex;
-    flex-direction: column;
-    /* Display rows vertically */
-    max-width: 90%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-  }
 
-  .col-span {
-    grid-column: span 3;
-    background-color: lightyellow;
-    text-align: center;
-  }
+/* iPhone landscape */
+*/ .grid {
+  display: flex;
+  flex-direction: column;
+  /* Display rows vertically */
+  max-width: 90%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
 
-  .row {
-    display: flex;
-    color: darkgoldenrod;
-    height: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: 50px;
-    justify-content: center;
-  }
+.col-span {
+  grid-column: span 3;
+  background-color: lightyellow;
+  text-align: center;
+}
 
-  /* Draw a line */
+.row {
+  display: flex;
+  color: darkgoldenrod;
+  height: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  line-height: 50px;
+  justify-content: center;
+}
+
+/* Draw a line */
+p {
+  text-align: center;
+
+  hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cell {
+  color: darkgoldenrod;
+  background: cyan;
+  height: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  line-height: 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+/* button */
+#submit {
+  border-radius: 8px;
+  border: 1px solid black;
+  position: absolute;
+  height: 2em;
+  width: 6em;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.leftText {
   p {
-    text-align: center;
-
-    hr {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    white-space: pre-line;
   }
 
-  .cell {
-    color: darkgoldenrod;
-    background: cyan;
-    height: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: 50px;
-    box-sizing: border-box;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 8px;
-  }
+  font-family: Arial,
+  sans-serif;
+  font-size: 13px;
+}
 
-  p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: white;
-  }
+.button-container {
+  text-align: center;
+}
 
-  /* button */
-  #submit {
-    border-radius: 8px;
-    border: 1px solid black;
-    position: absolute;
-    height: 2em;
-    width: 6em;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-  }
+/* Styling for the round buttons */
+.round-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: thin;
+}
 
-  .leftText {
-    p {
-      white-space: pre-line;
-    }
+#blob1 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  left: 47%;
+  position: absolute;
+  top: 65%;
+}
 
-    font-family: Arial,
-    sans-serif;
-    font-size: 13px;
-  }
+#blob2 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  left: 49%;
+  position: absolute;
+  top: 65%;
+}
 
-  .button-container {
-    text-align: center;
-  }
+#blob3 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  left: 51%;
+  position: absolute;
+  top: 65%;
+}
 
-  /* Styling for the round buttons */
-  .round-button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 0 5px;
-    border: thin;
-  }
+#blob4 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  left: 53%;
+  position: absolute;
+  top: 65%;
+}
 
-  #blob1 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 47%;
-    position: absolute;
-    top: 65%;
-  }
+#blob5 {
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  left: 55%;
+  position: absolute;
+  top: 65%;
+}
 
-  #blob2 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 49%;
-    position: absolute;
-    top: 65%;
-  }
-
-  #blob3 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 51%;
-    position: absolute;
-    top: 65%;
-  }
-
-  #blob4 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 53%;
-    position: absolute;
-    top: 65%;
-  }
-
-  #blob5 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 55%;
-    position: absolute;
-    top: 65%;
-  }
-
-  #deselect {
-    border-radius: 8px;
-    border: 1px solid black;
-    position: absolute;
-    height: 2em;
-    width: auto;
-    transform: translateX(-50%);
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-  }
+#deselect {
+  border-radius: 8px;
+  border: 1px solid black;
+  position: absolute;
+  height: 2em;
+  width: auto;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
