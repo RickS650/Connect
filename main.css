@@ -74,28 +74,7 @@ body {
   
 
   @media only screen and (min-width: 992px) {
-    background-color: blue
-  }
-
-  @media only screen and (min-width: 1200px) {
-    background-color: orange
-  }
-
-  /* Extra Small Devices, Phones */
-  /* Samsung portrait phones */
-  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ ;
-
-  } */
-
-
-  /* iPhone portrait */
-  /*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
-    background-color: lightblue */
-
-  /* Tablets, iPad (Portrait) */
-  /* @media only screen and (min-width : 901px) { */
-  /* , screen and (max-width: 1111px){   */
-  /*  background-color: blue;
+    background-color: blue;
 
     .grid {
       margin: auto 5%;
@@ -117,11 +96,12 @@ body {
       top: 48vw;
     }
   } 
+  
 
-  /* Tablets, iPad (Landscape) */
-  /*@media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
-    background-color: lightblue;
+  @media only screen and (min-width: 1200px) {
+    background-color: orange;
 
+    
     .grid {
       margin: auto 5%;
       grid-template-columns: repeat(4, 95vw);
@@ -141,7 +121,30 @@ body {
       left: 70vw;
       top: 38vw;
     }
-  } 
+  }
+
+  /* Extra Small Devices, Phones */
+  /* Samsung portrait phones */
+  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ ;
+
+  } */
+
+
+  /* iPhone portrait */
+  /*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
+    background-color: lightblue */
+
+  /* Tablets, iPad (Portrait) */
+  /* @media only screen and (min-width : 901px) { */
+  /* , screen and (max-width: 1111px){   */
+  /*  background-color: blue;
+
+
+
+  /* Tablets, iPad (Landscape) */
+  /*@media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
+    background-color: lightblue;
+
  */
   /* Large Devices, Wide Screens, Laptops*/
   /*     @media only screen and (min-width : 1200px), screen and (max-width: 1409px) {
