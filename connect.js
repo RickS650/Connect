@@ -11,8 +11,8 @@ let specialCase = false;
 
 threeRight("off");
 
-alert(window.screen.availWidth); // in px
-alert(window.screen.availHeight);
+/* alert(window.screen.availWidth); // in px
+alert(window.screen.availHeight); */
 
 /* let person = prompt("Please enter your name", "");
 
