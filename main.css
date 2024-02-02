@@ -2,9 +2,7 @@ body {
 
   /* Extra Small Devices, Phones */
   /* Samsung portrait phones */
-  @media only screen and (min-width : 720px){
-
-  /* }, screen and (max-width: 779px) { */
+  @media only screen and (min-width : 360px), screen and (max-width: 833){ 
     background-color: red;
 
     .grid {
@@ -19,17 +17,18 @@ body {
 
     #deselect {
       left: 25vw;
-      top: 50vw;
+      top: 62vw;
     }
 
     #submit {
       left: 68vw;
-      top: 50vw;
+      top: 62vw;
     }
   }
 
+
   /* iPhone portrait */
-  @media only screen and (min-width : 780px), screen and (max-width: 833px) { 
+/*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
     background-color: lightblue;
 
     .grid {
@@ -51,12 +50,11 @@ body {
       left: 65%;
       top: 55vw;
     }
-  }
-
+  } */
 
   /* Tablets, iPad (Portrait) */
-  @media only screen and (min-width : 834px){
-    /* , screen and (max-width: 1111px){  */
+@media only screen and (min-width : 834px) {
+  /* , screen and (max-width: 1111px){   */
     background-color: blue;
 
     .grid {
@@ -81,7 +79,7 @@ body {
   } 
 
   /* Tablets, iPad (Landscape) */
-/*   @media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
+  @media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
     background-color: lightblue;
 
     .grid {
@@ -103,7 +101,7 @@ body {
       left: 70vw;
       top: 38vw;
     }
-  } */
+  } 
 
     /* Large Devices, Wide Screens, Laptops*/
 /*     @media only screen and (min-width : 1200px), screen and (max-width: 1409px) {
@@ -154,7 +152,7 @@ body {
   } */
 }
   /* iPhone landscape */
- 
+  */
   .grid {
     display: flex;
     flex-direction: column;

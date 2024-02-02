@@ -11,7 +11,7 @@ let specialCase = false;
 
 threeRight("off");
 
-alert(window.screen.availWidth);
+alert(window.screen.availWidth); // in px
 alert(window.screen.availHeight);
 
 /* let person = prompt("Please enter your name", "");
@@ -19,7 +19,7 @@ alert(window.screen.availHeight);
 if (person != null) {
   document.cookie = "username=" + person;
 } 
-const userName=["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Vic"]
+const userName=["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Trish", "Vic"]
 const notFound = !userName.includes('person'); /* Returns true if not a user
 if (notFound) {
   return;
