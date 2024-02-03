@@ -13,7 +13,7 @@ body {
       width: 22vw;
     }
 
-    #deselect {
+/*     #deselect {
       left: 25vw;
       top: 82vw;
     }
@@ -21,7 +21,7 @@ body {
     #submit {
       left: 68vw;
       top: 82vw;
-    }
+    } */
 
   }
 
@@ -112,15 +112,15 @@ body {
       width: 22vw;
     }
 
-    #deselect {
+/*     #deselect {
       left: 25vw;
       top: 38vw;
     }
 
     #submit {
       left: 70vw;
-      top: 38vw;
-    }
+      top: 38vw; 
+    }*/
   }
 
   /* Extra Small Devices, Phones */
@@ -264,7 +264,6 @@ p {
 #submit {
   border-radius: 8px;
   border: 1px solid black;
-  position: absolute;
   height: 2em;
   width: 6em;
   font-family: Arial, sans-serif;
@@ -283,6 +282,7 @@ p {
 
 .button-container {
   text-align: center;
+  /* align: center; */
 }
 
 /* Styling for the round buttons */
@@ -362,7 +362,7 @@ p {
 #deselect {
   border-radius: 8px;
   border: 1px solid black;
-  position: absolute;
+  /* position: absolute; */
   height: 2em;
   width: auto;
   transform: translateX(-50%);
