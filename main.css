@@ -262,8 +262,8 @@ p {
 #submit {
   border-radius: 8px;
   border: 1px solid black;
-  height: 2em;
-  width: 6em;
+  height: auto;
+  width: auto;
   font-family: Arial, sans-serif;
   font-size: 18px;
   margin-left: 50px;
@@ -362,7 +362,7 @@ p {
   border-radius: 8px;
   border: 1px solid black;
   /* position: absolute; */
-  height: 2em;
+  height: auto;
   width: auto;
   transform: translateX(-50%);
   font-family: Arial, sans-serif;
