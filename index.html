@@ -71,6 +71,44 @@
         </div>
     </div>
 
+    <style>
+        .button-container {
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            gap: 10px;
+            /* Adjust the gap as needed */
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            /* margin: 0 25px; */
+            border: thin;
+            align-content: center;
+        }
+
+        .button-container button {
+            flex: 1;
+        }
+
+        #submit,
+        #deselect {
+            width: calc(10% - 5px);
+            /* Adjust the width as needed */
+            margin-right: 10px;
+            /* Adjust the margin as needed */
+        }
+
+        #deselect {
+            margin-right: 0;
+        }
+
+        /* Additional styling for buttons */
+        /*         .round-button {
+          padding: 10px;
+          font-size: 16px;
+        } */
+    </style>
+
     <p class="leftText"><br>Mistakes remaining:</p>
 
     <button id="submit">Submit</button>
