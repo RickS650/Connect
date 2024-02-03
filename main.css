@@ -116,11 +116,11 @@ body {
       left: 25vw;
       top: 38vw;
     }
-
+*/
     #submit {
       left: 70vw;
-      top: 38vw; 
-    }*/
+      /* top: 38vw;  */
+    }
   }
 
   /* Extra Small Devices, Phones */
@@ -198,8 +198,7 @@ body {
 /* iPhone landscape */
 */ .grid {
   display: flex;
-  flex-direction: column;
-  /* Display rows vertically */
+  flex-direction: column;   /* Display rows vertically */
   max-width: 90%;
   height: auto;
   align-items: center;
@@ -268,6 +267,7 @@ p {
   width: 6em;
   font-family: Arial, sans-serif;
   font-size: 18px;
+  margin-left: 50px;
 }
 
 .leftText {
