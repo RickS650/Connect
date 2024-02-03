@@ -30,7 +30,7 @@ if (notFound) {
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 10.all";
+const existingContent = displayDate + " ver 1.0.0";
 
 document.getElementById('datetime').innerHTML = existingContent;
 
