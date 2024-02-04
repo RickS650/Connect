@@ -19,6 +19,9 @@ body {
       height: 2vw;
     }
 
+    .button-container {
+      margin-left: 9%;
+    }
     /*     #deselect {
       left: 25vw;
       top: 82vw;
