@@ -2,7 +2,7 @@ body {
 
   /* Extra Small Devices, Phones */
   @media only screen and (max-width: 600px) {
-    background-color: red;
+    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -36,7 +36,7 @@ body {
 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
-    background-color: green;
+    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -57,7 +57,7 @@ body {
 
   /* Tablets etc */
   @media only screen and (min-width: 768px) {
-    background-color: yellow;
+    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -78,7 +78,7 @@ body {
 
   /* Medium laptops */
   @media only screen and (min-width: 992px) {
-    background-color: blue;
+    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -100,7 +100,7 @@ body {
 
   /* Larger laptops*/
   @media only screen and (min-width: 1200px) {
-    background-color: orange;
+    background-color: lightgray;
 
 
     .grid {
