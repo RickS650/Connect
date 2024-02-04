@@ -57,7 +57,7 @@ body {
 
   /* Tablets etc */
   @media only screen and (min-width: 768px) {
-    background-color: lightgray;
+    background-color: yellow;
 
     .grid {
       margin: auto 5%;
