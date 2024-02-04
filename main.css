@@ -1,5 +1,6 @@
 body {
 
+  /* Extra Small Devices, Phones */
   @media only screen and (max-width: 600px) {
     background-color: red;
 
@@ -13,7 +14,12 @@ body {
       width: 22vw;
     }
 
-/*     #deselect {
+    .round-button {
+      width: 1.2vw;
+      height: 2vw;
+    }
+
+    /*     #deselect {
       left: 25vw;
       top: 82vw;
     }
@@ -25,6 +31,7 @@ body {
 
   }
 
+  /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
     background-color: green;
 
@@ -38,19 +45,17 @@ body {
       width: 23vw;
     }
 
-/*     #deselect {
-      left: 25%;
-      top: 55vw;
+    .round-button {
+      width: 15px;
+      height: 15px;
     }
 
-    #submit {
-      left: 65%;
-      top: 55vw;
-    } */
   }
 
+  /* Tablets etc */
   @media only screen and (min-width: 768px) {
     background-color: yellow;
+
     .grid {
       margin: auto 5%;
       grid-template-columns: repeat(4, 90vw);
@@ -61,18 +66,14 @@ body {
       width: 46vw;
     }
 
-/*     #deselect {
-      left: 25vw;
-      top: 48vw;
+    .round-button {
+      width: 15px;
+      height: 15px;
     }
 
-    #submit {
-      left: 70vw;
-      top: 48vw;
-    } */
-  } 
-  
+  }
 
+  /* Medium laptops */
   @media only screen and (min-width: 992px) {
     background-color: blue;
 
@@ -86,22 +87,19 @@ body {
       width: 46vw;
     }
 
-/*     #deselect {
-      left: 25vw;
-      top: 48vw;
+
+    .round-button {
+      width: 15px;
+      height: 15px;
     }
 
-    #submit {
-      left: 70vw;
-      top: 48vw;
-    } */
-  } 
-  
+  }
 
+  /* Larger laptops*/
   @media only screen and (min-width: 1200px) {
     background-color: orange;
 
-    
+
     .grid {
       margin: auto 5%;
       grid-template-columns: repeat(4, 95vw);
@@ -112,259 +110,183 @@ body {
       width: 22vw;
     }
 
-/*     #deselect {
-      left: 25vw;
-      top: 38vw;
-    }
-        #submit {
-      left: 70vw;
-      /* top: 38vw;  
-    } */
-}
-
-  /* Extra Small Devices, Phones */
-  /* Samsung portrait phones */
-  /*  @media only screen and (min-width : 360px), screen and (max-width: 900){ ;
-
-  } */
-
-
-  /* iPhone portrait */
-  /*   @media only screen and (min-width : 392px), screen and (max-width: 831px) { 
-    background-color: lightblue */
-
-  /* Tablets, iPad (Portrait) */
-  /* @media only screen and (min-width : 901px) { */
-  /* , screen and (max-width: 1111px){   */
-  /*  background-color: blue;
-
-
-
-  /* Tablets, iPad (Landscape) */
-  /*@media only screen and (min-width : 1112px), screen and (max-width: 1199px) {
-    background-color: lightblue;
-
- */
-  /* Large Devices, Wide Screens, Laptops*/
-  /*     @media only screen and (min-width : 1200px), screen and (max-width: 1409px) {
-      background-color: lightblue;
-  
-      .grid {
-        margin: auto 20em;
-      }
-  
-      .cell {
-        width: 175px;
-      }
-  
-      #deselect {
-        left: 31vw;
-        top: 30vw;
-      }
-  
-      #submit {
-        top: 30vw;
-        left: 65vw;
-      }
-    } */
-
-  /* Landscape Samsung */
-  /*   @media only screen and (min-width : 1410px), screen and (max-width: 1499px) { 
-    background-color: lightgreen;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
+    .round-button {
+      width: 15px;
+      height: 15px;
     }
 
-    .cell {
-      width: 24vw;
-    }
-
-    #deselect {
-      left: 25%;
-      top: 64vh;
-    }
-
-    #submit {
-      left: 70%;
-      top: 64vh;
-    }
-  } */
-}
-
-/* iPhone landscape */
-*/ .grid {
-  display: flex;
-  flex-direction: column;   /* Display rows vertically */
-  max-width: 90%;
-  height: auto;
-  align-items: center;
-  text-align: center;
-}
-
-.col-span {
-  grid-column: span 3;
-  background-color: lightyellow;
-  text-align: center;
-}
-
-.row {
-  display: flex;
-  color: darkgoldenrod;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  margin-bottom: 2px;
-  margin-right: 2px;
-  line-height: 50px;
-  justify-content: center;
-}
-
-/* Draw a line */
-p {
-  text-align: center;
-
-  hr {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
-}
 
-.cell {
-  color: darkgoldenrod;
-  background: cyan;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  margin-bottom: 2px;
-  margin-right: 2px;
-  line-height: 50px;
-  box-sizing: border-box;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: 8px;
-}
+  .grid {
+    display: flex;
+    flex-direction: column;
+    /* Display rows vertically */
+    max-width: 90%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
 
-p {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  color: white;
-}
+  .col-span {
+    grid-column: span 3;
+    background-color: lightyellow;
+    text-align: center;
+  }
 
-/* button */
-#submit {
-  border-radius: 8px;
-  border: 1px solid black;
-  height: auto;
-  width: auto;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  margin-left: 50px;
-}
+  .row {
+    display: flex;
+    color: darkgoldenrod;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height: 50px;
+    justify-content: center;
+  }
 
-.leftText {
+  /* Draw a line */
   p {
-    white-space: pre-line;
+    text-align: center;
+
+    hr {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  font-family: Arial,
-  sans-serif;
-  font-size: 13px;
-}
+  .cell {
+    color: darkgoldenrod;
+    background: cyan;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+  }
 
-.button-container {
-  text-align: center;
-  /* align: center; */
-}
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+  }
 
-/* Styling for the round buttons */
-.round-button {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0 5px;
-  border: thin;
-}
+  /* button */
+  #submit {
+    border-radius: 8px;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-left: 50px;
+  }
 
-#blob1 {
-  border-radius: 50%;
-  border: none;
-  color: black;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  left: 47%;
-  position: absolute;
-  top: 65%;
-}
+  .leftText {
+    p {
+      white-space: pre-line;
+    }
 
-#blob2 {
-  border-radius: 50%;
-  border: none;
-  color: black;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  left: 49%;
-  position: absolute;
-  top: 65%;
-}
+    font-family: Arial,
+    sans-serif;
+    font-size: 13px;
+  }
 
-#blob3 {
-  border-radius: 50%;
-  border: none;
-  color: black;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  left: 51%;
-  position: absolute;
-  top: 65%;
-}
+  .button-container {
+    text-align: center;
+    /* align: center; */
+  }
 
-#blob4 {
-  border-radius: 50%;
-  border: none;
-  color: black;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  left: 53%;
-  position: absolute;
-  top: 65%;
-}
+  /* Styling for the round buttons */
+  .round-button {
+    border-radius: 50%;
+    margin: 0 5px;
+    border: thin;
+  }
 
-#blob5 {
-  border-radius: 50%;
-  border: none;
-  color: black;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  left: 55%;
-  position: absolute;
-  top: 65%;
-}
+  #blob1 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    left: 47%;
+    position: absolute;
+    top: 65%;
+  }
 
-#deselect {
-  border-radius: 8px;
-  border: 1px solid black;
-  /* position: absolute; */
-  height: auto;
-  width: auto;
-  transform: translateX(-50%);
-  font-family: Arial, sans-serif;
-  font-size: 18px;
+  #blob2 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    left: 49%;
+    position: absolute;
+    top: 65%;
+  }
+
+  #blob3 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    left: 51%;
+    position: absolute;
+    top: 65%;
+  }
+
+  #blob4 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    left: 53%;
+    position: absolute;
+    top: 65%;
+  }
+
+  #blob5 {
+    border-radius: 50%;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    left: 55%;
+    position: absolute;
+    top: 65%;
+  }
+
+  #deselect {
+    border-radius: 8px;
+    border: 1px solid black;
+    /* position: absolute; */
+    height: auto;
+    width: auto;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
 }
