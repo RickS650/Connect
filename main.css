@@ -22,6 +22,7 @@ body {
     .button-container {
       margin-left: 9%;
     }
+
     /*     #deselect {
       left: 25vw;
       top: 82vw;
@@ -66,7 +67,7 @@ body {
     }
 
     .cell {
-      width: 46vw;
+      width: 23vw;
     }
 
     .round-button {
@@ -206,8 +207,8 @@ body {
   }
 
   .button-container {
-    text-align: center;
-    /* align: center; */
+    display: flex;
+    justify-content: center;
   }
 
   /* Styling for the round buttons */
@@ -215,70 +216,28 @@ body {
     border-radius: 50%;
     margin: 0 5px;
     border: thin;
+    padding: 5px;
+    font-size: 16px;
+    background-color: black;
   }
 
   #blob1 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 47%;
-    position: absolute;
     top: 65%;
   }
 
   #blob2 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 49%;
-    position: absolute;
     top: 65%;
   }
 
   #blob3 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 51%;
-    position: absolute;
     top: 65%;
   }
 
   #blob4 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 53%;
-    position: absolute;
     top: 65%;
   }
 
   #blob5 {
-    border-radius: 50%;
-    border: none;
-    color: black;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    left: 55%;
-    position: absolute;
     top: 65%;
   }
 
