@@ -30,17 +30,17 @@ if (notFound) {
 var date = new Date();
 var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 1.1.0";
+const existingContent = displayDate + " ver beta";
 
 document.getElementById('datetime').innerHTML = existingContent;
 
 const catsWords = [
   "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
   "WALLS-HADRIAN", "WALLS-WAILING", "WALLS-BERLIN", "WALLS-CHINA",
-  "objects-Car", "objects-Guitar", "objects-Hat", "objects-Pencil",
-  "nature-Flower", "nature-Moon", "nature-Kite", "nature-Nest"
+  "FIRE-Car", "FIRE-ANT", "FIRE-DRILL", "FIRE-OPAL",
+  "FISH-BASS", "FISH-FLOUNDER", "FISH-SALMON", "FISH-TROUT"
 ];
-var longCat = ["BLACK .... ", "FAMOUS WALLS - ", "Types of objects - ", "Types of nature - "]
+var longCat = ["BLACK .... ", "FAMOUS WALLS - ", "FIRE .... ", "TYPES OF FISH - "]
 const words = catsWords.map(item => item.split('-')[1]);
 var shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures

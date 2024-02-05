@@ -12,7 +12,6 @@ body {
 
     .cell {
       width: 22vw;
-      /* background-color: beige; */
     }
 
     .round-button {
@@ -59,7 +58,7 @@ body {
 
   /* Tablets etc */
   @media only screen and (min-width: 768px) {
-    background-color: yellow;
+    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
