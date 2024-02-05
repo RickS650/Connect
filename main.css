@@ -1,8 +1,8 @@
 body {
+  background-color: lightgray;
 
   /* Extra Small Devices, Phones */
   @media only screen and (max-width: 600px) {
-    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -12,6 +12,7 @@ body {
 
     .cell {
       width: 22vw;
+      background-color: cyan;
     }
 
     .round-button {
@@ -19,25 +20,10 @@ body {
       height: 2vw;
     }
 
-    /* .button-container {
-      margin-left: 9%;
-    } */
-
-    /*     #deselect {
-      left: 25vw;
-      top: 82vw;
-    }
-
-    #submit {
-      left: 68vw;
-      top: 82vw;
-    } */
-
   }
 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
-    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -58,7 +44,6 @@ body {
 
   /* Tablets etc */
   @media only screen and (min-width: 768px) {
-    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -79,7 +64,6 @@ body {
 
   /* Medium laptops */
   @media only screen and (min-width: 992px) {
-    background-color: lightgray;
 
     .grid {
       margin: auto 5%;
@@ -99,10 +83,8 @@ body {
 
   }
 
-  /* Larger laptops*/
+  /* Larger laptops, mainframe PCs*/
   @media only screen and (min-width: 1200px) {
-    background-color: lightgray;
-
 
     .grid {
       margin: auto 5%;
@@ -195,14 +177,13 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     margin-left: 50px;
-    /* padding-right: 1.1em;*/
-    /* padding-left: 1.1em;  */
   }
 
   .leftText {
     p {
       white-space: pre-line;
     }
+
     font-family: Arial,
     sans-serif;
     font-size: 13px;
@@ -246,11 +227,9 @@ body {
   #deselect {
     border-radius: 8px;
     border: 1px solid black;
-    /* position: absolute; */
     margin-right: 50px;
     height: auto;
     width: 130px;
-    /* transform: translateX(-50%); */
     font-family: Arial, sans-serif;
     font-size: 18px;
   }

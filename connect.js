@@ -37,7 +37,7 @@ document.getElementById('datetime').innerHTML = existingContent;
 const catsWords = [
   "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
   "WALLS-HADRIAN", "WALLS-WAILING", "WALLS-BERLIN", "WALLS-CHINA",
-  "FIRE-Car", "FIRE-ANT", "FIRE-DRILL", "FIRE-OPAL",
+  "FIRE-ISLAND", "FIRE-ANT", "FIRE-DRILL", "FIRE-OPAL",
   "FISH-BASS", "FISH-FLOUNDER", "FISH-SALMON", "FISH-TROUT"
 ];
 var longCat = ["BLACK .... ", "FAMOUS WALLS - ", "FIRE .... ", "TYPES OF FISH - "]
