@@ -12,7 +12,7 @@ body {
 
     .cell {
       width: 22vw;
-      background-color: cyan;
+      /* background-color: cyan; */
     }
 
     .round-button {
@@ -33,6 +33,7 @@ body {
 
     .cell {
       width: 23vw;
+      /* background-color: cyan; */
     }
 
     .round-button {
@@ -53,6 +54,7 @@ body {
 
     .cell {
       width: 23vw;
+      /* background-color: cyan; */
     }
 
     .round-button {
@@ -73,6 +75,7 @@ body {
 
     .cell {
       width: 46vw;
+      /* background-color: cyan; */
     }
 
 
@@ -94,6 +97,7 @@ body {
 
     .cell {
       width: 22vw;
+      /* background-color: cyan; */
     }
 
     .round-button {
@@ -146,7 +150,7 @@ body {
 
   .cell {
     color: darkgoldenrod;
-    background: cyan;
+    background-color: cyan;
     height: auto;
     text-align: center;
     padding: 0;
