@@ -2,7 +2,7 @@ body {
   background-color: lightgray;
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 300px) and (max-width: 599px){
+  @media only screen and (min-width: 300px) and (max-width: 599){
     background-color: yellow;
 
     .p {
@@ -29,7 +29,7 @@ body {
     }
 
   }
-
+/* 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
     background-color: green;
@@ -115,6 +115,7 @@ body {
 
   }
 
+   */
   .grid {
     display: flex;
     flex-direction: column;
