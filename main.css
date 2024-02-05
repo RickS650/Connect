@@ -15,8 +15,7 @@ body {
     }
 
     .cell {
-      width: 23vw;
-      background-color: cyan;
+      width: 22vw;
     }
 
     .round-button {
@@ -154,11 +153,14 @@ body {
 
   .cell {
     color: darkgoldenrod;
-    /* background: cyan; */
+    background: cyan;
     height: auto;
     text-align: center;
     padding: 0;
     margin: 0;
+    border-color:black;
+    border-style:solid;
+    border-width:thin;
     cursor: pointer;
     margin-bottom: 2px;
     margin-right: 2px;
