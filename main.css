@@ -12,7 +12,7 @@ body {
 
     .cell {
       width: 22vw;
-      background-color: beige;
+      /* background-color: beige; */
     }
 
     .round-button {
@@ -20,9 +20,9 @@ body {
       height: 2vw;
     }
 
-    .button-container {
+    /* .button-container {
       margin-left: 9%;
-    }
+    } */
 
     /*     #deselect {
       left: 25vw;
@@ -183,7 +183,8 @@ body {
   p {
     font-family: Arial, sans-serif;
     font-size: 18px;
-    color: white;
+    color: darkslategrey;
+    justify-content: center;
   }
 
   /* button */
@@ -191,17 +192,18 @@ body {
     border-radius: 8px;
     border: 1px solid black;
     height: auto;
-    width: auto;
+    width: 130px;
     font-family: Arial, sans-serif;
     font-size: 18px;
     margin-left: 50px;
+    /* padding-right: 1.1em;*/
+    /* padding-left: 1.1em;  */
   }
 
   .leftText {
     p {
       white-space: pre-line;
     }
-text-justify: center;
     font-family: Arial,
     sans-serif;
     font-size: 13px;
@@ -246,9 +248,10 @@ text-justify: center;
     border-radius: 8px;
     border: 1px solid black;
     /* position: absolute; */
+    margin-right: 50px;
     height: auto;
-    width: auto;
-    transform: translateX(-50%);
+    width: 130px;
+    /* transform: translateX(-50%); */
     font-family: Arial, sans-serif;
     font-size: 18px;
   }
