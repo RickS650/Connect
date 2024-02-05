@@ -2,11 +2,11 @@ body {
   background-color: lightgray;
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 300px) {
+  @media only screen and (min-width: 300px) and (max-width: 599px){
     background-color: yellow;
 
     .p {
-    text-align: center;
+    justify-content: center;
     }
 
     .grid {
@@ -18,9 +18,9 @@ body {
     .cell {
       width: 22vw;
       background-color: cyan;
-      border-color:black;
+/*       border-color:black;
       border-style:solid;
-      border-width:thin;
+      border-width:thin; */
     }
 
     .round-button {
