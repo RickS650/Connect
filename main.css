@@ -4,6 +4,10 @@ body {
   /* Extra Small Devices, Phones */
   @media only screen and (max-width: 600px) {
 
+    .p {
+    justify-content: center;
+    }
+    
     .grid {
       margin: auto 5%;
       grid-template-columns: (4, 21vw);
@@ -165,7 +169,7 @@ body {
     border-radius: 8px;
   }
 
-  p {
+  .p {
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: darkslategrey;
