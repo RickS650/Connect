@@ -18,6 +18,9 @@ body {
     .cell {
       width: 22vw;
       background-color: cyan;
+      border-color:black;
+      border-style:solid;
+      border-width:thin;
     }
 
     .round-button {
