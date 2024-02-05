@@ -2,7 +2,7 @@ body {
   background-color: lightgray;
 
   /* Extra Small Devices, Phones */
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 300px) {
     background-color: yellow;
     .p {
     justify-content: center;
