@@ -2,7 +2,7 @@ body {
   background-color: lightgray;
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 300px) and (max-width: 599){
+  @media only screen and (min-width: 360px){
     background-color: yellow;
 
     .p {
