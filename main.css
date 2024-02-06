@@ -22,10 +22,14 @@ body {
     border-radius: 8px;
   }
 
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 350px){
-    background-color: yellow; /* For testing purposes */
+    background-color: green; /* For testing purposes */
 
     .grid {
       margin: auto 5%;
@@ -117,10 +121,7 @@ body {
     font-size: 13px;
   }
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-  }
+
 
   /* Styling for the round buttons */
   .round-button {
