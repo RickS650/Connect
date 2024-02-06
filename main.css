@@ -1,13 +1,9 @@
 body {
-  background-color: lightgray;
+  /* background-color: lightgray; */
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 360px){
-    background-color: blue; /* For testing purposes */
-
-    .p {
-    justify-content: center;
-    }
+  @media only screen and (min-width: 360px) and (orientation: portrait){
+    background-color: green; /* For testing purposes */
 
     .grid {
       margin: auto 5%;
@@ -17,10 +13,6 @@ body {
 
     .cell {
       width: 22vw;
-      /* background-color: cyan; */
-/*       border-color:black;
-      border-style:solid;
-      border-width:thin; */
     }
 
     .round-button {
@@ -122,8 +114,7 @@ body {
  */
   .grid {
     display: flex;
-    flex-direction: column;
-    /* Display rows vertically */
+    flex-direction: column; /* Display rows vertically!! Weird */
     max-width: 90%;
     height: auto;
     align-items: center;
