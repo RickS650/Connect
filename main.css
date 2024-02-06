@@ -22,6 +22,61 @@ body {
     border-radius: 8px;
   }
 
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 350px){
+    background-color: yellow; /* For testing purposes */
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 22vw;
+    }
+
+    .round-button {
+      width: 1.2vw;
+      height: 2vw;
+    }
+
+  }
+
+/************************************************/
+
+
+.grid {
+  display: flex;
+  flex-direction: column; /* Display rows vertically!! Weird */
+  max-width: 90%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.col-span {
+  grid-column: span 3;
+  background-color: lightyellow;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  color: darkgoldenrod;
+  height: auto;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  line-height: 50px;
+  justify-content: center;
+}
+
+
   /* Draw a line */
   p {
     text-align: center;
@@ -106,61 +161,6 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
   }
-
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 350px){
-    background-color: yellow; /* For testing purposes */
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 22vw;
-    }
-
-    .round-button {
-      width: 1.2vw;
-      height: 2vw;
-    }
-
-  }
-
-/************************************************/
-
-
-.grid {
-  display: flex;
-  flex-direction: column; /* Display rows vertically!! Weird */
-  max-width: 90%;
-  height: auto;
-  align-items: center;
-  text-align: center;
-}
-
-.col-span {
-  grid-column: span 3;
-  background-color: lightyellow;
-  text-align: center;
-}
-
-.row {
-  display: flex;
-  color: darkgoldenrod;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  margin-bottom: 2px;
-  margin-right: 2px;
-  line-height: 50px;
-  justify-content: center;
-}
-
-
 /************************************************/
   /* Medium Small Devices, Phones */
 
