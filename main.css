@@ -1,27 +1,6 @@
 body {
   /* background-color: lightgray; */
 
-  .cell {
-    color: darkgoldenrod;
-    background: cyan;
-    height: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    border-color:black;
-    border-style:solid;
-    border-width:thin;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: 50px;
-    box-sizing: border-box;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 8px;
-  }
-
-  
   .grid {
     display: flex;
     flex-direction: column; /* Display rows vertically!! Weird */
@@ -49,6 +28,26 @@ body {
     margin-right: 2px;
     line-height: 50px;
     justify-content: center;
+  }
+
+  .cell {
+    color: darkgoldenrod;
+    background: cyan;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-color:black;
+    border-style:solid;
+    border-width:thin;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
   }
 
   /* Draw a line */
@@ -137,7 +136,7 @@ body {
   }
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 360px) and (max-width: 599px){
+  @media only screen and (min-width: 360px){
     background-color: red; /* For testing purposes */
 
     .grid {
