@@ -14,7 +14,7 @@ function MergeCellsInRow(rowToMerge) {
     return;
   }
   for (let i = 0; i < wordElements.length; i++) {
-    if (wordElements[i].style.backgroundColor = 'blue') {
+    if (wordElements[i].style.backgroundColor == 'blue') {
       wordElements[i].style.backgroundColor = 'cyan';
     }
   }
