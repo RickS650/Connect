@@ -20,117 +20,8 @@ body {
     font-weight: bold;
     border-radius: 8px;
   }
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 360px) and (orientation: portrait){
-    background-color: purple; /* For testing purposes */
 
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 22vw;
-    }
-
-    .round-button {
-      width: 1.2vw;
-      height: 2vw;
-    }
-
-  }
-
-  /* Medium Small Devices, Phones */
-
-/*
-  @media only screen and (min-width: 600px) {
-    background-color: green;
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Tablets etc */
-  /*
-  @media only screen and (min-width: 768px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Medium laptops */
-  /*
-  @media only screen and (min-width: 992px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 46vw;
-      background-color: cyan;
-    }
-
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Larger laptops, mainframe PCs*/
-  /*
-  @media only screen and (min-width: 1200px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 95vw);
-      font-size: 18px;
-    }
-
-    .cell {
-      width: 22vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
- */
+  
   .grid {
     display: flex;
     flex-direction: column; /* Display rows vertically!! Weird */
@@ -244,4 +135,115 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
   }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 360px) and (max-width: 599px){
+    background-color: red; /* For testing purposes */
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 22vw;
+    }
+
+    .round-button {
+      width: 1.2vw;
+      height: 2vw;
+    }
+
+  }
+
+  /* Medium Small Devices, Phones */
+
+/*
+  @media only screen and (min-width: 600px) {
+    background-color: green;
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 23vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Tablets etc */
+  /*
+  @media only screen and (min-width: 768px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 23vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Medium laptops */
+  /*
+  @media only screen and (min-width: 992px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 46vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Larger laptops, mainframe PCs*/
+  /*
+  @media only screen and (min-width: 1200px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 95vw);
+      font-size: 18px;
+    }
+
+    .cell {
+      width: 22vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+ */
 }
