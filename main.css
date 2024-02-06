@@ -29,7 +29,7 @@ body {
     }
 
   }
-/* 
+/* /* 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
     background-color: green;
@@ -115,6 +115,7 @@ body {
 
   }
 
+   */
    */
   .grid {
     display: flex;
