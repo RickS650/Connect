@@ -27,9 +27,27 @@ body {
     justify-content: center;
   }
 
+   /* Draw a line */
+   p {
+    text-align: center;
+
+    hr {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  .p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: darkslategrey;
+    justify-content: center;
+  }
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 350px){
-    background-color: green; /* For testing purposes */
+    background-color: blue; /* For testing purposes */
 
     .grid {
       margin: auto 5%;
@@ -81,24 +99,7 @@ body {
 }
 
 
-  /* Draw a line */
-  p {
-    text-align: center;
-
-    hr {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-
-  .p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: darkslategrey;
-    justify-content: center;
-  }
+ 
 
   /* button */
   #submit {
