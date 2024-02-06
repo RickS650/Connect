@@ -3,7 +3,7 @@ body {
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 360px){
-    background-color: orange;
+    background-color: orange; /* For testing purposes */
 
     .p {
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 
     .cell {
       width: 22vw;
-      background-color: cyan;
+      /* background-color: cyan; */
 /*       border-color:black;
       border-style:solid;
       border-width:thin; */
@@ -29,8 +29,10 @@ body {
     }
 
   }
-/* /* 
+
   /* Medium Small Devices, Phones */
+
+/*
   @media only screen and (min-width: 600px) {
     background-color: green;
     .grid {
@@ -52,6 +54,7 @@ body {
   }
 
   /* Tablets etc */
+  /*
   @media only screen and (min-width: 768px) {
 
     .grid {
@@ -73,6 +76,7 @@ body {
   }
 
   /* Medium laptops */
+  /*
   @media only screen and (min-width: 992px) {
 
     .grid {
@@ -95,6 +99,7 @@ body {
   }
 
   /* Larger laptops, mainframe PCs*/
+  /*
   @media only screen and (min-width: 1200px) {
 
     .grid {
@@ -114,9 +119,7 @@ body {
     }
 
   }
-
-   */
-   */
+ */
   .grid {
     display: flex;
     flex-direction: column;
