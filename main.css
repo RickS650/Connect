@@ -3,7 +3,7 @@ body {
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 360px){
-    background-color: orange; /* For testing purposes */
+    background-color: blue; /* For testing purposes */
 
     .p {
     justify-content: center;
