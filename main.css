@@ -27,27 +27,71 @@ body {
     justify-content: center;
   }
 
-   /* Draw a line */
-   p {
-    text-align: center;
-
-    hr {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
+    /* button */
+    #submit {
+      border-radius: 8px;
+      border: 1px solid black;
+      height: auto;
+      width: 130px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin-left: 50px;
     }
-  }
-
-
-  .p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: darkslategrey;
-    justify-content: center;
-  }
+  
+    .leftText {
+      p {
+        white-space: pre-line;
+      }
+  
+      font-family: Arial,
+      sans-serif;
+      font-size: 13px;
+    }
+  
+  
+  
+    /* Styling for the round buttons */
+    .round-button {
+      border-radius: 50%;
+      margin: 0 5px;
+      border: thin;
+      padding: 5px;
+      font-size: 16px;
+      background-color: black;
+    }
+  
+    #blob1 {
+      top: 65%;
+    }
+  
+    #blob2 {
+      top: 65%;
+    }
+  
+    #blob3 {
+      top: 65%;
+    }
+  
+    #blob4 {
+      top: 65%;
+    }
+  
+    #blob5 {
+      top: 65%;
+    }
+  
+    #deselect {
+      border-radius: 8px;
+      border: 1px solid black;
+      margin-right: 50px;
+      height: auto;
+      width: 130px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 350px){
-    background-color: blue; /* For testing purposes */
+    background-color: red; /* For testing purposes */
 
     .grid {
       margin: auto 5%;
@@ -99,70 +143,26 @@ body {
 }
 
 
- 
+  /* Draw a line */
+  p {
+    text-align: center;
 
-  /* button */
-  #submit {
-    border-radius: 8px;
-    border: 1px solid black;
-    height: auto;
-    width: 130px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    margin-left: 50px;
-  }
-
-  .leftText {
-    p {
-      white-space: pre-line;
+    hr {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    font-family: Arial,
-    sans-serif;
-    font-size: 13px;
   }
 
 
-
-  /* Styling for the round buttons */
-  .round-button {
-    border-radius: 50%;
-    margin: 0 5px;
-    border: thin;
-    padding: 5px;
-    font-size: 16px;
-    background-color: black;
-  }
-
-  #blob1 {
-    top: 65%;
-  }
-
-  #blob2 {
-    top: 65%;
-  }
-
-  #blob3 {
-    top: 65%;
-  }
-
-  #blob4 {
-    top: 65%;
-  }
-
-  #blob5 {
-    top: 65%;
-  }
-
-  #deselect {
-    border-radius: 8px;
-    border: 1px solid black;
-    margin-right: 50px;
-    height: auto;
-    width: 130px;
+  .p {
     font-family: Arial, sans-serif;
     font-size: 18px;
+    color: darkslategrey;
+    justify-content: center;
   }
+
+
 /************************************************/
   /* Medium Small Devices, Phones */
 
