@@ -14,6 +14,10 @@ threeRight("off");
 /* alert(window.screen.availWidth); // in px
 alert(window.screen.availHeight); */
 
+
+
+
+
 /* let person = prompt("Please enter your name", "");
 
 if (person != null) {
@@ -53,7 +57,7 @@ shortCat[3] = catsWords[12].split('-')[0];
 // Submit button functionality
 const submitButton = document.querySelector("#submit");
 submitButton.disabled = true;
-submitButton.addEventListener('click', submitButtonClickHandler);
+submitButton.addEventListener('click', submitButtonClicked);
 
 // Deselect button functionality
 const deselectButton = document.querySelector("#deselect");

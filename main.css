@@ -1,5 +1,5 @@
 body {
-   background-color: lightgray; 
+  background-color: lightgray;
 
 
   .cell {
@@ -9,9 +9,6 @@ body {
     text-align: center;
     padding: 0;
     margin: 0;
-/*     border-color:black;
-    border-style:solid;
-    border-width:thin; */
     cursor: pointer;
     margin-bottom: 2px;
     margin-right: 2px;
@@ -27,101 +24,104 @@ body {
     justify-content: center;
   }
 
-    /* button */
-    #submit {
-      border-radius: 8px;
-      border: 1px solid black;
-      height: auto;
-      width: 130px;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      margin-left: 50px;
-    }
-  
-    .leftText {
-      p {
-        white-space: pre-line;
-      }
-  
-      font-family: Arial,
-      sans-serif;
-      font-size: 13px;
-    }
-  
-    /* Styling for the round buttons */
-    .round-button {
-      border-radius: 50%;
-      margin: 0 5px;
-      border: thin;
-      padding: 5px;
-      font-size: 16px;
-      background-color: black;
-    }
-  
-    #blob1 {
-      top: 65%;
-    }
-  
-    #blob2 {
-      top: 65%;
-    }
-  
-    #blob3 {
-      top: 65%;
-    }
-  
-    #blob4 {
-      top: 65%;
-    }
-  
-    #blob5 {
-      top: 65%;
-    }
-  
-    #deselect {
-      border-radius: 8px;
-      border: 1px solid black;
-      margin-right: 50px;
-      height: auto;
-      width: 130px;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
+  /* button */
+  #submit {
+    border-radius: 12px;
+    border: 1px solid black;
+    height: auto;
+    width: 130px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-left: 50px;
+  }
+
+  .leftText {
+    p {
+      white-space: pre-line;
     }
 
+    font-family: Arial,
+    sans-serif;
+    font-size: 13px;
+  }
 
-    .grid {
-      display: flex;
-      flex-direction: column; /* Display rows vertically!! Weird */
-      max-width: 90%;
-      height: auto;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .col-span {
-      grid-column: span 3;
-      background-color: lightyellow;
-      text-align: center;
-    }
-    
-    .row {
-      display: flex;
-      color: darkgoldenrod;
-      height: auto;
-      text-align: center;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
-      margin-bottom: 2px;
-      margin-right: 2px;
-      line-height: 50px;
-      justify-content: center;
-    }
-    
-    
+  /* Styling for the round buttons */
+  .round-button {
+    border-radius: 50%;
+    margin: 0 5px;
+    border: thin;
+    padding: 5px;
+    font-size: 16px;
+    background-color: black;
+  }
+
+  #blob1 {
+    top: 65%;
+  }
+
+  #blob2 {
+    top: 65%;
+  }
+
+  #blob3 {
+    top: 65%;
+  }
+
+  #blob4 {
+    top: 65%;
+  }
+
+  #blob5 {
+    top: 65%;
+  }
+
+  #deselect {
+    border-radius: 12px;
+    border: 1px solid black;
+    margin-right: 50px;
+    height: auto;
+    width: 130px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+  }
+
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    /* Display rows vertically!! Weird */
+    max-width: 90%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-span {
+    grid-column: span 3;
+    background-color: lightyellow;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    color: darkgoldenrod;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height: 50px;
+    justify-content: center;
+  }
+
+
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 350px){
+  @media only screen and (min-width: 350px) {
 
     .grid {
       margin: auto 5%;
@@ -140,7 +140,7 @@ body {
 
   }
 
-/* Medium Small Devices, Phones */
+  /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
 
     .grid {
@@ -224,8 +224,8 @@ body {
 
   }
 
-/************************************************/
-/* Do NOT move these to above media types
+  /************************************************/
+  /* Do NOT move these to above media types
 
   /* Draw a line */
   p {
@@ -246,7 +246,60 @@ body {
     justify-content: center;
   }
 
+  .gear {
+    text-transform: capitalize;
+  }
 
-/************************************************/
   
+.dropdown {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  width: 200px;   /* This controls the drop down width */
+}
+
+button{
+  border:none;
+  border-radius:5px;
+  padding: 5px 5px;
+  font-size:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:#ddd;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  left: 0;
+  overflow: auto;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options a {
+  display: block;
+  color: #000000;
+  /* width: 150px; */
+  font-size: 15px;
+  text-decoration: none;
+  padding:10px 10px;
+}
+
+.dropdown-options a:hover {
+  color: #0a0a23;
+  /* width: auto; */
+  background-color: #ddd;
+  border-radius:5px;
+}
+
+  /************************************************/
+
 }

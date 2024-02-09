@@ -7,17 +7,29 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Connect Wall Game</title>
     <h1>
 
         <table style="width: 100%;">
             <tr>
-                <td style="width: 50%; font-size: 1.5vw" ;>
-                    <!-- <span style="font-size: 1,5vw"></span> -->
+                <td style="width: 20%; font-size: 1.5vw" ;>
                     Connect With Rick
                 </td>
                 <td style="float: right;">
-                    <p style="color: darkslategrey; font-size: .75vw; font-weight: lighter" id="datetime"></p>
+                    <p style="color: darkslategrey; font-size: 1.3vw; font-weight: lighter" id="datetime"></p>
+                    <div style="float: right; color: darkslategray; font-size: 1.3vw;">
+                        <div class="dropdown">
+                            <i class="fa-solid fa-gear fa-xs" id="gear">&nbsp;&nbsp;</i>Settings</i>
+                            <!-- <button>Profile</button> -->
+                            <div class="dropdown-options">
+                                <a href="#">Use the timer</a>
+                                <a href="#">Stop using timer</a>
+                                <a href="#">Coming soon 1</a>
+                                <a href="#">Coming soon 2</a>
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>
@@ -29,7 +41,11 @@
         }
     </style>
 
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link href="main.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c142c7325d.js" crossorigin="anonymous"></script>
     <script src="buttonControl.js"></script>
     <script src="merging.js"></script>
     <script src="connect.js" defer> </script>
@@ -39,6 +55,18 @@
 <hr>
 
 <body>
+    <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Welcome to Connect Wall</h1>
+      
+          <label for="userName"><b>Name?</b></label>
+          <input type="text"  id = "userName" name="userName" required>
+      
+          <button type="submit" id = "btnlogin" class="btn">Login</button>
+          <button type="button" class="btnCancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
 
     <p class="addText">Create groups of four! ..... You only get 5 attempts!</p>
 
@@ -72,15 +100,15 @@
     <p class="leftText"><br>Mistakes remaining:</p>
 
     <div class="button-container">
-        <button class="deselect"; id="deselect">Deselect All</button>
+        <button class="deselect" ; id="deselect">Deselect All</button>
 
         <button class="round-button" id="button1"></button>
         <button class="round-button" id="button2"></button>
         <button class="round-button" id="button3"></button>
         <button class="round-button" id="button4"></button>
         <button class="round-button" id="button5"></button>
-        
-        <button class="submit"; id="submit">Submit</button>
+
+        <button class="submit" ; id="submit">Submit</button>
     </div>
     <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp -->
     <div id="threeGoes">
