@@ -11,50 +11,6 @@ function threeRight(onOff) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btnLogin = document.getElementById("btnlogin");
-  btnLogin.addEventListener('click', btnLoginClickHandler);
-
-  function btnLoginClickHandler(event) {
-    event.preventDefault();
-
-    const userNameInput = document.getElementById("userName");
-    const enteredName = userNameInput.value;
-    const userNameList = ["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Rick", "Trish", "Vic"];
-    const notFound = !userNameList.includes(enteredName);
-
-    if (!notFound) {
-      console.log(enteredName + " is found in the list.");
-      // Here you can perform actions for a successful login
-    } else {
-      console.log(enteredName + " is not found in the list.");
-      displayErrorMessage("Incorrect username entered. Please try again.");
-      userNameInput.value = ""; // Clear the input field
-    }
-  }
-
-  function displayErrorMessage(message) {
-    const errorDiv = document.createElement("div");
-    errorDiv.classList.add("error-message");
-    errorDiv.textContent = message;
-    document.body.appendChild(errorDiv);
-
-    // Remove the error message after 3 seconds
-    setTimeout(function () {
-      errorDiv.remove();
-    }, 3000);
-  }
-});
-
-// Attach the closeForm function to the cancel button
-const btnCancel = document.querySelector(".btnCancel");
-btnCancel.addEventListener('click', closeForm);
-
-// Function to close the form
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-
 function submitButtonClickHandler() {
   submitButtonClicked = true;
   submitButton.disabled = true;
