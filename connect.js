@@ -1,38 +1,18 @@
-var completedRows = 0;
-var fullCat = "";
-var mergeRow = 0;
-var whatCat = [];
-var whatWord = [];
-let cyanColor = "rgb(0, 255, 255)";
-let blueColor = "rgb(0, 0, 255)";
-let lightRedColor = "rgb( (255,114,118)";
+let completedRows = 0, mergeRow = 0;
+let fullCat = "";
+let whatCat = [], whatWord = [];
+let cyanColor = "rgb(0, 255, 255)", blueColor = "rgb(0, 0, 255)", lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
 let specialCase = false;
 
 threeRight("off");
 
-/* alert(window.screen.availWidth); // in px
-alert(window.screen.availHeight); */
+let date = new Date();
+let options = { year: 'numeric', month: 'short', day: 'numeric' };
+let displayDate = date.toLocaleDateString('en-GB', options);
+const existingContent = displayDate + " ver 1.0.0";
 
-/* let person = prompt("Please enter your name", "");
-
-if (person != null) {
-  document.cookie = "username=" + person;
-} 
-const userName=["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Trish", "Vic"]
-const notFound = !userName.includes('person'); /* Returns true if not a user
-if (notFound) {
-  return;
-}
-// Ok we are in so carry on 
-*/
-
-var date = new Date();
-var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-var displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver beta";
-
-document.getElementById('datetime').innerHTML = existingContent;
+document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 const catsWords = [
   "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
@@ -40,9 +20,9 @@ const catsWords = [
   "FIRE-ISLAND", "FIRE-ANT", "FIRE-DRILL", "FIRE-OPAL",
   "FISH-BASS", "FISH-FLOUNDER", "FISH-SALMON", "FISH-TROUT"
 ];
-var longCat = ["BLACK .... ", "FAMOUS WALLS - ", "FIRE .... ", "TYPES OF FISH - "]
+let longCat = ["BLACK .... ", "FAMOUS WALLS", "FIRE .... ", "TYPES OF FISH"]
 const words = catsWords.map(item => item.split('-')[1]);
-var shortCat = [];
+let shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
 
 shortCat[0] = catsWords[0].split('-')[0];
@@ -53,7 +33,7 @@ shortCat[3] = catsWords[12].split('-')[0];
 // Submit button functionality
 const submitButton = document.querySelector("#submit");
 submitButton.disabled = true;
-submitButton.addEventListener('click', submitButtonClicked);
+submitButton.addEventListener('click', submitButtonClickHandler);
 
 // Deselect button functionality
 const deselectButton = document.querySelector("#deselect");
@@ -72,10 +52,11 @@ function shuffleArray(array) {
 shuffleArray(words);
 
 // The container element for the grid
-var grid = document.getElementById("gridID");
+let grid = document.getElementById("gridID");
+const gridWidth = grid.clientWidth;
 
 for (let i = 0; i < words.length; i++) {
-  var cell = document.getElementById("cell" + i);
+  let cell = document.getElementById("cell" + i);
   cell.textContent = words[i];
 }
 
@@ -85,7 +66,7 @@ wordElements.forEach(cell => {
   cell.addEventListener('click', toggleSelection);
 });
 
-var selectedCells = [];
+let selectedCells = [];
 let selectedCount = 0;
 
 // Function to toggle cell selection
@@ -114,6 +95,7 @@ function toggleSelection(event) {
     if (selectedCount <= 3); {
       selectedCells.push(selectedWord);
       selectedCell.style.backgroundColor = 'blue';
+      selectedCell.style.color = 'white';
       selectedCount++;
     }
   } else {
@@ -121,6 +103,7 @@ function toggleSelection(event) {
     selectedCell.classList.remove('selected');
     selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
     selectedCell.style.backgroundColor = 'cyan';
+    selectedCell.style.color = 'darkslategrey';
     selectedCount--;
   }
   // Check if the maximum number of cells has been selected
@@ -132,7 +115,7 @@ function toggleSelection(event) {
 
 }
 
-var submitButtonClicked = false;
+submitButtonClicked = false;
 
 // Add click event listeners to the word cells
 wordElements.forEach(cell => {
@@ -143,12 +126,24 @@ wordElements.forEach(cell => {
 function findCats(array) {
   let a = 0, b = 0, c = 0, d = 0;
   whatCat = [], whatWord = [];
-  letCat = "", letWord = "", letWhole = "";
+  letCat = "", letWord = "", letWhole = ""
+  let normalPart = '';
 
   for (let i = 0; i < array.length; i++) {
-    var index = catsWords.findIndex(element => element.includes(selectedCells[i]))
+    let index = catsWords.findIndex(element => element.includes(selectedCells[i]))
     letWhole = catsWords[index];    // Store the whole cat/word
     letCat = letWhole.split('-')[0];   // Extract cat ....
+    letWord = letWhole.split('-')[1];  // ... and word
+    whatCat.push(letCat);           // push into array
+    whatWord.push(letWord);
+
+    if (i == 0) {
+      normalPart = whatWord[i];
+    }
+    else {
+      normalPart = normalPart + ", " + whatWord[i];
+    }
+
 
     switch (letCat) {
       case (letCat = shortCat[0]):
@@ -167,11 +162,6 @@ function findCats(array) {
         d++;
         break;
     }
-
-    letWord = letWhole.split('-')[1];  // ... and word
-    whatCat.push(letCat);           // push into array
-    whatWord.push(letWord);
-    whatWord[i];
   }
   if ((a == 4) || (b == 4) || (c == 4) || (d == 4)) {
     if (a == 4) {
@@ -192,12 +182,13 @@ function findCats(array) {
       d = 0
     }
     selectedCells = [];
+
   } else if ((a == 3) || (b == 3) || (c == 3) || (d == 3)) {
     // Turn message on ...
     threeRight("on");
     // .. remove a button
     if (noOfAttempts > 0) {
-      var x = document.getElementById("button" + noOfAttempts);
+      let x = document.getElementById("button" + noOfAttempts);
       x.style.display = "none";
       // Decrement attempts
       noOfAttempts--;
@@ -214,7 +205,7 @@ function findCats(array) {
     });
     threeRight('off');
     if (noOfAttempts > 0) {
-      var x = document.getElementById("button" + noOfAttempts);
+      let x = document.getElementById("button" + noOfAttempts);
       x.style.display = "none";
       noOfAttempts--;
       selectedCells = [];
@@ -225,7 +216,13 @@ function findCats(array) {
     return;
   }
 
-  fullCat = fullCat + whatWord[0] + ", " + whatWord[1] + ", " + whatWord[2] + ", " + whatWord[3];
+  let boldPart = fullCat;
+
+  // normalPart ="\n" + whatWord[i] + ", " + whatWord[i + 1] + ", " + whatWord[i + 2] + ", " + whatWord[i + 3];
+  // fullCat= '<strong>${boldPart}</strong> ${normalPart}';
+  // spanCell.innerHTML = 'cat<br>dog';
+
+  fullCat = boldPart+'<br>'+normalPart;
 
   //Empty selectconst selectedCells = []; 
   selectedCount = 0;
@@ -256,7 +253,7 @@ function resetAll() {
 }
 
 function threeRight(onOff) {
-  var x = document.getElementById("threeGoes");
+  let x = document.getElementById("threeGoes");
 
   if (onOff == "on") {
     x.style.display = "block";

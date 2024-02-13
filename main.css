@@ -3,19 +3,21 @@ body {
 
 
   .cell {
-    color: darkgoldenrod;
+    color: darkslategrey;
     background: cyan;
-    height: auto;
+    height:55px;
     text-align: center;
-    padding: 0;
+    padding: 15px;
     margin: 0;
     cursor: pointer;
     margin-bottom: 2px;
     margin-right: 2px;
-    line-height: 50px;
+    line-height: normal;
     box-sizing: border-box;
-    justify-content: center;
+    /* justify-content: center; */
     font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
     border-radius: 8px;
   }
 
@@ -90,12 +92,12 @@ body {
 
   .grid {
     display: flex;
-    flex-direction: column;
-    /* Display rows vertically!! Weird */
+    flex-direction: column; /* Displays rows horizontally! Weird */
     max-width: 90%;
     height: auto;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+    vertical-align: middle;
   }
 
   .col-span {
@@ -114,8 +116,10 @@ body {
     cursor: pointer;
     margin-bottom: 2px;
     margin-right: 2px;
-    line-height: 50px;
-    justify-content: center;
+    line-height: normal;
+    /* justify-content: center; */
+    text-align: center;
+    vertical-align: middle;
   }
 
 
@@ -245,6 +249,60 @@ body {
     color: darkslategrey;
     justify-content: center;
   }
+
+  .gear {
+    text-transform: capitalize;
+  }
+
+  
+.dropdown {
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  width: 200px;   /* This controls the drop down width */
+}
+
+button{
+  border:none;
+  border-radius:5px;
+  padding: 5px 5px;
+  font-size:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:#ddd;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  left: 0;
+  overflow: auto;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options a {
+  display: block;
+  color: #000000;
+  /* width: 150px; */
+  font-size: 15px;
+  text-decoration: none;
+  padding:10px 10px;
+}
+
+.dropdown-options a:hover {
+  color: #0a0a23;
+  /* width: auto; */
+  background-color: #ddd;
+  border-radius:5px;
+}
 
   /************************************************/
 

@@ -1,3 +1,5 @@
+
+
 function threeRight(onOff) {
   var x = document.getElementById("threeGoes");
 
@@ -11,11 +13,21 @@ function threeRight(onOff) {
   }
 }
 
+/* // Deselect button functionality
+const deselectButton = document.querySelector("#deselect");
+deselectButton.disabled = true;
+deselectButton.addEventListener('click', deselectButtonClickHandler);
+
+// Submit button functionality
+const submitButton = document.querySelector("#submit");
+submitButton.disabled = true;
+submitButton.addEventListener('click', submitButtonClickHandler); */
+
 function submitButtonClickHandler() {
-  submitButtonClicked = true;
+  // submitButtonClicked = true;
   submitButton.disabled = true;
 
-  if (submitButtonClicked) {
+  // if (submitButton.disabled) {
     // Remove click event listeners from other cells
     wordElements.forEach(cell => {
       if (!selectedCells.includes(cell)) {
@@ -51,7 +63,7 @@ function submitButtonClickHandler() {
     Math.max.apply(null, whatCat)
     findCats(selectedCells);
 
-  }
+  // }
 }
 
 function deselectButtonClickHandler() {

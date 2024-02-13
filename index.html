@@ -10,18 +10,30 @@
 
     <title>Connect Wall Game</title>
     <h1>
-
         <table style="width: 100%;">
             <tr>
-                <td style="width: 20%; font-size: 1.5vw" ;>
-                    Connect With Rick
+                <td style="width: 20%; font-size: 1.5vw" ; id="header";>
+                    Connect With Rick 
                 </td>
                 <td style="float: right;">
-                    <p style="color: darkslategrey; font-size: 1.3vw; font-weight: lighter" id="datetime"></p>                   
+                    <!-- <p style="color: darkslategrey; font-size: 1.3vw; font-weight: lighter" id="datetime"></p> -->
+                    <div style="float: right; color: darkslategray; font-size: 1.3vw;">
+
+                        <i class="fa-solid fa-gear fa-xs" id="gear">&nbsp;&nbsp;</i>Settings&nbsp;&nbsp;</i>
+                        <button type="button" id="btnBox" class="btnbox">Login</button>
+
+                        <div class="dropdown">
+                            <div class="dropdown-options">
+                                <a href="#">Login</a>
+                                <a href="#">Start using the timer</a>
+                                <a href="#">Stop using the timer</a>
+                                <a href="#">Coming soon</a>
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>
-
     </h1>
     <style>
         h1 {
@@ -29,8 +41,11 @@
         }
     </style>
 
-    <!-- <link rel="stylesheet" href="main.css"> -->
     <link href="main.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c142c7325d.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
     <script src="buttonControl.js"></script>
     <script src="merging.js"></script>
     <script src="connect.js" defer> </script>
@@ -40,6 +55,18 @@
 <hr>
 
 <body>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h1>Welcome to Connect Wall</h1>
+
+            <label for="userName"><b>Name?</b></label>
+            <input type="text" id="userName" name="userName" autocomplete="off" required>
+
+            <button type="button" id="btnlogin" class="btn">Login</button>
+            <button type="button" id="btnCancel" class="btnCancel">Close</button>
+        </form>
+    </div>
 
     <p class="addText">Create groups of four! ..... You only get 5 attempts!</p>
 
@@ -83,7 +110,6 @@
 
         <button class="submit" ; id="submit">Submit</button>
     </div>
-    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp -->
     <div id="threeGoes">
         <div style="text-align:center">
             One away ......
