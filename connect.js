@@ -17,12 +17,12 @@ const existingContent = displayDate + " ver 1.0.0";
 document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 const catsWords = [
-  "BLACK-MARK", "BLACK-DEATH", "BLACK-MARKET", "BLACK-FRIDAY",
-  "WALLS-HADRIAN", "WALLS-WAILING", "WALLS-BERLIN", "WALLS-CHINA",
-  "FIRE-ISLAND", "FIRE-ANT", "FIRE-DRILL", "FIRE-OPAL",
-  "FISH-BASS", "FISH-FLOUNDER", "FISH-SALMON", "FISH-TROUT"
+  "TYPES OF FOOTWEAR-SLIDERS", "TYPES OF FOOTWEAR-WELLINGTONS", "TYPES OF FOOTWEAR-SLIPPERS", "TYPES OF FOOTWEAR-TRAINERS",
+  "HIGH STREET BANKS-SANTANDER", "HIGH STREET BANKS-NATIONWIDE", "HIGH STREET BANKS-NATWEST", "HIGH STREET BANKS-BARCLAYS",
+  "ISLE 0F ...-MAN", "ISLE 0F ...-WIGHT", "ISLE 0F ...-DOGS", "ISLE 0F ...-SKYE",
+  "BRITISH RIVERS-CLYDE", "BRITISH RIVERS-DEE", "BRITISH RIVERS-FORTH", "BRITISH RIVERS-DON"
 ];
-let longCat = ["BLACK .... ", "FAMOUS WALLS", "FIRE .... ", "TYPES OF FISH"]
+let longCat = ["TYPES OF FOOTWEAR ....", "HIGH STREET BANKS", "ISLE 0F ....", "BRITISH RIVERS"]
 const words = catsWords.map(item => item.split('-')[1]);
 let shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
