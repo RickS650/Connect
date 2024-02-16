@@ -49,7 +49,10 @@ function MergeCellsInRow(rowToMerge) {
         mergedCell.remove();
       }
       spanCell = document.getElementById("cell12");
-      spanCell.style.backgroundColor = 'gold';
+      spanCell.style.backgroundColor = 'lightgold';
+      if (timerFlag == true) {
+        stopTimer = true;
+      }
       break;
   }
 
@@ -139,7 +142,7 @@ function fail2Win() {
           mergedCell.remove();
         }
         spanCell = document.getElementById("cell8");
-        spanCell.style.backgroundColor = 'gold';
+        spanCell.style.backgroundColor = 'lightgold';
         break;
       case 3:
         for (let i = 13; i <= 15; i++) {
@@ -148,6 +151,7 @@ function fail2Win() {
         }
         spanCell = document.getElementById("cell12");
         spanCell.style.backgroundColor = 'cornflowerblue';
+        setTimeout();
         break;
     }
     let boldPart = longCat[j];

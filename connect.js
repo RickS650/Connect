@@ -4,6 +4,8 @@ let whatCat = [], whatWord = [];
 let cyanColor = "rgb(0, 255, 255)", blueColor = "rgb(0, 0, 255)", lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
 let specialCase = false;
+let timerFlag = false;
+let stopTimer = false;
 
 threeRight("off");
 
