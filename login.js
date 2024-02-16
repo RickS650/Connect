@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             closeForm();
 
             // Start the countdown timer when the login button is clicked
-            startCountDown(11, function () {
+            startCountDown(6, function () {
                 // This function will be called when the count-down timer finishes
                 // document.getElementById("countdownTimer").style.color = 'darkgray';
                 startCountUp();
