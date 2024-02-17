@@ -6,16 +6,30 @@ let noOfAttempts = 4;
 let specialCase = false;
 let timerFlag = false;
 let stopTimer = false;
-
-threeRight("off");
-
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 1.0.0";
+const existingContent = displayDate + " ver 1.1.0";
 
+// displays best time and timers
+if (timerFlag == true) {
+  // get the best time, if there is one, else set it to 0
+  if (localStorage.getItem('bestTime') == null) {
+    localStorage.setItem('bestTime', 0);
+  }
+  let bestTime = localStorage.getItem('bestTime');
+  const dispText = document.getElementById("centreText")
+  dispText.style.display = 'inline';
+  dispText.innerHTML = "Your best time: " + bestTime + " secs";
+}
+
+// function to tell user 3 right
+threeRight("off");
+
+// Title
 document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
+//load the words
 const catsWords = [
   "TYPES OF FOOTWEAR-SLIDERS", "TYPES OF FOOTWEAR-WELLINGTONS", "TYPES OF FOOTWEAR-SLIPPERS", "TYPES OF FOOTWEAR-TRAINERS",
   "HIGH STREET BANKS-SANTANDER", "HIGH STREET BANKS-NATIONWIDE", "HIGH STREET BANKS-NATWEST", "HIGH STREET BANKS-BARCLAYS",
@@ -23,6 +37,7 @@ const catsWords = [
   "BRITISH RIVERS-CLYDE", "BRITISH RIVERS-DEE", "BRITISH RIVERS-FORTH", "BRITISH RIVERS-DON"
 ];
 let longCat = ["TYPES OF FOOTWEAR ....", "HIGH STREET BANKS", "ISLE 0F ....", "BRITISH RIVERS"]
+
 const words = catsWords.map(item => item.split('-')[1]);
 let shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
@@ -224,7 +239,7 @@ function findCats(array) {
   // fullCat= '<strong>${boldPart}</strong> ${normalPart}';
   // spanCell.innerHTML = 'cat<br>dog';
 
-  fullCat = boldPart+'<br>'+normalPart;
+  fullCat = boldPart + '<br>' + normalPart;
 
   //Empty selectconst selectedCells = []; 
   selectedCount = 0;

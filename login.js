@@ -4,8 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnCancel = document.getElementById("btnCancel");
     let elapsedTime;
     let timerUser;
-    
+
     timerFlag = true;
+    // get the best time, if there is one, else set it to 0
+    if (localStorage.getItem('bestTime') == null) {
+        localStorage.setItem('bestTime', 0);
+    }
+    let bestTime = localStorage.getItem('bestTime');
+    const dispText = document.getElementById("centreText")
+    dispText.style.display = 'inline';
+    dispText.innerHTML = "Your best time: " + bestTime + " secs";
 
     // To show the login popup
     const myLoginButton = document.querySelector('#btnBox');
@@ -87,7 +95,7 @@ function timer(timeToGo) {
             clearInterval(timer);
             return;
         }
-        document.getElementById("countdownTimer").innerHTML = "Seconds to go: " + sec;
+        document.getElementById("centreText").innerHTML = "Seconds to go: " + sec;
     }, 1000);
 }
 
@@ -96,10 +104,10 @@ function startCountDown(durationInSeconds, callback) {
     let remainingTime = durationInSeconds;
     let countDownTimer = setInterval(function () {
         remainingTime--;
-        document.getElementById("countdownTimer").innerHTML = "Timer countdown: " + remainingTime;
-/*         if (remainingTime <= 5) {
-            document.getElementById("countdownTimer").style.color = 'red';
-        } */
+        document.getElementById("centreText").innerHTML = "Timer countdown: " + remainingTime;
+        /*         if (remainingTime <= 5) {
+                    document.getElementById("centreText").style.color = 'red';
+                } */
         if (remainingTime <= 0) {
             clearInterval(countDownTimer); // Stop the count-down timer
             if (callback && typeof callback === 'function') {
@@ -126,9 +134,13 @@ function startCountUp() {
             seconds = "0" + seconds;
         if (stopTimer == true) {
             clearInterval(countUpTimer); // Stop the count-up timer 
-            return; 
+            return;
         }
-        document.getElementById("countdownTimer").innerHTML = "Elapsed time: " + hour + ":" + minute + ":" + seconds;
-        localStorage.setItem('bestTime', elapsedTime);
+        document.getElementById("centreText").innerHTML = "Elapsed time: " + hour + ":" + minute + ":" + seconds;
+        let oldTime = localStorage.getItem('bestTime');
+        let newTime = elapsedTime;
+        if (newTime > oldTime) {
+            localStorage.setItem('bestTime', newTime);
+        }
     }, 1000);
 }
