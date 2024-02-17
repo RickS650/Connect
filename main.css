@@ -231,6 +231,27 @@ body {
 
   }
 
+    /* Larger tablets */
+    @media only screen and (min-width: 1440px) {
+
+      .grid {
+        margin: auto 5%;
+        grid-template-columns: repeat(4, 95vw);
+        font-size: 18px;
+      }
+  
+      .cell {
+        width: 22vw;
+        background-color: cyan;
+      }
+  
+      .round-button {
+        width: 15px;
+        height: 15px;
+      }
+  
+    }
+
   /************************************************/
   /* Do NOT move these to above media types
 
