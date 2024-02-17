@@ -112,8 +112,8 @@ function fail2Win() {
   for (j = 0; j < 16; j++) {
     spanCell = document.getElementById("cell" + j);
     spanCell.removeEventListener('click', toggleSelection);
-    if (wordElements[j].style.backgroundColor = 'blue') {
-      wordElements[j].style.backgroundColor = 'cyan';
+    if (wordElements[j].style.backgroundColor == 'blue') {
+      wordElements[j].style.backgroundColor == 'cyan';
       wordElements[j].style.color='darkslategrey'
     }
   }

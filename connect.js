@@ -33,7 +33,7 @@ document.getElementById('header').innerHTML = "Connect with Rick    " + existing
 const catsWords = [
   "LONDON UNDERGROUND LINES-DISTRICT", "LONDON UNDERGROUND LINES-VICTORIA", "LONDON UNDERGROUND LINES-METROPOLITAN", "LONDON UNDERGROUND LINES-BAKERLOO",
   "SHAPES-CIRCLE", "SHAPE-HEXAGON", "SHAPES-SQUARE", "SHAPES-TRIANGLE",
-  "ROALD DAHL CHARACTERS-SOPHIE", "ROALD DAHL CHARACTERS-VERUCA", "ROALD DAHL CHARACTERS-MrsTWIT", "ROALD DAHL CHARACTERS-VIOLET",
+  "ROALD DAHL CHARACTERS-SOPHIE", "ROALD DAHL CHARACTERS-VERUCA", "ROALD DAHL CHARACTERS-Mrs TWIT", "ROALD DAHL CHARACTERS-VIOLET",
   "BRITISH QUEENS-ELIZABETH", "BRITISH QUEENS-ELEANOR", "BRITISH QUEENS-ANNE", "BRITISH QUEENS-MATILDA"
 ];
 let longCat = ["LONDON UNDERGROUND LINES ....", "SHAPES", "ROALD DAHL CHARACTERS.", "BRITISH QUEENS"]
@@ -107,7 +107,7 @@ function toggleSelection(event) {
 
   // Check if the cell is already selected
 
-  if (bgColor === cyanColor) {
+  if (bgColor == cyanColor) {
     // Check if the maximum number of cells has been selected
     if (selectedCount <= 3); {
       selectedCells.push(selectedWord);

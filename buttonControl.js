@@ -70,8 +70,9 @@ function deselectButtonClickHandler() {
   // Check if the cell is already selected
   const wordElements = document.querySelectorAll('.cell');
   for (let i = 0; i < wordElements.length; i++) {
-    if (wordElements[i].style.backgroundColor = 'blue') {
+    if (wordElements[i].style.backgroundColor == 'blue') {
       wordElements[i].style.backgroundColor = 'cyan';
+      wordElements[i].style.color='darkslategrey'
     }
   }
   selectedCount = 0;
@@ -84,6 +85,7 @@ function failure() {
   for (let i = 0; i < wordElements.length; i++) {
     if (wordElements[i].style.backgroundColor = 'blue') {
       wordElements[i].style.backgroundColor = 'cyan';
+      wordElements[i].style.color='darkslategrey'
     }
   }
   deselectButton.disabled = true;
