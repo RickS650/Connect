@@ -250,7 +250,7 @@ function findCats(array) {
   // fullCat= '<strong>${boldPart}</strong> ${normalPart}';
   // spanCell.innerHTML = 'cat<br>dog';
 
-  fullCat = boldPart + '<br>' + normalPart;
+  fullCat = '<b>' + boldPart + '</b>' + '<br>' + normalPart;
 
   //Empty selectconst selectedCells = []; 
   selectedCount = 0;

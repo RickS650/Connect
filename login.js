@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dispText.innerHTML = "Your best time: " + bestTime + " secs";
 
     // To show the login popup
-    const myLoginButton = document.querySelector('#btnBox');
+    const myLoginButton  = document.querySelector('#btnBox');
     myLoginButton.addEventListener('click', myLoginButtonClickHandler);
 
     function myLoginButtonClickHandler() {

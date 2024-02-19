@@ -26,6 +26,7 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell0");
       spanCell.style.backgroundColor = 'lightyellow';
+      completedRows++;
       break;
     case 1:
       for (let i = 5; i <= 7; i++) {
@@ -34,6 +35,7 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell4");
       spanCell.style.backgroundColor = "pink";
+      completedRows++;
       break;
     case 2:
       for (let i = 9; i <= 11; i++) {
@@ -42,6 +44,7 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell8");
       spanCell.style.backgroundColor = 'lightgreen';
+      completedRows++;
       break;
     case 3:
       for (let i = 13; i <= 15; i++) {
@@ -53,6 +56,7 @@ function MergeCellsInRow(rowToMerge) {
       if (timerFlag == true) {
         stopTimer = true;
       }
+      completedRows++;
       break;
   }
 
@@ -167,12 +171,14 @@ function fail2Win() {
 
 // shows all completed categories - end of game
 function quitAll() {
+  // we need to find if any row has been completed
+
   let cellNo = '';
   if (timerFlag == true) {
     stopTimer = true;
   }
 
-  for (i = 0; i <= 3; i++) {
+  for (i = completedRows; i <= completedRows + 3; i++) {
     switch (i) {
       case 0:
         for (let j = 1; j <= 3; j++) {
@@ -257,11 +263,10 @@ function quitAll() {
     spanCell.style.fontWeight = 'lightbold';
     spanCell.style.padding = '5px'
 
-    fullCat = boldPart + '<br>' + partWords;
+    fullCat = '<b>' + boldPart + '</b>' + '<br>' + partWords;
 
     spanCell.innerHTML = fullCat;
 
-    mergeRow++;
   }
   deselectButton.disabled = true;
   submitButton.disabled = true;
