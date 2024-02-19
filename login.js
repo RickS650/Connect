@@ -2,8 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const userNameInput = document.getElementById("userName");
     const btnLogin = document.getElementById("btnlogin");
     const btnCancel = document.getElementById("btnCancel");
+    const btnGiveUp = document.getElementById("btnCGiveUp");
     let elapsedTime;
     let timerUser;
+
+    const quitButton = document.querySelector('#btnGiveUp');
+    quitButton.addEventListener('click', quitButtonClickHandler);
+    function quitButtonClickHandler() {
+        quitButton.disabled = true;
+        // Now it has been clicked make all correct selections
+        quitAll();  // lives in merging.js
+        return;
+    }
 
     timerFlag = true;
     // get the best time, if there is one, else set it to 0

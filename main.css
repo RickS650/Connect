@@ -232,8 +232,8 @@ body {
   }
 
     /* Larger tablets */
-    @media only screen and (min-width: 1440px) {
-
+    @media only screen and (min-width: 1440px) and (orientation: portrait) {
+      background-color: red;
       .grid {
         margin: auto 5%;
         grid-template-columns: repeat(4, 95vw);

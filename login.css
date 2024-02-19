@@ -90,3 +90,11 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+/* The give up button */
+#btnGiveUp {
+  width: 100px;
+  top: 5%;
+  right: 95%;
+  border: 1px solid black;
+}

@@ -3,13 +3,11 @@ let fullCat = "";
 let whatCat = [], whatWord = [];
 let cyanColor = "rgb(0, 255, 255)", blueColor = "rgb(0, 0, 255)", lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
-let specialCase = false;
-let timerFlag = false;
-let stopTimer = false;
+let specialCase = false,timerFlag = false,stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 1.1.0";
+const existingContent = displayDate + " ver 2.0.0";
 
 // displays best time and timers
 if (timerFlag == true) {
@@ -36,9 +34,11 @@ const catsWords = [
   "ROALD DAHL CHARACTERS-SOPHIE", "ROALD DAHL CHARACTERS-VERUCA", "ROALD DAHL CHARACTERS-Mrs TWIT", "ROALD DAHL CHARACTERS-VIOLET",
   "BRITISH QUEENS-ELIZABETH", "BRITISH QUEENS-ELEANOR", "BRITISH QUEENS-ANNE", "BRITISH QUEENS-MATILDA"
 ];
-let longCat = ["LONDON UNDERGROUND LINES ....", "SHAPES", "ROALD DAHL CHARACTERS.", "BRITISH QUEENS"]
+let longCat = ["LONDON UNDERGROUND LINES", "SHAPES", "ROALD DAHL CHARACTERS", "BRITISH QUEENS"]
 
 const words = catsWords.map(item => item.split('-')[1]);
+const quitWords =catsWords.map(item => item.split('-')[1]); // get this before the shuffle
+
 let shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
 
@@ -92,43 +92,54 @@ function toggleSelection(event) {
   const selectedWord = selectedCell.innerText.trim();
   // Don't allow more than 4 selections (count starts at 0)
   if (selectedCount > 3) {
-    return;
-  }
+    const computedStyle = window.getComputedStyle(selectedCell);
+    const bgColor = computedStyle.getPropertyValue('background-color');
 
-  // Get the background color of the selected cell
-  const computedStyle = window.getComputedStyle(selectedCell);
-  const bgColor = computedStyle.getPropertyValue('background-color');
-
-  if (selectedCount >= 0) {
-    deselectButton.disabled = false;
-  } else {
-    deselectButton.disabled = true;
-  }
-
-  // Check if the cell is already selected
-
-  if (bgColor == cyanColor) {
-    // Check if the maximum number of cells has been selected
-    if (selectedCount <= 3); {
-      selectedCells.push(selectedWord);
+    if (bgColor == blueColor) {  
+      selectedCell.style.backgroundColor = 'cyan';
+      selectedCell.style.color = 'darkslategrey';
+      selectedCount--;
+    } else {
       selectedCell.style.backgroundColor = 'blue';
       selectedCell.style.color = 'white';
-      selectedCount++;
+      selectedCount--;
     }
-  } else {
-    // Deselect the cell
-    selectedCell.classList.remove('selected');
-    selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
-    selectedCell.style.backgroundColor = 'cyan';
-    selectedCell.style.color = 'darkslategrey';
-    selectedCount--;
-  }
+    return;
+  };
+
+// Get the background color of the selected cell
+const computedStyle = window.getComputedStyle(selectedCell);
+const bgColor = computedStyle.getPropertyValue('background-color');
+
+if (selectedCount >= 0) {
+  deselectButton.disabled = false;
+} else {
+  deselectButton.disabled = true;
+}
+
+// Check if the cell is already selected
+if (bgColor == cyanColor) {
   // Check if the maximum number of cells has been selected
-  // has to be 4, not 3,  because incremented earlier
-  if (selectedCount == 4) {
-    submitButton.disabled = false;
-    // selectedCount = 0;
+  if (selectedCount <= 3); {
+    selectedCells.push(selectedWord);
+    selectedCell.style.backgroundColor = 'blue';
+    selectedCell.style.color = 'white';
+    selectedCount++;
   }
+} else {
+  // Deselect the cell
+  selectedCell.classList.remove('selected');
+  selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
+  selectedCell.style.backgroundColor = 'cyan';
+  selectedCell.style.color = 'darkslategrey';
+  selectedCount--;
+}
+// Check if the maximum number of cells has been selected
+// has to be 4, not 3,  because incremented earlier
+if (selectedCount == 4) {
+  submitButton.disabled = false;
+  // selectedCount = 0;
+}
 
 }
 
