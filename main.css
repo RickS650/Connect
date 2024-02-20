@@ -129,6 +129,12 @@ body {
 
     transform: rotate(-90deg);
     transform-origin: left top;
+    width: 100vh;
+    height:100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
 
     .grid {
       margin: auto 5%;
@@ -233,7 +239,7 @@ body {
 
     /* Larger tablets */
     @media only screen and (min-width: 1440px) and (orientation: portrait) {
-      background-color: red;
+      
       .grid {
         margin: auto 5%;
         grid-template-columns: repeat(4, 95vw);
