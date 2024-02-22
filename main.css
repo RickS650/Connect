@@ -127,10 +127,10 @@ body {
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait){
 
-    transform: rotate(-90deg);
+    transform: rotate(+90deg);
     transform-origin: left top;
-    width: 100vh;
-    height:100vw;
+    width: 100vw;
+    height:100vh;
     overflow-x: hidden;
     position: absolute;
     top: 100%;

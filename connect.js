@@ -7,7 +7,7 @@ let specialCase = false,timerFlag = false,stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 2.0.0";
+const existingContent = displayDate + " ver 2.1.0";
 
 // displays best time and timers
 if (timerFlag == true) {
@@ -29,12 +29,12 @@ document.getElementById('header').innerHTML = "Connect with Rick    " + existing
 
 //load the words
 const catsWords = [
-  "LONDON UNDERGROUND LINES-DISTRICT", "LONDON UNDERGROUND LINES-VICTORIA", "LONDON UNDERGROUND LINES-METROPOLITAN", "LONDON UNDERGROUND LINES-BAKERLOO",
-  "SHAPES-CIRCLE", "SHAPES-HEXAGON", "SHAPES-SQUARE", "SHAPES-TRIANGLE",
-  "ROALD DAHL CHARACTERS-SOPHIE", "ROALD DAHL CHARACTERS-VERUCA", "ROALD DAHL CHARACTERS-Mrs TWIT", "ROALD DAHL CHARACTERS-VIOLET",
-  "BRITISH QUEENS-ELIZABETH", "BRITISH QUEENS-ELEANOR", "BRITISH QUEENS-ANNE", "BRITISH QUEENS-MATILDA"
+  "SOUNDS LIKE A LETTER + A NUMBER-Kuwait", "SOUNDS LIKE A LETTER + A NUMBER-Canine", "SOUNDS LIKE A LETTER + A NUMBER-Eaten", "SOUNDS LIKE A LETTER + A NUMBER-Before",
+  "LITTLE BITS-Smidgen", "LITTLE BITS-Trace", "LITTLE BITS-Morsel", "LITTLE BITS-Speck",
+  "WORDS THAT BEGIN WITH A NAME-Bendy", "WORDS THAT BEGIN WITH A NAME-Jackal", "WORDS THAT BEGIN WITH A NAME-Rickshaw", "WORDS THAT BEGIN WITH A NAME-Length",
+  "THINGS PLURAL BUT ONLY ONE OF-Scissors", "THINGS PLURAL BUT ONLY ONE OF-Tights", "THINGS PLURAL BUT ONLY ONE OF-Socks", "THINGS PLURAL BUT ONLY ONE OF-Maths"
 ];
-let longCat = ["LONDON UNDERGROUND LINES", "SHAPES", "ROALD DAHL CHARACTERS", "BRITISH QUEENS"]
+let longCat = ["SOUNDS LIKE A LETTER + A NUMBER", "LITTLE BITS", "WORDS THAT BEGIN WITH A NAME", "THINGS PLURAL BUT ONLY ONE OF"]
 
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords =catsWords.map(item => item.split('-')[1]); // get this before the shuffle
