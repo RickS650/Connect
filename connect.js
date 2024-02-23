@@ -28,13 +28,20 @@ threeRight("off");
 document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 //load the words
-const catsWords = [
+const  temp1 = [
   "SOUNDS LIKE A LETTER & A NUMBER-Kuwait", "SOUNDS LIKE A LETTER & A NUMBER-Canine", "SOUNDS LIKE A LETTER & A NUMBER-Eaten", "SOUNDS LIKE A LETTER & A NUMBER-Before",
   "LITTLE BITS-Smidgen", "LITTLE BITS-Trace", "LITTLE BITS-Morsel", "LITTLE BITS-Speck",
   "WORDS THAT BEGIN WITH A NAME-Bendy", "WORDS THAT BEGIN WITH A NAME-Jackal", "WORDS THAT BEGIN WITH A NAME-Rickshaw", "WORDS THAT BEGIN WITH A NAME-Length",
   "THINGS PLURAL BUT ONLY ONE OF-Scissors", "THINGS PLURAL BUT ONLY ONE OF-Tights", "THINGS PLURAL BUT ONLY ONE OF-Socks", "THINGS PLURAL BUT ONLY ONE OF-Maths"
 ];
 let longCat = ["SOUNDS LIKE A LETTER + A NUMBER", "LITTLE BITS", "WORDS THAT BEGIN WITH A NAME", "THINGS PLURAL BUT ONLY ONE OF"]
+const catsWords = temp1.map(function (e) { 
+  return e.toUpperCase()
+});
+
+longCat = longCat.map(function (e) { 
+  return e.toUpperCase()
+});
 
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords =catsWords.map(item => item.split('-')[1]); // get this before the shuffle
