@@ -144,13 +144,17 @@ function startCountUp() {
             seconds = "0" + seconds;
         if (stopTimer == true) {
             clearInterval(countUpTimer); // Stop the count-up timer 
+            let oldTime = localStorage.getItem('bestTime');
+            let newTime = elapsedTime;
+
+            if (newTime < oldTime) {
+                localStorage.setItem('bestTime', newTime);
+                animateBestTime();
+            }
+            
             return;
         }
         document.getElementById("centreText").innerHTML = "Elapsed time: " + hour + ":" + minute + ":" + seconds;
-        let oldTime = localStorage.getItem('bestTime');
-        let newTime = elapsedTime;
-        if (newTime > oldTime) {
-            localStorage.setItem('bestTime', newTime);
-        }
+
     }, 1000);
 }

@@ -3,11 +3,17 @@ let fullCat = "";
 let whatCat = [], whatWord = [];
 let cyanColor = "rgb(0, 255, 255)", blueColor = "rgb(0, 0, 255)", lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
-let specialCase = false,timerFlag = false,stopTimer = false;
+let specialCase = false, timerFlag = false, stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 2.1.0";
+const existingContent = displayDate + " ver 2.2.0";
+
+// Function to animate "Best Time!" appearing from the left
+function animateBestTime() {
+  const bestTimeContainer = document.getElementById("bestTimeContainer");
+  bestTimeContainer.classList.add("slide-in"); // Add class to trigger animation
+}
 
 // displays best time and timers
 if (timerFlag == true) {
@@ -28,23 +34,32 @@ threeRight("off");
 document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 //load the words
-const  temp1 = [
+// Next time
+/* const  temp1 = [
+  "PALINDROMES-AIBOHPHOBIA", "PALINDROMES-RADAR", "PALINDROMES-RACECAR", "PALINDROMES-REPAPER",
+  "SAME WORD, OPPOSITE MEANING-FAST", "SAME WORD, OPPOSITE MEANING-SANCTION", "SAME WORD, OPPOSITE MEANING-SCREEN", "SAME WORD, OPPOSITE MEANING-BOLT",
+  "WORDS THAT BEGIN WITH A NAME-BULL", "WORDS THAT BEGIN WITH A NAME-LION", "WORDS THAT BEGIN WITH A NAME-RAM", "WORDS THAT BEGIN WITH A NAME-FISH",
+  "FAMOUS FOR POTTERY-GERMANY", "FAMOUS FOR POTTERY-JAPAN", "FAMOUS FOR POTTERY-CHINA", "FAMOUS FOR POTTERY-UK"
+]; */
+const temp1 = [
   "SOUNDS LIKE A LETTER & A NUMBER-Kuwait", "SOUNDS LIKE A LETTER & A NUMBER-Canine", "SOUNDS LIKE A LETTER & A NUMBER-Eaten", "SOUNDS LIKE A LETTER & A NUMBER-Before",
   "LITTLE BITS-Smidgen", "LITTLE BITS-Trace", "LITTLE BITS-Morsel", "LITTLE BITS-Speck",
   "WORDS THAT BEGIN WITH A NAME-Bendy", "WORDS THAT BEGIN WITH A NAME-Jackal", "WORDS THAT BEGIN WITH A NAME-Rickshaw", "WORDS THAT BEGIN WITH A NAME-Length",
   "THINGS PLURAL BUT ONLY ONE OF-Scissors", "THINGS PLURAL BUT ONLY ONE OF-Tights", "THINGS PLURAL BUT ONLY ONE OF-Socks", "THINGS PLURAL BUT ONLY ONE OF-Maths"
 ];
-let longCat = ["SOUNDS LIKE A LETTER + A NUMBER", "LITTLE BITS", "WORDS THAT BEGIN WITH A NAME", "THINGS PLURAL BUT ONLY ONE OF"]
-const catsWords = temp1.map(function (e) { 
+// let longCat = ["PALINDROMES", "SAME WORD, OPPOSITE MEANING", "ASTROLOGICAL ANIMALS", "FAMOUS FOR POTTERY"]
+
+let longCat = ["SOUNDS LIKE A LETTER & A NUMBER", "LITTLE BITS", "WORDS THAT BEGIN WITH A NAME", "THINGS PLURAL BUT ONLY ONE OF"]
+const catsWords = temp1.map(function (e) {
   return e.toUpperCase()
 });
 
-longCat = longCat.map(function (e) { 
+longCat = longCat.map(function (e) {
   return e.toUpperCase()
 });
 
 const words = catsWords.map(item => item.split('-')[1]);
-const quitWords =catsWords.map(item => item.split('-')[1]); // get this before the shuffle
+const quitWords = catsWords.map(item => item.split('-')[1]); // get this before the shuffle
 
 let shortCat = [];
 const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
@@ -102,7 +117,7 @@ function toggleSelection(event) {
     const computedStyle = window.getComputedStyle(selectedCell);
     const bgColor = computedStyle.getPropertyValue('background-color');
 
-    if (bgColor == blueColor) {  
+    if (bgColor == blueColor) {
       selectedCell.style.backgroundColor = 'cyan';
       selectedCell.style.color = 'darkslategrey';
       selectedCount--;
@@ -114,39 +129,39 @@ function toggleSelection(event) {
     return;
   };
 
-// Get the background color of the selected cell
-const computedStyle = window.getComputedStyle(selectedCell);
-const bgColor = computedStyle.getPropertyValue('background-color');
+  // Get the background color of the selected cell
+  const computedStyle = window.getComputedStyle(selectedCell);
+  const bgColor = computedStyle.getPropertyValue('background-color');
 
-if (selectedCount >= 0) {
-  deselectButton.disabled = false;
-} else {
-  deselectButton.disabled = true;
-}
-
-// Check if the cell is already selected
-if (bgColor == cyanColor) {
-  // Check if the maximum number of cells has been selected
-  if (selectedCount <= 3); {
-    selectedCells.push(selectedWord);
-    selectedCell.style.backgroundColor = 'blue';
-    selectedCell.style.color = 'white';
-    selectedCount++;
+  if (selectedCount >= 0) {
+    deselectButton.disabled = false;
+  } else {
+    deselectButton.disabled = true;
   }
-} else {
-  // Deselect the cell
-  selectedCell.classList.remove('selected');
-  selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
-  selectedCell.style.backgroundColor = 'cyan';
-  selectedCell.style.color = 'darkslategrey';
-  selectedCount--;
-}
-// Check if the maximum number of cells has been selected
-// has to be 4, not 3,  because incremented earlier
-if (selectedCount == 4) {
-  submitButton.disabled = false;
-  // selectedCount = 0;
-}
+
+  // Check if the cell is already selected
+  if (bgColor == cyanColor) {
+    // Check if the maximum number of cells has been selected
+    if (selectedCount <= 3); {
+      selectedCells.push(selectedWord);
+      selectedCell.style.backgroundColor = 'blue';
+      selectedCell.style.color = 'white';
+      selectedCount++;
+    }
+  } else {
+    // Deselect the cell
+    selectedCell.classList.remove('selected');
+    selectedCells.splice(selectedCells.indexOf(selectedCell), 1);
+    selectedCell.style.backgroundColor = 'cyan';
+    selectedCell.style.color = 'darkslategrey';
+    selectedCount--;
+  }
+  // Check if the maximum number of cells has been selected
+  // has to be 4, not 3,  because incremented earlier
+  if (selectedCount == 4) {
+    submitButton.disabled = false;
+    // selectedCount = 0;
+  }
 
 }
 
