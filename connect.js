@@ -11,6 +11,7 @@ const existingContent = displayDate + " ver 2.2.0";
 
 // Function to animate "Best Time!" appearing from the left
 function animateBestTime() {
+  
   const bestTimeContainer = document.getElementById("bestTimeContainer");
   bestTimeContainer.classList.add("slide-in"); // Add class to trigger animation
 }

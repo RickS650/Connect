@@ -1,0 +1,29 @@
+#bestTimeContainer {
+    position: fixed;
+    top: 50%;
+    left: -100%; /* Start off-screen to the left */
+    transform: translateY(-50%);
+    z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+#bestTime {
+    background-color: yellow; /* Yellow background */
+    color: #333; /* Dark text color */
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 43.5%; /* Slide in to the left edge */
+    }
+}
+
+#bestTimeContainer.slide-in {
+    animation: slideInFromLeft 6s ease forwards; /* Run the animation */
+}
