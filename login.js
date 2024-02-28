@@ -17,8 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     timerFlag = true;
     // get the best time, if there is one, else set it to 0
+    // unless Sa for testing
     if (localStorage.getItem('bestTime') == null) {
         localStorage.setItem('bestTime', 0);
+    }
+    if (textValue = "Sa") {
+        localStorage.setItem('bestTime', 59);
     }
     let bestTime = localStorage.getItem('bestTime');
     const dispText = document.getElementById("centreText")
@@ -26,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dispText.innerHTML = "Your best time: " + bestTime + " secs";
 
     // To show the login popup
-    const myLoginButton  = document.querySelector('#btnBox');
+    const myLoginButton = document.querySelector('#btnBox');
     myLoginButton.addEventListener('click', myLoginButtonClickHandler);
 
     function myLoginButtonClickHandler() {
@@ -146,12 +150,12 @@ function startCountUp() {
             clearInterval(countUpTimer); // Stop the count-up timer 
             let oldTime = localStorage.getItem('bestTime');
             let newTime = elapsedTime;
-
-            if (newTime < oldTime) {
+            if (oldTime == 0) {
+                localStorage.setItem('bestTime', newTime);
+            } else if (newTime < oldTime) {
                 localStorage.setItem('bestTime', newTime);
                 animateBestTime();
             }
-            
             return;
         }
         document.getElementById("centreText").innerHTML = "Elapsed time: " + hour + ":" + minute + ":" + seconds;

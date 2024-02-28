@@ -11,7 +11,7 @@ const existingContent = displayDate + " ver 2.2.0";
 
 // Function to animate "Best Time!" appearing from the left
 function animateBestTime() {
-  
+
   const bestTimeContainer = document.getElementById("bestTimeContainer");
   bestTimeContainer.classList.add("slide-in"); // Add class to trigger animation
 }
@@ -22,7 +22,9 @@ if (timerFlag == true) {
   if (localStorage.getItem('bestTime') == null) {
     localStorage.setItem('bestTime', 0);
   }
+  localStorage.setItem('bestTime', 59);
   let bestTime = localStorage.getItem('bestTime');
+  
   const dispText = document.getElementById("centreText")
   dispText.style.display = 'inline';
   dispText.innerHTML = "Your best time: " + bestTime + " secs";
@@ -34,41 +36,9 @@ threeRight("off");
 // Title
 document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
-//load the words
-// Next time
-/* const  temp1 = [
-  "PALINDROMES-AIBOHPHOBIA", "PALINDROMES-RADAR", "PALINDROMES-RACECAR", "PALINDROMES-REPAPER",
-  "SAME WORD, OPPOSITE MEANING-FAST", "SAME WORD, OPPOSITE MEANING-SANCTION", "SAME WORD, OPPOSITE MEANING-SCREEN", "SAME WORD, OPPOSITE MEANING-BOLT",
-  "WORDS THAT BEGIN WITH A NAME-BULL", "WORDS THAT BEGIN WITH A NAME-LION", "WORDS THAT BEGIN WITH A NAME-RAM", "WORDS THAT BEGIN WITH A NAME-FISH",
-  "FAMOUS FOR POTTERY-GERMANY", "FAMOUS FOR POTTERY-JAPAN", "FAMOUS FOR POTTERY-CHINA", "FAMOUS FOR POTTERY-UK"
-]; */
-const temp1 = [
-  "SOUNDS LIKE A LETTER & A NUMBER-Kuwait", "SOUNDS LIKE A LETTER & A NUMBER-Canine", "SOUNDS LIKE A LETTER & A NUMBER-Eaten", "SOUNDS LIKE A LETTER & A NUMBER-Before",
-  "LITTLE BITS-Smidgen", "LITTLE BITS-Trace", "LITTLE BITS-Morsel", "LITTLE BITS-Speck",
-  "WORDS THAT BEGIN WITH A NAME-Bendy", "WORDS THAT BEGIN WITH A NAME-Jackal", "WORDS THAT BEGIN WITH A NAME-Rickshaw", "WORDS THAT BEGIN WITH A NAME-Length",
-  "THINGS PLURAL BUT ONLY ONE OF-Scissors", "THINGS PLURAL BUT ONLY ONE OF-Tights", "THINGS PLURAL BUT ONLY ONE OF-Socks", "THINGS PLURAL BUT ONLY ONE OF-Maths"
-];
-// let longCat = ["PALINDROMES", "SAME WORD, OPPOSITE MEANING", "ASTROLOGICAL ANIMALS", "FAMOUS FOR POTTERY"]
-
-let longCat = ["SOUNDS LIKE A LETTER & A NUMBER", "LITTLE BITS", "WORDS THAT BEGIN WITH A NAME", "THINGS PLURAL BUT ONLY ONE OF"]
-const catsWords = temp1.map(function (e) {
-  return e.toUpperCase()
-});
-
-longCat = longCat.map(function (e) {
-  return e.toUpperCase()
-});
-
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords = catsWords.map(item => item.split('-')[1]); // get this before the shuffle
-
-let shortCat = [];
-const failWords = catsWords.map(item => item.split('-')[1]);  //used for when user has 5 failures
-
-shortCat[0] = catsWords[0].split('-')[0];
-shortCat[1] = catsWords[4].split('-')[0];
-shortCat[2] = catsWords[8].split('-')[0];
-shortCat[3] = catsWords[12].split('-')[0];
+const failWords = catsWords.map(item => item.split('-')[1]);  // used for when user has 5 failures
 
 // Submit button functionality
 const submitButton = document.querySelector("#submit");

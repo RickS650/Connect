@@ -14,8 +14,6 @@ body {
     margin-right: 2px;
     line-height: normal;
     box-sizing: border-box;
-    /* justify-content: center; */
-    /* font-weight: bold; */
     font-family: "Arial", Calibri, Verdana, sans-serif;
     text-align: center;
     vertical-align: middle;
@@ -118,7 +116,6 @@ body {
     margin-bottom: 2px;
     margin-right: 2px;
     line-height: normal;
-    /* justify-content: center; */
     text-align: center;
     vertical-align: middle;
   }
@@ -260,11 +257,10 @@ body {
     }
 
   /************************************************/
-  /* Do NOT move these to above media types
+  /* Do NOT move these to above media types*/
 
-  /* Draw a line */
   p {
-    text-align: center;
+    text-align: center;  /* Draw a line */
 
     hr {
       width: 100%;
@@ -290,7 +286,7 @@ body {
   display: inline-block;
   position: relative;
   height: 25px;
-  width: 200px;   /* This controls the drop down width */
+  width: 200px;
 }
 
 button{
@@ -334,7 +330,5 @@ button:hover{
   background-color: #ddd;
   border-radius:5px;
 }
-
-  /************************************************/
 
 }

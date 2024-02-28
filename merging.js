@@ -1,4 +1,5 @@
 var cellWidth = "700px";
+
 // Assuming you want to merge cell
 function MergeCellsInRow(rowToMerge) {
   const rows = document.querySelectorAll('.row');
@@ -53,9 +54,7 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell12");
       spanCell.style.backgroundColor = 'lightgold';
-      if (timerFlag == true) {
-        stopTimer = true;
-      }
+      if (timerFlag == true) stopTimer = true; 
       completedRows++;
       break;
   }

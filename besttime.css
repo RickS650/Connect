@@ -20,10 +20,10 @@
         left: -100%; /* Start off-screen to the left */
     }
     100% {
-        left: 43.5%; /* Slide in to the left edge */
+        left: 43.5%;/* Slide in to the left edge */
     }
 }
 
 #bestTimeContainer.slide-in {
-    animation: slideInFromLeft 6s ease forwards; /* Run the animation */
+    animation: slideInFromLeft 5s ease forwards;  
 }
