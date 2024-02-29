@@ -7,7 +7,7 @@ let specialCase = false, timerFlag = false, stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 2.2.0";
+const existingContent = displayDate + " ver 2.2.1";
 
 // Function to animate "Best Time!" appearing from the left
 function animateBestTime() {

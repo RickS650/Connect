@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function submitPressed(textValue) {
         textValue = textValue[0].toUpperCase() + textValue.substring(1);
-        const userNameList = ["Ahmed", "Alex", "Barbara", "Lily", "Nicki", "Rob", "Trish", "Vic", "Sa"];
+        const userNameList = ["Ahmed", "Alex", "Barbara", "Cheryl", "Jean", "Lily", "Nicki", "Rob", "Trish", "Vic", "Sa"];
         const notFound = !userNameList.includes(textValue);
 
         if (!notFound) {
