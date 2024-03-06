@@ -5,7 +5,7 @@ body {
   .cell {
     color: darkslategrey;
     background: cyan;
-    height:55px;
+    height: 55px;
     text-align: center;
     padding: 15px;
     margin: 0;
@@ -91,11 +91,12 @@ body {
 
   .grid {
     display: flex;
-    flex-direction: column; /* Displays rows horizontally! Weird */
+    flex-direction: column;
+    /* Displays rows horizontally! Weird */
     max-width: 90%;
     height: auto;
     align-items: center;
-    text-align: center; 
+    text-align: center;
     vertical-align: middle;
   }
 
@@ -120,15 +121,43 @@ body {
     vertical-align: middle;
   }
 
+  /* iphone6 and 7 */
+  @media only screen and (min-device-width : 375px) and 
+      (max-device-width : 667px) and 
+      (orientation : landscape) {
+        
+    transform: rotate(+90deg);
+    transform-origin: left top;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
 
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 22vw;
+    }
+
+    .round-button {
+      width: 1.2vw;
+      height: 2vw;
+    }
+  }
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait){
+  @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait) {
 
     transform: rotate(+90deg);
     transform-origin: left top;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     overflow-x: hidden;
     position: absolute;
     top: 100%;
@@ -235,32 +264,33 @@ body {
 
   }
 
-    /* Larger tablets */
-    @media only screen and (min-width: 1440px) and (orientation: portrait) {
-      
-      .grid {
-        margin: auto 5%;
-        grid-template-columns: repeat(4, 95vw);
-        font-size: 18px;
-      }
-  
-      .cell {
-        width: 22vw;
-        background-color: cyan;
-      }
-  
-      .round-button {
-        width: 15px;
-        height: 15px;
-      }
-  
+  /* Larger tablets */
+  @media only screen and (min-width: 1440px) and (orientation: portrait) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 95vw);
+      font-size: 18px;
     }
+
+    .cell {
+      width: 22vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
 
   /************************************************/
   /* Do NOT move these to above media types*/
 
   p {
-    text-align: center;  /* Draw a line */
+    text-align: center;
+    /* Draw a line */
 
     hr {
       width: 100%;
@@ -281,54 +311,54 @@ body {
     text-transform: capitalize;
   }
 
-  
-.dropdown {
-  display: inline-block;
-  position: relative;
-  height: 25px;
-  width: 200px;
-}
 
-button{
-  border:none;
-  border-radius:5px;
-  padding: 5px 5px;
-  font-size:10px;
-  cursor:pointer;
-}
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    width: 200px;
+  }
 
-button:hover{
-  background-color:#ddd;
-}
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 10px;
+    cursor: pointer;
+  }
 
-.dropdown-options {
-  display: none;
-  position: absolute;
-  left: 0;
-  overflow: auto;
-  background-color:#fff;
-  border-radius:5px;
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-}
+  button:hover {
+    background-color: #ddd;
+  }
 
-.dropdown:hover .dropdown-options {
-  display: block;
-}
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    left: 0;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  }
 
-.dropdown-options a {
-  display: block;
-  color: #000000;
-  /* width: 150px; */
-  font-size: 15px;
-  text-decoration: none;
-  padding:10px 10px;
-}
+  .dropdown:hover .dropdown-options {
+    display: block;
+  }
 
-.dropdown-options a:hover {
-  color: #0a0a23;
-  /* width: auto; */
-  background-color: #ddd;
-  border-radius:5px;
-}
+  .dropdown-options a {
+    display: block;
+    color: #000000;
+    /* width: 150px; */
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 10px;
+  }
+
+  .dropdown-options a:hover {
+    color: #0a0a23;
+    /* width: auto; */
+    background-color: #ddd;
+    border-radius: 5px;
+  }
 
 }
