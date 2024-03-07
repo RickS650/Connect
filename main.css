@@ -1,364 +1,68 @@
-body {
-  background-color: lightgray;
-
-
-  .cell {
-    color: darkslategrey;
-    background: cyan;
-    height: 55px;
-    text-align: center;
-    padding: 15px;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: normal;
-    box-sizing: border-box;
-    font-family: "Arial", Calibri, Verdana, sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 8px;
-  }
-
-  .button-container {
+.float-container {
     display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+
+}
+
+.float-child {
+    display: flex;
+    width: 20%;
     justify-content: center;
-  }
-
-  /* button */
-  #submit {
-    border-radius: 12px;
-    border: 1px solid black;
-    height: auto;
-    width: 130px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: black;
-    margin-left: 50px;
-  }
-
-  .leftText {
-    p {
-      white-space: pre-line;
-    }
-
-    font-family: Arial,
-    sans-serif;
-    font-size: 13px;
-  }
-
-  /* Styling for the round buttons */
-  .round-button {
-    border-radius: 50%;
-    margin: 0 5px;
-    border: thin;
-    padding: 5px;
-    font-size: 16px;
-    background-color: black;
-  }
-
-  #blob1 {
-    top: 65%;
-  }
-
-  #blob2 {
-    top: 65%;
-  }
-
-  #blob3 {
-    top: 65%;
-  }
-
-  #blob4 {
-    top: 65%;
-  }
-
-  #blob5 {
-    top: 65%;
-  }
-
-  #deselect {
-    border-radius: 12px;
-    border: 1px solid black;
-    margin-right: 50px;
-    height: auto;
-    width: 130px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: black;
-  }
-
-
-  .grid {
-    display: flex;
-    flex-direction: column;
-    /* Displays rows horizontally! Weird */
-    max-width: 90%;
-    height: auto;
     align-items: center;
-    text-align: center;
-    vertical-align: middle;
-  }
+    /* content: rotate(45deg) skew(10deg, 10deg); */
+}
 
-  .col-span {
-    grid-column: span 3;
-    background-color: lightyellow;
-    text-align: center;
-  }
+.rhombus {
+    width: 150px;
+    height: 150px;
+    margin-top: 15%;
+    background: yellow;
+    transform: rotate(45deg) skew(10deg, 10deg);
+/*     justify-content: center;
+    align-items: center; */
+}
 
-  .row {
-    display: flex;
-    color: darkgoldenrod;
-    height: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: normal;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  /* iphone6 and 7 */
-  /* @media only screen and (min-device-width : 375px) and 
-      (max-device-width : 667px) and 
-      (orientation : landscape) {
-        
-    transform: rotate(+90deg);
-    transform-origin: left top;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+.rhombus span {
+    font-size: 1.8vw;
+    font-weight: bold;
     position: absolute;
-    top: 100%;
-    left: 0;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 22vw;
-    }
-
-    .round-button {
-      width: 1.2vw;
-      height: 2vw;
-    }
-  } */
-
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait) {
-
-    transform: rotate(+90deg);
-    transform-origin: left top;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 22vw;
-    }
-
-    .round-button {
-      width: 1.2vw;
-      height: 2vw;
-    }
-
-  }
-
-  /* Medium Small Devices, Phones */
-  @media only screen and (min-width: 600px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Tablets etc */
-  @media only screen and (min-width: 768px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Medium laptops */
-  @media only screen and (min-width: 992px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 46vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Larger laptops, mainframe PCs*/
-  @media only screen and (min-width: 1200px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 95vw);
-      font-size: 18px;
-    }
-
-    .cell {
-      width: 22vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Larger tablets */
-  @media only screen and (min-width: 1440px) and (orientation: portrait) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 95vw);
-      font-size: 18px;
-    }
-
-    .cell {
-      width: 22vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /************************************************/
-  /* Do NOT move these to above media types*/
-
-  p {
-    text-align: center;
-    /* Draw a line */
-
-    hr {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-
-  .p {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: darkslategrey;
+    top: 50%;
+    left: 50%;
     justify-content: center;
-  }
+    align-items: center;
+    transform: translate(-50%, -50%) rotate(-45deg) skew(-20deg);
+    color: red;
+}
 
-  .gear {
-    text-transform: capitalize;
-  }
+.square-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.2vw;
+    font-weight: bold;
+    margin-top: 75px;
+    margin-left: 68px;
+    color: red;
+}
 
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center */
+    background: yellow;
+}
 
-  .dropdown {
-    display: inline-block;
-    position: relative;
-    height: 25px;
-    width: 200px;
-  }
+.float-square {
+    margin-left: 36px;
+    margin-right: 175px;
+    display: flex;
+}
 
-  button {
-    border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 10px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #ddd;
-  }
-
-  .dropdown-options {
-    display: none;
-    position: absolute;
-    left: 0;
-    overflow: auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-  }
-
-  .dropdown:hover .dropdown-options {
-    display: block;
-  }
-
-  .dropdown-options a {
-    display: block;
-    color: #000000;
-    /* width: 150px; */
-    font-size: 15px;
-    text-decoration: none;
-    padding: 10px 10px;
-  }
-
-  .dropdown-options a:hover {
-    color: #0a0a23;
-    /* width: auto; */
-    background-color: #ddd;
-    border-radius: 5px;
-  }
-
+.btnClass {
+    height: 40px;
+    min-width: 100px;
+    color: blue; 
+    font-size: 1.3vw;
 }
