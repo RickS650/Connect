@@ -1,124 +1,202 @@
 body {
-  background-color: lightgray;
+  @media all {
+    background-color: lightgray;
 
 
-  .cell {
-    color: #2f4f4f;
-    background: cyan;
-    height: 55px;
-    text-align: center;
-    padding: 15px;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: normal;
-    box-sizing: border-box;
-    font-family: "Arial", Calibri, Verdana, sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 8px;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* button */
-  #submit {
-    border-radius: 12px;
-    border: 1px solid black;
-    height: auto;
-    width: 130px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: black;
-    margin-left: 50px;
-  }
-
-  .leftText {
-    p {
-      white-space: pre-line;
+    .cell {
+      color: #2f4f4f;
+      background: cyan;
+      height: 55px;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+      cursor: pointer;
+      margin-bottom: 2px;
+      margin-right: 2px;
+      line-height: normal;
+      box-sizing: border-box;
+      font-family: "Arial", Calibri, Verdana, sans-serif;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 8px;
     }
 
-    font-family: Arial,
-    sans-serif;
-    font-size: 13px;
-  }
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
 
-  /* Styling for the round buttons */
-  .round-button {
-    border-radius: 50%;
-    margin: 0 5px;
-    border: thin;
-    padding: 5px;
-    font-size: 16px;
-    background-color: black;
-  }
+    /* button */
+    #submit {
+      border-radius: 12px;
+      border: 1px solid black;
+      height: auto;
+      width: 130px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: black;
+      margin-left: 50px;
+    }
 
-  #blob1 {
-    top: 65%;
-  }
+    .leftText {
+      p {
+        white-space: pre-line;
+      }
 
-  #blob2 {
-    top: 65%;
-  }
+      font-family: Arial,
+      sans-serif;
+      font-size: 13px;
+    }
 
-  #blob3 {
-    top: 65%;
-  }
+    /* Styling for the round buttons */
+    .round-button {
+      border-radius: 50%;
+      margin: 0 5px;
+      border: thin;
+      padding: 5px;
+      font-size: 16px;
+      background-color: black;
+    }
 
-  #blob4 {
-    top: 65%;
-  }
+    #blob1 {
+      top: 65%;
+    }
 
-  #blob5 {
-    top: 65%;
-  }
+    #blob2 {
+      top: 65%;
+    }
 
-  #deselect {
-    border-radius: 12px;
-    border: 1px solid black;
-    margin-right: 50px;
-    height: auto;
-    width: 130px;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: black;
-  }
+    #blob3 {
+      top: 65%;
+    }
+
+    #blob4 {
+      top: 65%;
+    }
+
+    #blob5 {
+      top: 65%;
+    }
+
+    #deselect {
+      border-radius: 12px;
+      border: 1px solid black;
+      margin-right: 50px;
+      height: auto;
+      width: 130px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: black;
+    }
 
 
-  .grid {
-    display: flex;
-    flex-direction: column;
-    /* Displays rows horizontally! Weird */
-    max-width: 90%;
-    height: auto;
-    align-items: center;
-    text-align: center;
-    vertical-align: middle;
-  }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      /* Displays rows horizontally! Weird */
+      max-width: 90%;
+      height: auto;
+      align-items: center;
+      text-align: center;
+      vertical-align: middle;
+    }
 
-  .col-span {
-    grid-column: span 3;
-    background-color: lightyellow;
-    text-align: center;
-  }
+    .col-span {
+      grid-column: span 3;
+      background-color: lightyellow;
+      text-align: center;
+    }
 
-  .row {
-    display: flex;
-    color: darkgoldenrod;
-    height: auto;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    line-height: normal;
-    text-align: center;
-    vertical-align: middle;
+    .row {
+      display: flex;
+      color: darkgoldenrod;
+      height: auto;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      margin-bottom: 2px;
+      margin-right: 2px;
+      line-height: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    /*    */
+
+    p {
+      text-align: center;
+      /* Draw a line */
+  
+      hr {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  
+  
+    .p {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: darkslategrey;
+      justify-content: center;
+    }
+  
+    .gear {
+      text-transform: capitalize;
+    }
+  
+  
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      height: 25px;
+      width: 200px;
+    }
+  
+    button {
+      border: none;
+      border-radius: 5px;
+      padding: 5px 5px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #ddd;
+    }
+  
+    .dropdown-options {
+      display: none;
+      position: absolute;
+      left: 0;
+      overflow: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+  
+    .dropdown:hover .dropdown-options {
+      display: block;
+    }
+  
+    .dropdown-options a {
+      display: block;
+      color: #000000;
+      /* width: 150px; */
+      font-size: 15px;
+      text-decoration: none;
+      padding: 10px 10px;
+    }
+  
+    .dropdown-options a:hover {
+      color: #0a0a23;
+      /* width: auto; */
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
   }
 
   /* Extra Small Devices, Phones */
@@ -171,7 +249,7 @@ body {
   }
 
   /* iPhone 7 */
- /*  @media all and (min-width: 750px) {
+  /*  @media all and (min-width: 750px) {
     background-color: yellow;
     transform: rotate(+90deg);
     transform-origin: left top;
