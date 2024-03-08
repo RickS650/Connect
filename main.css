@@ -3,7 +3,7 @@ body {
 
 
   .cell {
-    color: darkslategrey;
+    color: #2f4f4f;
     background: cyan;
     height: 55px;
     text-align: center;
@@ -123,7 +123,6 @@ body {
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait) {
-    background-color: purple;
     transform: rotate(+90deg);
     transform-origin: left top;
     width: 100vw;
@@ -152,7 +151,6 @@ body {
 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
-    background-color: red;
 
     .grid {
       margin: auto 5%;
@@ -173,7 +171,7 @@ body {
   }
 
   /* iPhone 7 */
-  @media only screen and (min-width: 750px) {
+ /*  @media all and (min-width: 750px) {
     background-color: yellow;
     transform: rotate(+90deg);
     transform-origin: left top;
@@ -195,7 +193,7 @@ body {
     }
 
 
-  }
+  } */
 
   /* Tablets etc */
   @media only screen and (min-width: 768px) {
