@@ -1,6 +1,11 @@
 #bestTimeContainer {
+    background-color: yellow; /* Yellow background */
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: -100%; /* Start off-screen to the left */
     transform: translateY(-50%);
     z-index: 9999; /* Ensure it's on top of other elements */
@@ -24,6 +29,20 @@
     }
 }
 
-#bestTimeContainer.slide-in {
+@keyframes slideOutToRight {
+    0% {
+        left: 50%; /* Start mid-screen to the left */
+    }
+    100% {
+        left: 100%; /* Slide out to the right edge */
+    }
+}
+
+
+#bestTimeContainer.slide-out {
     animation: slideInFromLeft 5s ease forwards;  
+}
+
+#bestTimeContainer.slide-out {
+    animation: slideOutToRight 5 secs ease-out;  
 }

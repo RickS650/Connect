@@ -9,11 +9,19 @@ let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
 const existingContent = displayDate + " ver 2.3.1";
 
-// Function to animate "Best Time!" appearing from the left
+// Function to animate "Best Time!" appearing from the left or
+// "Well Done!" if not going for best
 function animateBestTime() {
-
   const bestTimeContainer = document.getElementById("bestTimeContainer");
-  bestTimeContainer.classList.add("slide-in"); // Add class to trigger animation
+
+  if (timerFlag == true) {
+    bestTimeContainer.textContent = "Best Time!"
+  } else {
+    bestTimeContainer.textContent = "Well Done!"
+  }
+
+  bestTimeContainer.classList.add("slide-in"); 
+  bestTimeContainer.classList.add("slide-out");
 }
 
 // displays best time and timers
@@ -24,7 +32,7 @@ if (timerFlag == true) {
   }
   localStorage.setItem('bestTime', 59);
   let bestTime = localStorage.getItem('bestTime');
-  
+
   const dispText = document.getElementById("centreText")
   dispText.style.display = 'inline';
   dispText.innerHTML = "Your best time: " + bestTime + " secs";

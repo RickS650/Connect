@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    timerFlag = true;
     // get the best time, if there is one, else set it to 0
     // unless Sa for testing
     if (localStorage.getItem('bestTime') == null) {
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!notFound) {
             closeForm();
-
+timerFlag = true;
             // Start the countdown timer when the login button is clicked
             startCountDown(6, function () {
                 // This function will be called when the count-down timer finishes

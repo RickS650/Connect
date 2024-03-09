@@ -1,7 +1,140 @@
 body {
+  
+  /* Extra Small Devices, Phones */
+  @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait) {
+    transform: rotate(+90deg);
+    transform-origin: left top;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 22vw;
+    }
+
+    .round-button {
+      width: 1.2vw;
+      height: 2vw;
+    }
+
+  }
+
+  /* Medium Small Devices, Phones */
+  @media only screen and (min-width: 600px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: (4, 21vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 23vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Tablets etc */
+  @media only screen and (min-width: 768px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 23vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Medium laptops */
+  @media only screen and (min-width: 992px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 90vw);
+      font-size: 15px;
+    }
+
+    .cell {
+      width: 46vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Larger laptops, mainframe PCs*/
+  @media only screen and (min-width: 1200px) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 95vw);
+      font-size: 18px;
+    }
+
+    .cell {
+      width: 22vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
+  /* Larger tablets */
+  @media only screen and (min-width: 1440px) and (orientation: portrait) {
+
+    .grid {
+      margin: auto 5%;
+      grid-template-columns: repeat(4, 95vw);
+      font-size: 18px;
+    }
+
+    .cell {
+      width: 22vw;
+      background-color: cyan;
+    }
+
+    .round-button {
+      width: 15px;
+      height: 15px;
+    }
+
+  }
+
   @media all {
     background-color: lightgray;
-
 
     .cell {
       color: #2f4f4f;
@@ -43,8 +176,7 @@ body {
         white-space: pre-line;
       }
 
-      font-family: Arial,
-      sans-serif;
+      font-family: Arial,sans-serif;
       font-size: 13px;
     }
 
@@ -199,180 +331,23 @@ body {
 
   }
 
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 350px) and (max-width: 599px) and (orientation: portrait) {
-    transform: rotate(+90deg);
-    transform-origin: left top;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 22vw;
-    }
-
-    .round-button {
-      width: 1.2vw;
-      height: 2vw;
-    }
-
-  }
-
-  /* Medium Small Devices, Phones */
-  @media only screen and (min-width: 600px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: (4, 21vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* iPhone 7 */
-  /*  @media all and (min-width: 750px) {
-    background-color: yellow;
-    transform: rotate(+90deg);
-    transform-origin: left top;
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-
-  } */
-
-  /* Tablets etc */
-  @media only screen and (min-width: 768px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 23vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Medium laptops */
-  @media only screen and (min-width: 992px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 90vw);
-      font-size: 15px;
-    }
-
-    .cell {
-      width: 46vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Larger laptops, mainframe PCs*/
-  @media only screen and (min-width: 1200px) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 95vw);
-      font-size: 18px;
-    }
-
-    .cell {
-      width: 22vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
-
-  /* Larger tablets */
-  @media only screen and (min-width: 1440px) and (orientation: portrait) {
-
-    .grid {
-      margin: auto 5%;
-      grid-template-columns: repeat(4, 95vw);
-      font-size: 18px;
-    }
-
-    .cell {
-      width: 22vw;
-      background-color: cyan;
-    }
-
-    .round-button {
-      width: 15px;
-      height: 15px;
-    }
-
-  }
 
   /************************************************/
   /* Do NOT move these to above media types*/
 
-  p {
-    text-align: center;
+/*   p {
+    text-align: center; */
     /* Draw a line */
 
-    hr {
+/*     hr {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
     }
-  }
+  } */
 
 
-  .p {
+ /*  .p {
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: darkslategrey;
@@ -412,25 +387,24 @@ body {
     border-radius: 5px;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
   }
-
-  .dropdown:hover .dropdown-options {
+ */
+  /* .dropdown:hover .dropdown-options {
     display: block;
   }
 
   .dropdown-options a {
     display: block;
-    color: #000000;
-    /* width: 150px; */
-    font-size: 15px;
+    color: #000000; */
+    /* width: 150px; ************/
+/*     font-size: 15px;
     text-decoration: none;
     padding: 10px 10px;
-  }
+  } */
 
-  .dropdown-options a:hover {
-    color: #0a0a23;
-    /* width: auto; */
-    background-color: #ddd;
+/*   .dropdown-options a:hover {
+    color: #0a0a23; */
+    /* width: auto; ************/
+/*     background-color: #ddd;
     border-radius: 5px;
-  }
-
+  } */
 }

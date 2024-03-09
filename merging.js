@@ -1,5 +1,5 @@
 var cellWidth = "700px";
-
+alert(timerFlag);
 // Assuming you want to merge cell
 function MergeCellsInRow(rowToMerge) {
   const rows = document.querySelectorAll('.row');
@@ -54,23 +54,31 @@ function MergeCellsInRow(rowToMerge) {
       }
       spanCell = document.getElementById("cell12");
       spanCell.style.backgroundColor = 'lightgold';
-      if (timerFlag == true) stopTimer = true; 
+      if (timerFlag == true) stopTimer = true;
       completedRows++;
       break;
   }
 
   if (specialCase == false) {
     spanCell.removeEventListener('click', toggleSelection);
-    // Unable to get span to work
+    // Unable to get span to work ....
     //const spanCell = document.getElementById("cell0");
     //spanCell.classList.add("col-span");   
-
+    // const spanCell = document.getElementById('spanCell');
     spanCell.style.columnSpan = '3';
-    spanCell.style.width = cellWidth; // so did this instead
-    spanCell.style.columnSpan = '3';
+    spanCell.style.width = cellWidth; // .. so did this instead
     spanCell.style.width = gridWidth + 'px';
     spanCell.style.fontWeight = 'lightbold';
     spanCell.style.padding = '5px'
+    spanCell.innerHTML = fullCat;
+    if (rowToMerge == 3) {
+      animateBestTime();
+    }
+
+
+    // const fullCat = "Your text"; // Replace with your text
+
+    // Set the text content
     spanCell.innerHTML = fullCat;
 
     mergeRow++;
