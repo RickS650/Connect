@@ -1,8 +1,9 @@
 body {
   
-
+  /* and (orientation: portrait) */
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 200px)  and (orientation: portrait) {
+  @media all {
+  /* only screen and (min-width: 10px)  { */
     
     background-color: red;
     transform: rotate(+90deg);
