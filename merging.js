@@ -1,5 +1,5 @@
 var cellWidth = "700px";
-alert(timerFlag);
+
 // Assuming you want to merge cell
 function MergeCellsInRow(rowToMerge) {
   const rows = document.querySelectorAll('.row');

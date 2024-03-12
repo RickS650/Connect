@@ -1,8 +1,7 @@
 body {
   
-
   /* Extra Small Devices, Phones */
-  @media only screen and (min-width: 200px)  and (orientation: portrait) {
+/*   @media only screen and (min-width: 200px)  and (orientation: portrait) {
     background-color: red;
     transform: rotate(+90deg);
     transform-origin: left top;
@@ -28,8 +27,7 @@ body {
       height: 2vw;
     }
 
-  }
-
+  } */
 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
@@ -138,7 +136,6 @@ body {
   }
 
   @media all {
-    background-color: green;
 
     .cell {
       color: #2f4f4f;
