@@ -7,7 +7,7 @@ let specialCase = false, timerFlag = false, stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " Vic 1.10.0";
+const existingContent = displayDate + " Vic 1.11.0";
 
 // Function to animate "Best Time!" appearing from the left or
 // "Well Done!" if not going for best
@@ -42,7 +42,7 @@ if (timerFlag == true) {
 threeRight("off");
 
 // Title
-document.getElementById('header').innerHTML = "Under Maintenance    " + existingContent;
+document.getElementById('header').innerHTML = "Under Maintenance!!    " + existingContent;
 
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords = catsWords.map(item => item.split('-')[1]); // get this before the shuffle
