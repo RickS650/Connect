@@ -7,7 +7,7 @@ let specialCase = false, timerFlag = false, stopTimer = false;
 let date = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " ver 2.3.1";
+const existingContent = displayDate + " Viv 1.0.0";
 
 // Function to animate "Best Time!" appearing from the left or
 // "Well Done!" if not going for best
