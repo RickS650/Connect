@@ -42,7 +42,7 @@ if (timerFlag == true) {
 threeRight("off");
 
 // Title
-document.getElementById('header').innerHTML = "Under Maintenance!!    " + existingContent;
+document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords = catsWords.map(item => item.split('-')[1]); // get this before the shuffle
