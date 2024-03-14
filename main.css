@@ -1,7 +1,7 @@
 body {
 
   /* Extra Small Devices, Phones */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+ /*  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     background-color: red;
     transform: rotate(+90deg);
     transform-origin: left top;
@@ -27,7 +27,7 @@ body {
       height: 2vw;
     }
 
-  }
+  } */
 
   /* Medium Small Devices, Phones */
   @media only screen and (min-width: 600px) {
