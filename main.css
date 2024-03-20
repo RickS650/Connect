@@ -238,7 +238,7 @@ body {
 
     .col-span {
       grid-column: span 3;
-      background-color: lightyellow;
+      background-color: lightskyblue;
       text-align: center;
     }
 

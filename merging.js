@@ -26,7 +26,7 @@ function MergeCellsInRow(rowToMerge) {
         mergedCell.remove();
       }
       spanCell = document.getElementById("cell0");
-      spanCell.style.backgroundColor = 'lightyellow';
+      spanCell.style.backgroundColor = 'lightskyblue';
       completedRows++;
       break;
     case 1:
