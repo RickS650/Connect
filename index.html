@@ -14,7 +14,20 @@
     </style>
     <title>Connect with Rick</title>
     <h1>
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var element = document.documentElement;
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.mozRequestFullscreen) {
+                    element.mozRequestFullscreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                }
+            });
+        </script>
         <table style="width: 100%;">
             <tr>
                 <td style="width: 40%; font-size: 1.5vw" ; id="header">

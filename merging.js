@@ -35,7 +35,7 @@ function MergeCellsInRow(rowToMerge) {
         mergedCell.remove();
       }
       spanCell = document.getElementById("cell4");
-      spanCell.style.backgroundColor = "pink";
+      spanCell.style.backgroundColor = "lightgreen";
       completedRows++;
       break;
     case 2:
@@ -44,7 +44,7 @@ function MergeCellsInRow(rowToMerge) {
         mergedCell.remove();
       }
       spanCell = document.getElementById("cell8");
-      spanCell.style.backgroundColor = 'lightgreen';
+      spanCell.style.backgroundColor = 'lightblue';
       completedRows++;
       break;
     case 3:
@@ -137,7 +137,7 @@ function fail2Win() {
           mergedCell.remove();
         }
         spanCell = document.getElementById("cell0");
-        spanCell.style.backgroundColor = 'lightyellow';
+        spanCell.style.backgroundColor = 'skyblue';
         break;
       case 1:
         for (let i = 5; i <= 7; i++) {
