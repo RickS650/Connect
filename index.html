@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ; min-height: 100%; margin: 0;>
+<html lang="en">
 
 <head>
     <meta http-equiv='cache-control' content='no-cache'>
@@ -7,27 +7,21 @@
     <meta http-equiv='pragma' content='no-cache'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        h1 {
-            font-family: "Arial", Calibri, Verdana, sans-serif
-        }
-    </style>
-    <title>Connect with Rick</title>
-    <h1>
-        <script>
-            document.addEventListener("DOMContentLoaded", function (event) {
-                var element = document.documentElement;
-                if (element.requestFullscreen) {
-                    element.requestFullscreen();
-                } else if (element.mozRequestFullscreen) {
-                    element.mozRequestFullscreen();
-                } else if (element.webkitRequestFullscreen) {
-                    element.webkitRequestFullscreen();
-                } else if (element.msRequestFullscreen) {
-                    element.msRequestFullscreen();
-                }
-            });
-        </script>
+    <link href="main.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="besttime.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c142c7325d.js" crossorigin="anonymous"></script>
+    <script src="words.js"></script>
+    <script src="login.js"></script>
+    <script src="buttonControl.js"></script>
+    <script src="merging.js"></script>
+    <script src="connect.js" defer> </script>
+</head>
+
+<body style="margin: 0;min-height: 100%;font-family: Arial, Calibri, Verdana, sans-serif;">
+    <h1>Connect with Rick</h1>
+
         <table style="width: 100%;">
             <tr>
                 <td style="width: 40%; font-size: 1.5vw" ; id="header">
@@ -51,97 +45,97 @@
             </tr>
         </table>
 
-    </h1>
-
-    <style>
-        h1 {
-            font-family: "Arial", Calibri, Verdana, sans-serif
-        }
-    </style>
-
-    <link href="main.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet">
-    <link href="besttime.css" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/c142c7325d.js" crossorigin="anonymous"></script>
-    <script src="words.js"></script>
-    <script src="login.js"></script>
-    <script src="buttonControl.js"></script>
-    <script src="merging.js"></script>
-    <script src="connect.js" defer> </script>
-
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
-</head>
-<!-- <hr> -->
-
-<body margin: 0; min-height: 100%; style="font-family: Arial, Calibri, Verdana, sans-serif;">
-    </style>
-
-    <div id="bestTimeContainer">
-        <div id="bestTime"></div>
-    </div>
-    <div class="form-popup" id="form-popup">
-        <form class="form-container">
-            <h1 class="login-header">Start the timer</h1>
-            <label>Enter your name<font-size="1.5em; font-family="Avenir Next" , Calibri, Verdana, sans-serif /></label>
-
-            <input type="text" id="userName" name="userName" autofocus autocomplete=""><br>
-
-            <button type="button" id="btnlogin" class="btn">Login</button>
-            <button type="button" id="btnCancel" class="btnCancel">Close</button>
-        </form>
-    </div>
-
-    <p class="addText">Create groups of four! ..... You only get 5 attempts!</p>
-
-    <div id="gridID" class="grid">
-        <div class="row" id="row0">
-            <div class="cell" id="cell0"></div>
-            <div class="cell" id="cell1"></div>
-            <div class="cell" id="cell2"></div>
-            <div class="cell" id="cell3"></div>
+        <div id="bestTimeContainer">
+            <div id="bestTime"></div>
         </div>
-        <div class="row" id="row1">
-            <div class="cell" id="cell4"></div>
-            <div class="cell" id="cell5"></div>
-            <div class="cell" id="cell6"></div>
-            <div class="cell" id="cell7"></div>
-        </div>
-        <div class="row" id="row2">
-            <div class="cell" id="cell8"></div>
-            <div class="cell" id="cell9"></div>
-            <div class="cell" id="cell10"></div>
-            <div class="cell" id="cell11"></div>
-        </div>
-        <div class="row" id="row3">
-            <div class="cell" id="cell12"></div>
-            <div class="cell" id="cell13"></div>
-            <div class="cell" id="cell14"></div>
-            <div class="cell" id="cell15"></div>
+        <div class="form-popup" id="form-popup">
+            <form class="form-container">
+                <h1 class="login-header">Start the timer</h1>
+                <label>Enter your name<font-size="1.5em; font-family="Avenir Next" , Calibri, Verdana,
+                        sans-serif /></label>
+
+                <input type="text" id="userName" name="userName" autofocus autocomplete=""><br>
+
+                <button type="button" id="btnlogin" class="btn">Login</button>
+                <button type="button" id="btnCancel" class="btnCancel">Close</button>
+            </form>
         </div>
 
-    </div>
+        <p class="addText">Create groups of four! ..... You only get 5 attempts!</p>
 
-    <p class="leftText"><br>Mistakes remaining:</p>
+        <div id="gridID" class="grid">
+            <div class="row" id="row0">
+                <div class="cell" id="cell0"></div>
+                <div class="cell" id="cell1"></div>
+                <div class="cell" id="cell2"></div>
+                <div class="cell" id="cell3"></div>
+            </div>
+            <div class="row" id="row1">
+                <div class="cell" id="cell4"></div>
+                <div class="cell" id="cell5"></div>
+                <div class="cell" id="cell6"></div>
+                <div class="cell" id="cell7"></div>
+            </div>
+            <div class="row" id="row2">
+                <div class="cell" id="cell8"></div>
+                <div class="cell" id="cell9"></div>
+                <div class="cell" id="cell10"></div>
+                <div class="cell" id="cell11"></div>
+            </div>
+            <div class="row" id="row3">
+                <div class="cell" id="cell12"></div>
+                <div class="cell" id="cell13"></div>
+                <div class="cell" id="cell14"></div>
+                <div class="cell" id="cell15"></div>
+            </div>
 
-    <div class="button-container">
-        <button class="deselect" ; id="deselect">Deselect All</button>
-
-        <button class="round-button" id="button1"></button>
-        <button class="round-button" id="button2"></button>
-        <button class="round-button" id="button3"></button>
-        <button class="round-button" id="button4"></button>
-        <button class="round-button" id="button5"></button>
-
-        <button class="submit" ; id="submit">Submit</button>
-    </div>
-
-    <div id="threeGoes">
-        <div style="text-align:center">
-            One away ......
         </div>
-    </div>
 
-</body>
+        <p class="leftText"><br>Mistakes remaining:</p>
+
+        <div class="button-container">
+            <button class="deselect" ; id="deselect">Deselect All</button>
+
+            <button class="round-button" id="button1"></button>
+            <button class="round-button" id="button2"></button>
+            <button class="round-button" id="button3"></button>
+            <button class="round-button" id="button4"></button>
+            <button class="round-button" id="button5"></button>
+
+            <button class="submit" ; id="submit">Submit</button>
+        </div>
+
+        <div id="threeGoes">
+            <div style="text-align:center">
+                One away ......
+            </div>
+        </div>
+<!--         <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                let element = document.documentElement;
+                if (element.requestFullscreen) {
+                    element.requestFullscreen().catch(error => {
+                        console.error('Fullscreen request failed:', error);
+                    });
+                } else if (element.mozRequestFullscreen) {
+                    element.mozRequestFullscreen().catch(error => {
+                        console.error('Fullscreen request failed:', error);
+                    });
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen().catch(error => {
+                        console.error('Fullscreen request failed:', error);
+                    });
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen().catch(error => {
+                        console.error('Fullscreen request failed:', error);
+                    });
+                } else {
+                    console.error('Fullscreen is not supported');
+                }
+            });
+        </script>
+         -->
+        
+    </body>
 
 </html>
