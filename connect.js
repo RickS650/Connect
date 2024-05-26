@@ -4,10 +4,8 @@ let whatCat = [], whatWord = [];
 let cyanColor = "rgb(0, 255, 255)", blueColor = "rgb(0, 0, 255)", lightRedColor = "rgb( (255,114,118)";
 let noOfAttempts = 4;
 let specialCase = false, timerFlag = false, stopTimer = false;
-let date = new Date();
-let options = { year: 'numeric', month: 'short', day: 'numeric' };
-let displayDate = date.toLocaleDateString('en-GB', options);
-const existingContent = displayDate + " V3.1.0";
+
+const existingContent = "V3.1.0";
 
 // Function to animate "Best Time!" appearing from the left or
 // "Well Done!" if not going for best
@@ -42,7 +40,7 @@ if (timerFlag == true) {
 threeRight("off");
 
 // Title
-document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
+// document.getElementById('header').innerHTML = "Connect with Rick    " + existingContent;
 
 const words = catsWords.map(item => item.split('-')[1]);
 const quitWords = catsWords.map(item => item.split('-')[1]); // get this before the shuffle
@@ -159,10 +157,13 @@ function findCats(array) {
   let normalPart = '';
 
   for (let i = 0; i < array.length; i++) {
-    let index = catsWords.findIndex(element => element.includes(selectedCells[i]))
+    
+    let index = catsWords.findIndex(element => element.trim().includes(selectedCells[i].trim()));
+
     letWhole = catsWords[index];    // Store the whole cat/word
     letCat = letWhole.split('-')[0];   // Extract cat ....
     letWord = letWhole.split('-')[1];  // ... and word
+
     whatCat.push(letCat);           // push into array
     whatWord.push(letWord);
 
